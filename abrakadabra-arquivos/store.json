@@ -1,0 +1,46 @@
+{
+    "store": [
+      {
+        "title": "Pinheiros",
+        "address": "Av. Rebouças, 2157 - Pinheiros - São Paulo / SP",
+        "phone": "(11) 3062-0073 / (11) 3061-1743",
+        "latitude": -23.5659944,
+        "longitude": -46.6810118
+      },
+      {
+        "title": "Moema",
+        "address": "Alameda Jauaperi 1352 - Moema - São Paulo / SP",
+        "phone": "(11) 5049-3025 / (11) 5049-2701 - 5041-3384",
+        "latitude": -23.6075431,
+        "longitude": -46.6697406
+      },
+      {
+        "title": "Tatuapé",
+        "address": "Rua Apucarana, 1220 - Tatuapé - São Paulo / SP",
+        "phone": "(11) 2091-8601 / (11) 2091-9047",
+        "latitude": -23.5489794,
+        "longitude": -46.5628888
+      },
+      {
+        "title": "Água Branca",
+        "address": "Rua Sara de Souza, 78 - Água Branca - São Paulo / SP",
+        "phone": "(11) 3611-7374 / (11) 3611-3479",
+        "latitude": -23.5166425,
+        "longitude": -46.6913611
+      },
+      {
+        "title": "João Pessoa - Paraíba",
+        "address": "Av. Vandik Pinto Filgueiras, 111- Tambauzinho - João Pessoa / PB",
+        "phone": "(83) 3506-6486 / (83) 98701-0269",
+        "latitude": -7.1207882,
+        "longitude": -34.8432757
+      },
+      {
+        "title": "Campinas - SP",
+        "address": "Av. Anchieta, 1032 - Centro - Campinas / SP",
+        "phone": "(19) 3367-1825 / (19) 3234-0847",
+        "latitude": -22.8949201,
+        "longitude": -47.060506
+      }
+    ]
+}

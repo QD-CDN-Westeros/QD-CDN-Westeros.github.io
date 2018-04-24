@@ -1,0 +1,163 @@
+/* Content copied from "checkout-custom.css" at 2017-04-17T16:38:01.862Z */
+
+.check-footer-left img {
+    filter: gray; 
+    -webkit-filter: grayscale(1); 
+    filter: grayscale(1); 
+    opacity: 0.8;
+}
+
+body {
+	font-family: Arial;
+}
+
+a {
+	color: #7faac3;
+}
+
+h1 {
+	color: #f4acba;
+    font-size: 20px;
+    border-bottom: 1px solid #f4acba;
+    line-height: 200%;
+    padding: 0px;
+    text-transform: uppercase;
+    margin: 0px 0px 30px 0px;
+}
+
+.check-topo {
+	float: left;
+	width: 100%;
+	margin: 10px 0px 40px 0px;
+}
+
+.container-center {
+	margin: 0px auto;
+    max-width: 1050px;
+    padding: 0px;
+}
+
+.check-footer {
+	float: left;
+    width: 100%;
+    margin: 30px 0px 30px 0px;
+    border-top: 1px solid #e4e4e4;
+    padding: 20px 0px 0px 0px;
+}
+
+.item-attachments-content {
+	display: none!important;
+}
+
+.check-topo-left {
+	float: left;
+}
+
+.check-topo-right {
+	float: right;
+}
+
+.check-footer-left {
+	float: left;
+}
+
+.check-footer-right {
+	float: right;
+}
+
+.check-topo-right p {
+	background: url('/arquivos/fk-seguro.png') no-repeat 0px 0px transparent;
+    height: 32px;
+    color: #a5cfe8;
+    /* border: 1px solid #a5cfe8; */
+    text-transform: uppercase;
+    padding: 8px 0px 0px 49px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 14px 0px 0px 0px;
+}
+
+.check-footer p {
+	color: #919191;
+    font-size: 12px;
+}
+
+.check-footer span {
+	color: #747474;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.btn-success {
+	color: #fff;
+    text-shadow: none;
+    background-color: #5bb75b;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: none;
+    transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+    -o-transition: background .25s ease-in-out;
+    text-transform: uppercase;
+    background: none #b7cd6b!important;
+    font-size: 16px;
+    border-radius: 0px;
+    font-weight: 600;
+}
+
+.btn-success:hover {
+    background: none #94ab44!important;
+}
+
+@media (min-width: 1200px) {
+	.container-cart, .container-order-form {
+		float: left;
+	    width: 1050px;
+	    margin: 0px 0px 0px -525px;
+	    position: relative;
+	    left: 50%;
+	}
+}
+
+@media (min-width: 1050px) {
+    .container {
+        float: left;
+        width: 1050px;
+        margin: 10px 0px 0px -525px;
+        position: relative;
+        left: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .check-footer-right {
+        float: left;
+        width: 100%;
+        margin: 20px 0px 10px 0px;
+    }
+    .check-topo-right {
+        float: right;
+        float: left;
+        margin: 20px 0px 0px -107px;
+        width: 214px;
+        left: 50%;
+        position: relative;
+    }
+    .check-topo-left {
+        float: left;
+        width: 100%;
+    }
+    .check-topo-left a {
+        float: left;
+        width: 234px;
+        margin: 20px 0px 0px -117px;
+        left: 50%;
+        position: relative;
+        z-index: 999;
+    }
+}

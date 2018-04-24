@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* Aniversário Havan */
+
+body > div.vitrines-promo { width:1000px; margin:0 auto; display:table; position: relative; top: -26px; margin-bottom:30px;}
+body > div:nth-child(11){top:15px;}
+#promo-havan > ul > li {float: left; margin:3px; width:327px; background-color:#016EAF; position:relative;}
+#promo-havan > ul > li:hover a, .ui-tabs-active a,#promo-havan > ul > li:hover a span {background-color:#FFD900 !important;  transition-duration:0.8s; -moz-transition-duration: 0.8s;	-webkit-transition-duration: 0.8s; -o-transition-duration:0.8s; color:#016EAF !important;}
+.ui-tabs-active > .ui-tabs-anchor > span {color:#016EAF !important; border:1px solid #016EAF !important;}
+#promo-havan > ul > li > a { width:100%; display:block; color:#fff; font-size: 22px; text-align: center; padding: 25px 0px; font-weight:bold;}
+#promo-havan > ul > li > a span { width:184px; height:25px; text-transform:uppercase; font-size:14px; color:#FFD900; border:1px solid #fff; padding-top:10px; position:absolute; top:90px; left:74px;}
+#promo-havan > ul { float: left; margin-bottom: 15px;}
+article.sku-data { margin:20px;}
+div.faixa-promo, div.faixa-ofertas { background-color:#FFD900; width:100%; height:158px;}
+div.faixa-promo ul, div.faixa-ofertas ul { max-width:1000px; margin:0 auto;}
+div.faixa-promo h2 { width:100%; text-align:center; color:#003366; padding:40px 0 0; font-size:55px; font-weight:bold; text-transform:uppercase;}
+div.faixa-promo ul li { width:100%; text-align:center; color:#003366; text-transform:uppercase; font-size:20px;}
+body > div.faixa-ofertas > ul > li:nth-child(1) {padding:30px 0 0; font-size:30px;}
+body > div.faixa-ofertas > ul > li:nth-child(2) {font-weight:bold; font-size:55px;}
+div.faixa-ofertas  ul li { width:100%; text-align:center; color:#016EAF; text-transform:uppercase; font-size:20px;}
+body > div.setas { width:100%; float:left; position:relative; bottom:28px;}
+body > div.setas ul { width:1000px; margin:0 auto;}
+body > div.setas ul li { float:left; position:relative; margin:10px; background-color:#FFD900; width:35px; height:35px; -moz-transform: rotate(45deg);-webkit-transform: rotate(45deg);	-o-transform: rotate(45deg);-ms-transform: rotate(45deg);}
+body > div.setas > ul > li:nth-child(1) {left:127px;}
+body > div.setas > ul > li:nth-child(2) {left:410px;}
+body > div.setas > ul > li:nth-child(3) {left:685px;}
+#promo-vinte > div > h2, .wrapper-carrossel h2 {display:none;}
+body > div.super-banner > div > a { width:100% !important; min-width:1000px; overflow:hidden; display:block; text-align:center; margin:0 auto;}
+body > div.super-banner > div > a img { width:100%; height:auto; display:block;}
+
+body.brinquedo-bebe #btn-brinquedo-bebe {background-color:#FFD900 !important;  transition-duration:0.8s; -moz-transition-duration: 0.8s;	-webkit-transition-duration: 0.8s; -o-transition-duration:0.8s; color:#016EAF !important;}
+body.tecnologia #btn-tecnologia {background-color:#FFD900 !important;  transition-duration:0.8s; -moz-transition-duration: 0.8s;	-webkit-transition-duration: 0.8s; -o-transition-duration:0.8s; color:#016EAF !important;}
+body.eletrodomesticos #btn-eletrodomesticos {background-color:#FFD900 !important;  transition-duration:0.8s; -moz-transition-duration: 0.8s;	-webkit-transition-duration: 0.8s; -o-transition-duration:0.8s; color:#016EAF !important;}
+body.ferramentas #btn-ferramentas {background-color:#FFD900 !important;  transition-duration:0.8s; -moz-transition-duration: 0.8s;	-webkit-transition-duration: 0.8s; -o-transition-duration:0.8s; color:#016EAF !important;}
+body.utilidades-domesticas #btn-utilidades-domesticas {background-color:#FFD900 !important;  transition-duration:0.8s; -moz-transition-duration: 0.8s;	-webkit-transition-duration: 0.8s; -o-transition-duration:0.8s; color:#016EAF !important;}
+body.utilidades-domesticas #btn-utilidades-domesticas {background-color:#FFD900 !important;  transition-duration:0.8s; -moz-transition-duration: 0.8s;	-webkit-transition-duration: 0.8s; -o-transition-duration:0.8s; color:#016EAF !important;}
+body.casa-decoracao #btn-casa-decoracao {background-color:#FFD900 !important;  transition-duration:0.8s; -moz-transition-duration: 0.8s;	-webkit-transition-duration: 0.8s; -o-transition-duration:0.8s; color:#016EAF !important;}

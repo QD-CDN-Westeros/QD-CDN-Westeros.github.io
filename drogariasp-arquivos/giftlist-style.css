@@ -1,0 +1,4125 @@
+@import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@font-face {
+    font-family: 'Yesteryear';
+    src: url("/arquivos/yesteryear.eot.css");
+    src: url("/arquivos/yesteryear.eot.css?#iefix") format("embedded-opentype"), url("/arquivos/yesteryear.woff2.css") format("woff2"), url("/arquivos/yesteryear.woff.css") format("woff"), url("/arquivos/yesteryear.ttf.css") format("truetype"), url("/arquivos/yesteryear.svg.css#Yesteryear") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vidaloka';
+    src: url("/arquivos/vidaloka.eot.css");
+    src: url("/arquivos/vidaloka.eot.css?#iefix") format("embedded-opentype"), url("/arquivos/vidaloka.woff2.css") format("woff2"), url("/arquivos/vidaloka.woff.css") format("woff"), url("/arquivos/vidaloka.ttf.css") format("truetype"), url("/arquivos/vidaloka.svg.css#Vidaloka") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvertaStd';
+    src: url("/arquivos/AvertaStd-Regular.eot.css");
+    src: url("/arquivos/AvertaStd-Regular.eot.css?#iefix") format("embedded-opentype"), url("/arquivos/AvertaStd-Regular.woff2.css") format("woff2"), url("/arquivos/AvertaStd-Regular.woff.css") format("woff"), url("/arquivos/AvertaStd-Regular.ttf.css") format("truetype"), url("/arquivos/AvertaStd-Regular.svg.css#AvertaStd") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/arquivos/open-sans-regular.eot.css");
+    src: url("/arquivos/open-sans-regular.eot.css?#iefix") format("embedded-opentype"), url("/arquivos/open-sans-regular.woff2.css") format("woff2"), url("/arquivos/open-sans-regular.woff.css") format("woff"), url("/arquivos/open-sans-regular.ttf.css") format("truetype"), url("/arquivos/open-sans-regular.svg.css#Open Sans") format("svg");
+}
+
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url("/arquivos/open-sans-light.eot.css");
+    src: url("/arquivos/open-sans-light.eot.css?#iefix") format("embedded-opentype"), url("/arquivos/open-sans-light.woff2.css") format("woff2"), url("/arquivos/open-sans-light.woff.css") format("woff"), url("/arquivos/open-sans-light.ttf.css") format("truetype"), url("/arquivos/open-sans-light.svg.css#OpenSansLight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+header.header-wrap {
+    background-color: transparent !important;
+}
+
+.giftlisthome .canvas {
+    backface-visibility: inherit;
+}
+
+.giftlist-main,
+#giftlist-modal-success {
+    font-family: 'Open Sans', 'AvertaStd';
+    font-size: 14px;
+    color: #333333;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: url("/arquivos/giftlist-bg-main.png") no-repeat top center;
+}
+
+.giftlist-main .giftlist-clearfix:before,
+#giftlist-modal-success .giftlist-clearfix:before,
+.giftlist-main .giftlist-clearfix:after,
+#giftlist-modal-success .giftlist-clearfix:after {
+    content: "";
+    display: table;
+}
+
+.giftlist-main .giftlist-clearfix:after,
+#giftlist-modal-success .giftlist-clearfix:after {
+    clear: both;
+}
+
+.giftlist-main *:focus,
+#giftlist-modal-success *:focus {
+    outline: none;
+}
+
+.giftlist-main .giftlist-container,
+#giftlist-modal-success .giftlist-container {
+    width: 90%;
+    max-width: 1190px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.giftlist-main h3,
+#giftlist-modal-success h3,
+.giftlist-main h4,
+#giftlist-modal-success h4,
+.giftlist-main p,
+#giftlist-modal-success p,
+.giftlist-main ul,
+#giftlist-modal-success ul,
+.giftlist-main ol,
+#giftlist-modal-success ol {
+    margin: 0;
+    padding: 0;
+}
+
+.giftlist-main a,
+#giftlist-modal-success a {
+    text-decoration: none;
+}
+
+.giftlist-main a:hover,
+#giftlist-modal-success a:hover {
+    color: #ffffff;
+}
+
+.giftlist-main h2.giftlist-title,
+#giftlist-modal-success h2.giftlist-title {
+    margin: 12px 0 60px 62px;
+    padding: 0;
+    background: url("/arquivos/gitflist-title-intro.png") no-repeat center center;
+    width: 245px;
+    height: 245px;
+    background-size: 245px 245px;
+    overflow: hidden;
+    color: transparent;
+    text-indent: -999999px;
+    float: left;
+}
+
+.giftlist-main h3,
+#giftlist-modal-success h3 {
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 45px;
+    font-family: 'OpenSansLight', 'Open Sans';
+}
+
+.giftlist-main h3 span,
+#giftlist-modal-success h3 span {
+    color: #E2544C;
+    font-weight: bold;
+}
+
+.giftlist-main .giftlist-ajax-loader,
+#giftlist-modal-success .giftlist-ajax-loader {
+    background: url("/arquivos/giftlist-ajax-loader.gif") no-repeat center center;
+    min-height: 32px;
+}
+
+#giftlist-block-screen {
+    background: #ffffff url("/arquivos/giftlist-ajax-loader.gif") no-repeat center center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+}
+
+.giftlist-main .giftlist-btn-default,
+#giftlist-modal-success .giftlist-btn-default,
+.giftlist-main .address-form fieldset p.cancel-address-form a,
+#giftlist-modal-success .address-form fieldset p.cancel-address-form a,
+.giftlist-main .address-form fieldset p.btn-submit-wrapper button,
+#giftlist-modal-success .address-form fieldset p.btn-submit-wrapper button,
+.giftlist-main .address-list p.address-edit a,
+#giftlist-modal-success .address-list p.address-edit a,
+.giftlist-main .address-list p.address-create a,
+#giftlist-modal-success .address-list p.address-create a {
+    display: inline-block;
+    background-color: #E2544C;
+    color: #ffffff;
+    border: 1px dashed #ffffff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.giftlist-main .giftlist-btn-default-white,
+#giftlist-modal-success .giftlist-btn-default-white {
+    background-color: #ffffff;
+    color: #E2544C;
+    border-color: #E2544C;
+}
+
+.giftlist-main .giftlist-btn-default-transparent,
+#giftlist-modal-success .giftlist-btn-default-transparent {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.giftlist-main .giftlist-btn-default-g,
+#giftlist-modal-success .giftlist-btn-default-g {
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    font-size: 14px;
+    padding: 15px 40px;
+}
+
+.giftlist-main .address-form fieldset p.cancel-address-form a,
+#giftlist-modal-success .address-form fieldset p.cancel-address-form a {
+    display: inline-block;
+}
+
+.giftlist-main .giftlist-btn-circle,
+#giftlist-modal-success .giftlist-btn-circle {
+    background-color: #F6CBC9;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Yesteryear', cursive;
+    font-size: 21px;
+    font-weight: 100;
+    border: none;
+    padding: 3px 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    cursor: pointer;
+}
+
+.giftlist-main .giftlist-btn-circle.current,
+#giftlist-modal-success .giftlist-btn-circle.current {
+    background-color: #E2544C;
+}
+
+.giftlist-main .giftlist-btn-circle[disabled]:hover,
+#giftlist-modal-success .giftlist-btn-circle[disabled]:hover,
+.giftlist-main .giftlist-btn-default[disabled]:hover,
+#giftlist-modal-success .giftlist-btn-default[disabled]:hover,
+.giftlist-main .address-form fieldset p.btn-submit-wrapper button[disabled],
+#giftlist-modal-success .address-form fieldset p.btn-submit-wrapper button[disabled] {
+    background-color: #F6CBC9;
+    cursor: auto;
+}
+
+.giftlist-main .giftlist-btn-default:hover,
+#giftlist-modal-success .giftlist-btn-default:hover,
+.giftlist-main .giftlist-btn-circle:hover,
+#giftlist-modal-success .giftlist-btn-circle:hover,
+.giftlist-main .address-form fieldset p.cancel-address-form a,
+#giftlist-modal-success .address-form fieldset p.cancel-address-form a,
+.giftlist-main .address-form fieldset p.btn-submit-wrapper button,
+#giftlist-modal-success .address-form fieldset p.btn-submit-wrapper button {
+    background-color: #D34E47;
+}
+
+.giftlist-main .giftlist-cloud-left,
+#giftlist-modal-success .giftlist-cloud-left {
+    background: url("/arquivos/giftlist-clouds-main.png") no-repeat;
+    background-position: 0 0;
+    width: 245px;
+    height: 449px;
+    position: absolute;
+    top: 0;
+    left: -78px;
+    z-index: 4;
+}
+
+.giftlist-main .giftlist-cloud-right,
+#giftlist-modal-success .giftlist-cloud-right {
+    background: url("/arquivos/giftlist-clouds-main.png") no-repeat top right;
+    width: 390px;
+    height: 449px;
+    position: absolute;
+    top: 0;
+    right: -20%;
+}
+
+.giftlist-main .giftlist-content,
+#giftlist-modal-success .giftlist-content {
+    width: 48%;
+    margin: 0 auto;
+    padding: 50px 0;
+    float: left;
+}
+
+.giftlist-main .giftlist-content-description,
+#giftlist-modal-success .giftlist-content-description {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.giftlist-main .giftlist-content-create-list,
+#giftlist-modal-success .giftlist-content-create-list {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.giftlist-main .errormessage,
+#giftlist-modal-success .errormessage,
+.giftlist-main .successmessage,
+#giftlist-modal-success .successmessage {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.giftlist-main .errormessage,
+#giftlist-modal-success .errormessage {
+    color: #E2544C;
+}
+
+.giftlist-main .successmessage,
+#giftlist-modal-success .successmessage {
+    color: #51C180;
+}
+
+.giftlist-main form,
+#giftlist-modal-success form {
+    padding: 0;
+    margin: 0;
+}
+
+#giftlistform {
+    display: none;
+}
+
+.giftlist-main form fieldset,
+#giftlist-modal-success form fieldset {
+    border: none;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 0;
+    -webkit-padding-after: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.giftlist-main form ul,
+#giftlist-modal-success form ul,
+.giftlist-main form ol,
+#giftlist-modal-success form ol {
+    list-style: none;
+}
+
+.giftlist-main form .giftlistul label,
+#giftlist-modal-success form .giftlistul label,
+.giftlist-main form .address-form label,
+#giftlist-modal-success form .address-form label {
+    display: none;
+}
+
+.giftlist-main form .address-book-body,
+#giftlist-modal-success form .address-book-body,
+.giftlist-main form .therms-accept,
+#giftlist-modal-success form .therms-accept {
+    padding: 0 20px;
+}
+
+.giftlist-main form .therms-area,
+#giftlist-modal-success form .therms-area {
+    margin-top: 40px;
+}
+
+.giftlist-main form .therms-accept,
+#giftlist-modal-success form .therms-accept {
+    margin-top: 10px;
+}
+
+#therms-accept input[type=checkbox]+label:before {
+    background-color: #3F4444;
+    border-color: #3F4444;
+}
+
+#therms-accept input[type=checkbox]+label {
+    color: #000;
+}
+
+#therms-accept input[type=checkbox]:checked+label:before {
+    background-color: #E2544C;
+    border-color: #E2544C;
+}
+
+.giftlist-main form .address-book-title,
+#giftlist-modal-success form .address-book-title {
+    display: none;
+}
+
+.giftlist-main form .address-book-body h4,
+#giftlist-modal-success form .address-book-body h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.giftlist-main form a,
+#giftlist-modal-success form a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.giftlist-main form a:hover,
+#giftlist-modal-success form a:hover {
+    color: #666666;
+}
+
+.giftlist-main form .address-list-items,
+#giftlist-modal-success form .address-list-items {
+    margin-bottom: 30px;
+}
+
+.giftlist-main form .address-item,
+#giftlist-modal-success form .address-item {
+    padding: 0;
+    margin: 0;
+    height: 68px;
+}
+
+.giftlist-main form .address-item p.input,
+#giftlist-modal-success form .address-item p.input {
+    height: 68px;
+}
+
+.giftlist-main form .address-item .input label,
+#giftlist-modal-success form .address-item .input label {
+    display: block;
+}
+
+.giftlist-main form .address-item .link-box-select,
+#giftlist-modal-success form .address-item .link-box-select,
+.giftlist-main form .address-item .text-box-selected,
+#giftlist-modal-success form .address-item .text-box-selected {
+    visibility: hidden;
+}
+
+.giftlist-main form .address-list .address-edit,
+#giftlist-modal-success form .address-list .address-edit,
+.giftlist-main form .address-list .address-create,
+#giftlist-modal-success form .address-list .address-create {
+    width: 50%;
+    margin: 0;
+    display: inline;
+}
+
+.giftlist-main form .address-list .address-edit a,
+#giftlist-modal-success form .address-list .address-edit a,
+.giftlist-main form .address-list .address-create a,
+#giftlist-modal-success form .address-list .address-create a {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 9px;
+}
+
+.giftlist-main form h2,
+#giftlist-modal-success form h2 {
+    color: #E2544C;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.giftlist-main form input,
+#giftlist-modal-success form input,
+.giftlist-main form select,
+#giftlist-modal-success form select {
+    color: #278399;
+    background: #ffffff;
+    font-weight: bold;
+    border: 1px dashed #A4DBE8;
+    text-transform: uppercase;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    height: 40px;
+    font-size: 10px;
+}
+
+.giftlist-main form select,
+#giftlist-modal-success form select {
+    width: 98%;
+    height: 42px;
+}
+
+.giftlist-main form input.giftlisterror,
+#giftlist-modal-success form input.giftlisterror,
+.giftlist-main form textarea.giftlisterror,
+#giftlist-modal-success form textarea.giftlisterror,
+.giftlist-main form select.giftlisterror,
+#giftlist-modal-success form select.giftlisterror {
+    background: #FEE5E5;
+}
+
+.giftlist-main input:disabled,
+#giftlist-modal-success input:disabled,
+.giftlist-main input[disabled],
+#giftlist-modal-success input[disabled] {
+    background: #eee;
+}
+
+.giftlist-main form input::-webkit-input-placeholder,
+#giftlist-modal-success form input::-webkit-input-placeholder,
+.giftlist-main form textarea::-webkit-input-placeholder,
+#giftlist-modal-success form textarea::-webkit-input-placeholder {
+    color: #278399 !important;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.giftlist-main form input:-moz-placeholder,
+#giftlist-modal-success form input:-moz-placeholder,
+.giftlist-main form textarea:-moz-placeholder,
+#giftlist-modal-success form textarea:-moz-placeholder {
+    color: #278399 !important;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.giftlist-main form input::-moz-placeholder,
+#giftlist-modal-success form input::-moz-placeholder,
+.giftlist-main form textarea::-moz-placeholder,
+#giftlist-modal-success form textarea::-moz-placeholder {
+    color: #278399 !important;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.giftlist-main form input:-ms-input-placeholder,
+#giftlist-modal-success form input:-ms-input-placeholder,
+.giftlist-main form textarea:-ms-input-placeholder,
+#giftlist-modal-success form textarea:-ms-input-placeholder {
+    color: #278399 !important;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.giftlist-main form input[type=radio],
+#giftlist-modal-success form input[type=radio],
+.giftlist-main form input[type=checkbox],
+#giftlist-modal-success form input[type=checkbox] {
+    opacity: 0;
+    margin-right: -27px;
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+}
+
+.giftlist-main form input.giftlisterror[type=radio]+span,
+#giftlist-modal-success form input.giftlisterror[type=radio]+span,
+.giftlist-main form input.giftlisterror[type=radio]+label,
+#giftlist-modal-success form input.giftlisterror[type=radio]+label,
+.giftlist-main form input.giftlisterror[type=checkbox]+span,
+#giftlist-modal-success form input.giftlisterror[type=checkbox]+span,
+.giftlist-main form input.giftlisterror[type=checkbox]+label,
+#giftlist-modal-success form input.giftlisterror[type=checkbox]+label {
+    color: #E2544C;
+    font-weight: bold;
+}
+
+.giftlist-main form input[type=radio]+span:before,
+#giftlist-modal-success form input[type=radio]+span:before,
+.giftlist-main form input[type=radio]+label:before,
+#giftlist-modal-success form input[type=radio]+label:before,
+.giftlist-main form input[type=checkbox]+span:before,
+#giftlist-modal-success form input[type=checkbox]+span:before,
+.giftlist-main form input[type=checkbox]+label:before,
+#giftlist-modal-success form input[type=checkbox]+label:before {
+    content: "\00a0";
+    background-color: #E2544C;
+    display: inline-block;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #E2544C;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    visibility: visible;
+    box-shadow: none;
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.giftlist-main form input.giftlist-disabled-check[type=checkbox]+label:before,
+#giftlist-modal-success form input.giftlist-disabled-check[type=checkbox]+label:before {
+    background-color: #3F4444;
+    border: 1px solid #3F4444;
+}
+
+.giftlist-main form input[type=radio]:checked+span:before,
+#giftlist-modal-success form input[type=radio]:checked+span:before,
+.giftlist-main form input[type=radio]:checked+label:before,
+#giftlist-modal-success form input[type=radio]:checked+label:before,
+.giftlist-main form input[type=checkbox]:checked+span:before,
+#giftlist-modal-success form input[type=checkbox]:checked+span:before,
+.giftlist-main form input[type=checkbox]:checked+label:before,
+#giftlist-modal-success form input[type=checkbox]:checked+label:before {
+    content: "\2713";
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.giftlist-main .giftlist-field-centered,
+#giftlist-modal-success .giftlist-field-centered {
+    text-align: center;
+}
+
+.giftlist-main .giftlist-field-centered button,
+#giftlist-modal-success .giftlist-field-centered button {
+    margin: 0 3px 5px 3px;
+}
+
+.giftlist-main .address-form fieldset,
+#giftlist-modal-success .address-form fieldset {
+    margin-top: 20px;
+}
+
+.giftlist-main .giftlist-field,
+#giftlist-modal-success .giftlist-field,
+.giftlist-main .address-form fieldset p,
+#giftlist-modal-success .address-form fieldset p {
+    margin-bottom: 15px;
+}
+
+.giftlist-main .giftlist-field100,
+#giftlist-modal-success .giftlist-field100 {
+    width: 100%;
+}
+
+.giftlist-main .giftlist-field100 input,
+#giftlist-modal-success .giftlist-field100 input {
+    width: 90%;
+    padding: 0 5%;
+}
+
+.giftlist-main .giftlist-field50,
+#giftlist-modal-success .giftlist-field50,
+.giftlist-main .address-form fieldset p,
+#giftlist-modal-success .address-form fieldset p {
+    width: 50%;
+    float: left;
+}
+
+.giftlist-main .address-form fieldset p.ship-country,
+#giftlist-modal-success .address-form fieldset p.ship-country,
+.giftlist-main .address-form p.cancel-address-form:nth-of-type(1),
+#giftlist-modal-success .address-form p.cancel-address-form:nth-of-type(1),
+.giftlist-main .address-form fieldset p.ship-postal-code small,
+#giftlist-modal-success .address-form fieldset p.ship-postal-code small,
+.giftlist-main .address-form fieldset .error-list,
+#giftlist-modal-success .address-form fieldset .error-list,
+.giftlist-main .address-form p.ship-filled-data,
+#giftlist-modal-success .address-form p.ship-filled-data,
+.giftlist-main .address-form .ship-commercial.input.checkbox,
+#giftlist-modal-success .address-form .ship-commercial.input.checkbox {
+    display: none;
+    visibility: hidden;
+}
+
+.giftlist-main .address-form fieldset p.cancel-address-form,
+#giftlist-modal-success .address-form fieldset p.cancel-address-form {
+    clear: both;
+}
+
+.giftlist-main .address-form fieldset p.cancel-address-form,
+#giftlist-modal-success .address-form fieldset p.cancel-address-form,
+.giftlist-main .address-form fieldset p.btn-submit-wrapper,
+#giftlist-modal-success .address-form fieldset p.btn-submit-wrapper {
+    float: left;
+    text-align: center;
+}
+
+.giftlist-main .giftlist-field50-right,
+#giftlist-modal-success .giftlist-field50-right,
+.giftlist-main .address-form fieldset p.ship-street,
+#giftlist-modal-success .address-form fieldset p.ship-street,
+.giftlist-main .address-form fieldset p.ship-more-info,
+#giftlist-modal-success .address-form fieldset p.ship-more-info,
+.giftlist-main .address-form fieldset p.ship-city,
+#giftlist-modal-success .address-form fieldset p.ship-city,
+.giftlist-main .address-form fieldset p.ship-name,
+#giftlist-modal-success .address-form fieldset p.ship-name {
+    text-align: right;
+}
+
+.giftlist-main .giftlist-field50 input,
+#giftlist-modal-success .giftlist-field50 input,
+.giftlist-main .address-form fieldset p input,
+#giftlist-modal-success .address-form fieldset p input {
+    width: 77.5%;
+    padding: 0 10%;
+}
+
+.giftlist-main .action-area .form-action,
+#giftlist-modal-success .action-area .form-action {
+    margin-top: 10px;
+}
+
+.giftlist-main .action-area .form-action li,
+#giftlist-modal-success .action-area .form-action li {
+    display: inline;
+}
+
+.giftlist-main .action-area .form-action li.btn-voltar,
+#giftlist-modal-success .action-area .form-action li.btn-voltar {
+    margin-right: 5px;
+}
+
+.giftlist-main .action-area .form-action li.btn-voltar a,
+#giftlist-modal-success .action-area .form-action li.btn-voltar a {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.giftlist-main .giftlist-carousel,
+#giftlist-modal-success .giftlist-carousel {
+    clear: both;
+    background: url("/arquivos/giftlist-bg-steps.png") no-repeat center -35px;
+    padding: 60px 0 0 0;
+    min-height: 350px;
+}
+
+.giftlist-main .giftlist-carousel ul,
+#giftlist-modal-success .giftlist-carousel ul {
+    list-style: none;
+}
+
+.giftlist-main .giftlist-carousel ul li,
+#giftlist-modal-success .giftlist-carousel ul li {
+    float: left;
+    width: 25%;
+    margin: 0;
+    text-align: center;
+}
+
+.giftlist-main .giftlist-carousel ul.centered,
+#giftlist-modal-success .giftlist-carousel ul.centered {
+    text-align: center;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item-faded .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item-faded .giftlist-carousel-item-empty {
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1) !important;
+    -moz-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1) !important;
+    -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item-faded .giftlist-carousel-item-empty span,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item-faded .giftlist-carousel-item-empty span {
+    background: #F3F3F3 !important;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item-faded .giftlist-carousel-legend,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item-faded .giftlist-carousel-legend,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item-faded .giftlist-carousel-desc,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item-faded .giftlist-carousel-desc {
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+    -khtml-opacity: 0.3;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item-photo .giftlist-carousel-wrapper,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item-photo .giftlist-carousel-wrapper {
+    border: 8px solid #ffffff;
+    background-color: #ffffff;
+    background-size: cover;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 220px;
+    height: 220px;
+    display: block;
+    margin: 0 auto;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item {
+    position: relative;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item .giftlist-btn-default,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item .giftlist-btn-default {
+    padding: 5px 15px;
+    min-width: 50px;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item input,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item input {
+    padding: 0;
+    height: auto;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.centered,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.centered {
+    float: none;
+    display: inline-block;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty {
+    min-height: 220px;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty span,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty span {
+    background: #D8D8D8;
+    text-transform: uppercase;
+    color: #ffffff;
+    height: 100%;
+    min-height: 220px;
+    display: block;
+    line-height: 220px;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-file-selected span,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-file-selected span {
+    background: #99D18A;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item input[type=radio]+label:before,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item input[type=radio]+label:before {
+    display: none;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item input[type=radio]:checked+label:before,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item input[type=radio]:checked+label:before {
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    top: 15px;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item input[type=radio]:checked+label img,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item input[type=radio]:checked+label img,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item input[type=radio]:checked+label.giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item input[type=radio]:checked+label.giftlist-carousel-item-empty {
+    background: #E2544C;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item img,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item img,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty {
+    max-width: 220px;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    background: #ffffff;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(1) img,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(1) img,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(1) .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(1) .giftlist-carousel-item-empty,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(1) .giftlist-carousel-wrapper,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(1) .giftlist-carousel-wrapper,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-1 img,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-1 img,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-1 .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-1 .giftlist-carousel-item-empty,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-1 .giftlist-carousel-wrapper,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-1 .giftlist-carousel-wrapper {
+    -moz-transform: rotate(-2.5deg);
+    -ms-transform: rotate(-2.5deg);
+    -o-transform: rotate(-2.5deg);
+    -webkit-transform: rotate(-2.5deg);
+    transform: rotate(-2.5deg);
+    -webkit-backface-visibility: hidden;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(2) img,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(2) img,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(2) .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(2) .giftlist-carousel-item-empty,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(2) .giftlist-carousel-wrapper,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(2) .giftlist-carousel-wrapper,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-2 img,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-2 img,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-2 .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-2 .giftlist-carousel-item-empty,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-2 .giftlist-carousel-wrapper,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-2 .giftlist-carousel-wrapper {
+    -moz-transform: rotate(2.5deg);
+    -ms-transform: rotate(2.5deg);
+    -o-transform: rotate(2.5deg);
+    -webkit-transform: rotate(2.5deg);
+    transform: rotate(2.5deg);
+    -webkit-backface-visibility: hidden;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(3) img,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(3) img,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(3) .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(3) .giftlist-carousel-item-empty,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(3) .giftlist-carousel-wrapper,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(3) .giftlist-carousel-wrapper,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-3 img,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-3 img,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-3 .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-3 .giftlist-carousel-item-empty,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-3 .giftlist-carousel-wrapper,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-3 .giftlist-carousel-wrapper {
+    -moz-transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    -webkit-backface-visibility: hidden;
+}
+
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(4) img,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(4) img,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(4) .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(4) .giftlist-carousel-item-empty,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(4) .giftlist-carousel-wrapper,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item:nth-of-type(4) .giftlist-carousel-wrapper,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-4 img,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-4 img,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-4 .giftlist-carousel-item-empty,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-4 .giftlist-carousel-item-empty,
+.giftlist-main .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-4 .giftlist-carousel-wrapper,
+#giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item.giftlist-carousel-item-4 .giftlist-carousel-wrapper {
+    -moz-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+    -webkit-backface-visibility: hidden;
+}
+
+.giftlist-main .giftlist-carousel ul li:first-child,
+#giftlist-modal-success .giftlist-carousel ul li:first-child {
+    margin-left: 0;
+}
+
+.giftlist-main .giftlist-carousel ul li:last-child,
+#giftlist-modal-success .giftlist-carousel ul li:last-child {
+    margin-right: 0;
+}
+
+.giftlist-main .giftlist-carousel ul li .giftlist-carousel-legend,
+#giftlist-modal-success .giftlist-carousel ul li .giftlist-carousel-legend {
+    font-family: 'Yesteryear', cursive;
+    font-size: 14px;
+    display: block;
+    line-height: 35px;
+    margin: 10px auto 0 auto;
+}
+
+.giftlist-main .giftlist-carousel ul li textarea.giftlist-carousel-legend,
+#giftlist-modal-success .giftlist-carousel ul li textarea.giftlist-carousel-legend {
+    text-align: center;
+    font-family: 'Open Sans', 'AvertaStd';
+    width: 80%;
+    height: 50px;
+    text-transform: none;
+    color: #278399;
+    font-weight: normal;
+    border: 1px dashed #A4DBE8;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    font-size: 12px;
+    padding: 3px;
+    margin: 10px auto 0 auto;
+    line-height: inherit;
+}
+
+.giftlist-main .giftlist-carousel ul li .giftlist-carousel-desc,
+#giftlist-modal-success .giftlist-carousel ul li .giftlist-carousel-desc {
+    display: block;
+    margin: 0 auto;
+    line-height: 22px;
+    font-size: 11px;
+}
+
+.giftlist-main .giftlist-carousel ul li .giftlist-carousel-desc span,
+#giftlist-modal-success .giftlist-carousel ul li .giftlist-carousel-desc span {
+    font-weight: bold;
+    color: #E2544C;
+}
+
+.giftlist-main .giftlist-carousel p,
+#giftlist-modal-success .giftlist-carousel p {
+    text-align: center;
+    clear: both;
+    padding-top: 40px;
+}
+
+.giftlist-main .giftlist-carousel .giftlist-btn-default,
+#giftlist-modal-success .giftlist-carousel .giftlist-btn-default {
+    padding: 15px 35px;
+    font-size: 14px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    min-width: 160px;
+}
+
+.giftlist-main .giftlist-suggestions h3,
+#giftlist-modal-success .giftlist-suggestions h3 {
+    text-align: center;
+    margin: 70px auto 40px auto;
+}
+
+.giftlist-main .giftlist-suggestions .giftlist-categories,
+#giftlist-modal-success .giftlist-suggestions .giftlist-categories {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.giftlist-main .giftlist-suggestions .giftlist-categories div,
+#giftlist-modal-success .giftlist-suggestions .giftlist-categories div {
+    float: left;
+    position: relative;
+    background: #333;
+    transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+}
+
+.giftlist-main .giftlist-suggestions .giftlist-categories img,
+#giftlist-modal-success .giftlist-suggestions .giftlist-categories img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.giftlist-main .giftlist-suggestions .giftlist-categories img:hover,
+#giftlist-modal-success .giftlist-suggestions .giftlist-categories img:hover {
+    opacity: 0.5;
+}
+
+.giftlist-main .giftlist-suggestions .giftlist-col100,
+#giftlist-modal-success .giftlist-suggestions .giftlist-col100 {
+    width: 100%;
+}
+
+.giftlist-main .giftlist-suggestions .giftlist-col50,
+#giftlist-modal-success .giftlist-suggestions .giftlist-col50 {
+    width: 50%;
+}
+
+.giftlist-main .giftlist-suggestions .giftlist-col40,
+#giftlist-modal-success .giftlist-suggestions .giftlist-col40 {
+    width: 40%;
+}
+
+.giftlist-main .giftlist-suggestions .giftlist-col20,
+#giftlist-modal-success .giftlist-suggestions .giftlist-col20 {
+    width: 20%;
+}
+
+.giftlist-main .giftlist-products-list,
+#giftlist-modal-success .giftlist-products-list {
+    clear: both;
+}
+
+.giftlist-main .giftlist-products-list .no-product,
+#giftlist-modal-success .giftlist-products-list .no-product {
+    text-align: center;
+    color: #E2544C;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.giftlist-main .giftlist-products-list .giftlist-products-list-description,
+#giftlist-modal-success .giftlist-products-list .giftlist-products-list-description {
+    text-align: center;
+}
+
+.giftlist-main .giftlist-product-back,
+#giftlist-modal-success .giftlist-product-back {
+    text-align: center;
+}
+
+.giftlist-main .giftlist-product-back .giftlist-btn-default,
+#giftlist-modal-success .giftlist-product-back .giftlist-btn-default {
+    display: inline-block;
+    outline: none;
+    margin: 20px 5px;
+}
+
+.giftlist-main #nomeOrganizador,
+#giftlist-modal-success #nomeOrganizador {
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px 0 0 15px;
+    border: 1px dashed #ccc;
+    padding: 3px;
+}
+
+.giftlist-main .nome-search-ok,
+#giftlist-modal-success .nome-search-ok {
+    height: 39px;
+    background: #fff;
+    border: 1px dashed #ccc;
+    border-radius: 0 15px 15px 0;
+    background-color: #E2544C;
+    color: #fff;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.giftlist-modal-content th.giftlist-header-codigo,
+.giftlist-modal-content td.giftlist-body-codigo {
+    display: none;
+}
+
+table.giftlist-table {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.giftlist-main .giftlist-table-txt,
+#giftlist-modal-success .giftlist-table-txt {
+    margin-top: 15px;
+}
+
+tbody.giftlist-body tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.giftlist-table {
+    border-spacing: 0;
+    border-collapse: 0;
+}
+
+.giftlist-header tr>th {
+    color: #E2544C;
+    border: 1px dashed #ccc;
+    margin: 0;
+    padding: 3px 0;
+    border-left: none;
+}
+
+.giftlist-header tr>th:nth-child(3) {
+    border-left: 1px dashed #ccc;
+}
+
+.giftlist-body tr>td {
+    padding: 10px 0;
+}
+
+.giftlist-body tr:hover {
+    color: #E2544C;
+}
+
+.loading-lista {
+    background: #ffffff url("/arquivos/giftlist-ajax-loader.gif") no-repeat left center;
+}
+
+#giftlist-intro {
+    background: url("/arquivos/giftlist-bg-intro.png") no-repeat top center;
+    width: 100%;
+}
+
+#giftlist-intro .giftlist-clouds {
+    background: url("/arquivos/giftlist-clouds.png") no-repeat top center;
+    width: 100%;
+    height: 391px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 4;
+}
+
+#giftlist-intro h2 {
+    margin: 20px auto 35px auto;
+    background: url("/arquivos/gitflist-title-intro.png") no-repeat center center;
+    width: 342px;
+    height: 342px;
+    background-size: 342px 342px;
+    overflow: hidden;
+    color: transparent;
+    text-indent: -999999px;
+    float: none;
+}
+
+#giftlist-intro .giftlist-intro-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#giftlist-intro .giftlist-intro-description h3 {
+    margin: 0 0 20px 0;
+}
+
+#giftlist-intro .giftlist-intro-description p {
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+
+#giftlist-intro .giftlist-intro-description .giftlist-intro-description-step {
+    font-weight: bold;
+}
+
+#giftlist-intro .giftlist-intro-description .giftlist-intro-description-step span {
+    color: #E2544C;
+}
+
+#giftlist-intro .giftlist-steps {
+    background: url("/arquivos/giftlist-bg-steps.png") no-repeat center -35px;
+    padding: 60px 0 0 0;
+}
+
+#giftlist-intro .giftlist-steps ul {
+    list-style: none;
+}
+
+#giftlist-intro .giftlist-steps ul li {
+    float: left;
+    width: 25%;
+    margin: 0;
+    text-align: center;
+}
+
+#giftlist-intro .giftlist-steps ul li:first-child {
+    margin-left: 0;
+}
+
+#giftlist-intro .giftlist-steps ul li:last-child {
+    margin-right: 0;
+}
+
+#giftlist-intro .giftlist-steps ul li .giftlist-steps-legend {
+    font-family: 'Yesteryear', cursive;
+    font-size: 30px;
+    display: block;
+    line-height: 35px;
+}
+
+#giftlist-intro .giftlist-steps ul li:nth-of-type(3) .giftlist-steps-legend {
+    margin-top: -7px;
+}
+
+#giftlist-intro .giftlist-steps ul li .giftlist-steps-desc {
+    display: block;
+    margin: 0 auto;
+    line-height: 22px;
+}
+
+#giftlist-intro .giftlist-steps ul li:nth-of-type(1) .giftlist-steps-desc {
+    max-width: 185px;
+}
+
+#giftlist-intro .giftlist-steps ul li:nth-of-type(2) .giftlist-steps-desc {
+    max-width: 205px;
+}
+
+#giftlist-intro .giftlist-steps ul li:nth-of-type(3) .giftlist-steps-desc {
+    max-width: 270px;
+}
+
+#giftlist-intro .giftlist-steps ul li:nth-of-type(4) .giftlist-steps-desc {
+    max-width: 240px;
+}
+
+#giftlist-intro .giftlist-steps ul li .giftlist-steps-desc span {
+    font-weight: bold;
+    color: #E2544C;
+}
+
+#giftlist-intro .giftlist-steps p {
+    text-align: center;
+    clear: both;
+    padding-top: 60px;
+}
+
+#giftlist-intro .giftlist-steps .giftlist-btn-default {
+    padding: 15px 35px;
+    font-size: 14px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+}
+
+#giftlist-intro .giftlist-benefits {
+    width: 100%;
+    height: 540px;
+    min-height: 540px;
+    max-height: 540px;
+    background: #E8FBFF url("/arquivos/giftlist-bg-benefits.png") no-repeat 0 0;
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+#giftlist-intro .giftlist-benefits ul {
+    height: 100%;
+    list-style: none;
+}
+
+#giftlist-intro .giftlist-benefits ul li {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 20px;
+    color: #E2544C;
+    font-weight: 100;
+}
+
+#giftlist-intro .giftlist-benefits ul li:nth-of-type(1),
+#giftlist-intro .giftlist-benefits ul li:nth-of-type(3) {
+    margin-left: 50%;
+}
+
+#giftlist-intro .giftlist-benefits ul li:nth-of-type(2),
+#giftlist-intro .giftlist-benefits ul li:nth-of-type(4) {
+    margin-right: 0;
+}
+
+#giftlist-intro .giftlist-benefits ul li span {
+    display: block;
+    height: 85px;
+}
+
+#giftlist-intro .giftlist-benefits ul li:nth-of-type(1) span,
+#giftlist-intro .giftlist-benefits ul li:nth-of-type(2) span {
+    margin-top: 100px;
+}
+
+#giftlist-intro .giftlist-benefits ul li:nth-of-type(3) span,
+#giftlist-intro .giftlist-benefits ul li:nth-of-type(4) span {
+    margin-top: 35px;
+}
+
+#giftlist-intro .giftlist-benefits ul li span img {
+    display: block;
+    margin: 0 auto;
+}
+
+#giftlist-intro .giftlist-footer-create-list.giftlist-footer-create-list-show {
+    display: block;
+}
+
+#giftlist-intro .giftlist-footer-create-list.giftlist-footer-create-list-hide {
+    display: block;
+}
+
+#elCentralClient {
+    display: none !important;
+    visibility: hidden;
+}
+
+#giftlist-intro .giftlist-footer-create-list {
+    background-color: #404445;
+    padding: 10px 0;
+    color: #ffffff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+#giftlist-intro .giftlist-footer-create-list h4,
+#giftlist-intro .giftlist-footer-create-list h5 {
+    margin: 0;
+    padding: 0;
+    width: 33.33%;
+    display: block;
+    float: left;
+    font-weight: 100;
+    line-height: 55px;
+}
+
+#giftlist-intro .giftlist-footer-create-list h4 a,
+#giftlist-intro .giftlist-footer-create-list h5 a {
+    margin-left: 10px;
+    display: inline;
+}
+
+#giftlist-intro .giftlist-footer-create-list h4 {
+    text-align: right;
+    font-size: 20px;
+}
+
+#giftlist-intro .giftlist-footer-create-list h5 {
+    text-align: center;
+    font-size: 14px;
+    line-height: 57px;
+    width: 33.33%;
+    position: relative;
+}
+
+#giftlist-intro .giftlist-footer-create-list h5:before {
+    content: "";
+    width: 1px;
+    height: 56px;
+    background: #666;
+    display: block;
+    position: absolute;
+    left: 36px;
+}
+
+#giftlist-intro .giftlist-footer-create-list h5.possui-lista:before {
+    left: 36px;
+}
+
+#giftlist-intro .giftlist-footer-create-list h5.encontre-lista:before {
+    left: -25px;
+}
+
+footer.footer {
+    margin-top: 0 !important;
+    margin-bottom: 90px !important;
+}
+
+@media (max-width: 525px) {
+    .giftlist-main .giftlist-screen-only,
+    #giftlist-modal-success .giftlist-screen-only {
+        display: none;
+    }
+    .giftlist-main h3,
+    #giftlist-modal-success h3 {
+        font-size: 30px !important;
+    }
+    #giftlist-intro {
+        background-position: 45% 0;
+    }
+    #giftlist-intro h2 {
+        margin: 40px auto 20px auto;
+        width: 242px;
+        height: 242px;
+        background-size: 242px 242px;
+    }
+    #giftlist-intro .giftlist-steps {
+        padding-top: 10px;
+    }
+    #giftlist-intro .giftlist-steps ul li {
+        margin: 0 auto 20px auto;
+        width: 49%;
+    }
+    #giftlist-intro .giftlist-steps ul li:nth-of-type(2),
+    #giftlist-intro .giftlist-steps ul li:nth-of-type(4) {
+        float: right;
+    }
+    #giftlist-intro .giftlist-steps ul li img {
+        width: 100%;
+        height: auto;
+    }
+    #giftlist-intro .giftlist-steps ul li .giftlist-steps-legend {
+        font-size: 28px;
+        min-height: 70px;
+    }
+    #giftlist-intro .giftlist-steps ul li:nth-of-type(3) .giftlist-steps-legend {
+        margin-top: 0;
+    }
+    #giftlist-intro .giftlist-steps ul li .giftlist-steps-desc {
+        display: none;
+    }
+    #giftlist-intro .giftlist-steps p {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .giftlist-main .giftlist-suggestions h3,
+    #giftlist-modal-success .giftlist-suggestions h3 {
+        margin: 20px auto;
+    }
+    .giftlist-main .giftlist-suggestions .giftlist-col40,
+    #giftlist-modal-success .giftlist-suggestions .giftlist-col40 {
+        width: 100%;
+    }
+    #giftlist-intro .giftlist-footer-create-list h4,
+    #giftlist-intro .giftlist-footer-create-list h5 {
+        font-size: 12px;
+        width: 100%;
+        line-height: 30px;
+        margin: 20px 0 0;
+        padding: 0;
+        border: none;
+        color: transparent;
+        text-align: center;
+    }
+    #giftlist-intro .giftlist-footer-create-list h4 span,
+    #giftlist-intro .giftlist-footer-create-list h5 span {
+        display: none;
+        visibility: hidden;
+    }
+    #giftlist-intro .giftlist-footer-create-list h4 a,
+    #giftlist-intro .giftlist-footer-create-list h5 a {
+        padding: 5px 10px;
+        margin: 0 10px;
+        display: block;
+    }
+    #elCentral {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 526px) and (max-width: 665px) {
+    #giftlist-intro {
+        background-position: 40% 0;
+    }
+}
+
+@media (min-width: 666px) and (max-width: 767px) {
+    #giftlist-intro {
+        background-position: 34% 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 949px) {
+    #giftlist-intro {
+        background-position: 54% 0;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1189px) {
+    #giftlist-intro {
+        background-position: 44% 0;
+    }
+}
+
+@media (min-width: 526px) and (max-width: 1189px) {
+    #giftlist-intro h2 {
+        margin: 40px auto 20px auto;
+    }
+    #giftlist-intro .giftlist-steps {
+        padding-top: 10px;
+    }
+    #giftlist-intro .giftlist-steps ul li {
+        margin: 0 auto 20px auto;
+        width: 49%;
+    }
+    #giftlist-intro .giftlist-steps ul li:nth-of-type(2),
+    #giftlist-intro .giftlist-steps ul li:nth-of-type(4) {
+        float: right;
+    }
+    #giftlist-intro .giftlist-steps ul li img {
+        width: 100%;
+        max-width: 259px;
+        height: auto;
+    }
+    #giftlist-intro .giftlist-steps ul li .giftlist-steps-legend {
+        font-size: 28px;
+        min-height: 70px;
+    }
+    #giftlist-intro .giftlist-steps ul li:nth-of-type(3) .giftlist-steps-legend {
+        margin-top: 0;
+    }
+    #giftlist-intro .giftlist-steps ul li .giftlist-steps-desc {
+        display: none;
+    }
+    #giftlist-intro .giftlist-steps p {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .giftlist-main .giftlist-suggestions .giftlist-col20,
+    #giftlist-modal-success .giftlist-suggestions .giftlist-col20 {
+        display: none;
+    }
+    .giftlist-main .giftlist-suggestions .giftlist-col40,
+    #giftlist-modal-success .giftlist-suggestions .giftlist-col40 {
+        width: 50%;
+    }
+    #giftlist-intro .giftlist-footer-create-list h4,
+    #giftlist-intro .giftlist-footer-create-list h5 {
+        font-size: 12px;
+        width: 33.33%;
+        line-height: 30px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        color: transparent;
+        text-align: center;
+    }
+    #giftlist-intro .giftlist-footer-create-list h4 span,
+    #giftlist-intro .giftlist-footer-create-list h5 span {
+        display: none;
+        visibility: hidden;
+    }
+    #giftlist-intro .giftlist-footer-create-list h4 a,
+    #giftlist-intro .giftlist-footer-create-list h5 a {
+        padding: 5px 10px;
+        margin: 0 10px;
+        display: block;
+    }
+    #giftlist-intro .giftlist-footer-create-list h5.possui-lista:before {
+        width: 0;
+    }
+    #giftlist-intro .giftlist-footer-create-list h5.encontre-lista:before {
+        width: 0;
+    }
+    #elCentral {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1189px) {
+    #giftlist-intro .giftlist-steps {
+        padding-top: 80px;
+    }
+    #giftlist-intro .giftlist-steps ul li {
+        margin: 0 auto 10px auto;
+        width: 25%;
+    }
+    #giftlist-intro .giftlist-steps ul li:nth-of-type(2),
+    #giftlist-intro .giftlist-steps ul li:nth-of-type(4) {
+        float: left;
+    }
+    #giftlist-intro .giftlist-steps p {
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+    .giftlist-main .giftlist-suggestions .giftlist-col20,
+    #giftlist-modal-success .giftlist-suggestions .giftlist-col20 {
+        display: block;
+    }
+    .giftlist-main .giftlist-suggestions .giftlist-col40,
+    #giftlist-modal-success .giftlist-suggestions .giftlist-col40 {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1000px) {
+    #giftlist-intro .giftlist-steps ul li .giftlist-screen-only {
+        display: block;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+    #giftlist-intro .giftlist-benefits {
+        background-position: 75% 0;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1189px) {
+    #giftlist-intro .giftlist-benefits {
+        background-position: -150px 0;
+    }
+}
+
+@media (min-width: 1190px) and (max-width: 1700px) {
+    #giftlist-intro .giftlist-benefits {
+        background-position: 25% 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #giftlist-intro .giftlist-benefits ul li {
+        font-size: 18px;
+    }
+    #giftlist-intro .giftlist-benefits ul li:nth-of-type(1),
+    #giftlist-intro .giftlist-benefits ul li:nth-of-type(2),
+    #giftlist-intro .giftlist-benefits ul li:nth-of-type(3),
+    #giftlist-intro .giftlist-benefits ul li:nth-of-type(4) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 50%;
+    }
+    #giftlist-intro .giftlist-benefits ul li:nth-of-type(1) span,
+    #giftlist-intro .giftlist-benefits ul li:nth-of-type(2) span {
+        margin-top: 60px;
+    }
+    #giftlist-intro .giftlist-benefits ul li:nth-of-type(3) span,
+    #giftlist-intro .giftlist-benefits ul li:nth-of-type(4) span {
+        margin-top: 70px;
+    }
+    #giftlist-intro .giftlist-footer-create-list h4 a,
+    #giftlist-intro .giftlist-footer-create-list h5 a {
+        line-height: 15px;
+    }
+    #giftlist-intro .giftlist-footer-create-list h5.possui-lista:before {
+        width: 0;
+    }
+    #giftlist-intro .giftlist-footer-create-list h5.encontre-lista:before {
+        width: 0;
+    }
+}
+
+#giftlist-create .giftlist-tab,
+#giftlist-create .giftlist-tab-submit,
+#members-box {
+    display: none;
+}
+
+#giftlist-create .giftlist-tab-active {
+    display: block;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+    #giftlist-create .giftlist-field100 input {
+        width: 88%;
+        padding: 0 6%;
+    }
+    #giftlist-create .giftlist-field50 input,
+    #giftlist-create .address-form fieldset p input {
+        width: 76%;
+        padding: 0 11%;
+    }
+    #giftlist-create form .address-book-body,
+    #giftlist-create form .therms-accept {
+        padding: 0;
+    }
+}
+
+#giftlist-manage .giftlistmanager .giftlist-action,
+#giftlist-manage .giftlistmanager .glmanager-type h2,
+#giftlist-manage .giftlistmanager .giftlist-table .giftlist-header,
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-desired,
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-purchased,
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action .action-share,
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action .action-buy,
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action .action-view,
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action .action-edit,
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action .action-delete {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlist-manage .giftlist-manager-message {
+    text-transform: uppercase;
+    text-align: center;
+    color: #E2544C;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#giftlist-manage .giftlist-empty-list {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table {
+    width: 100%;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody tr {
+    background: #ffffff;
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-image {
+    display: block;
+    float: left;
+    width: 100%;
+    max-width: 110px;
+    margin-right: 10px;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-image img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-name,
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-member,
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-eventdate {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    float: left;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-name {
+    line-height: 25px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-name:before {
+    content: '';
+    background: url("/arquivos/giftlist-icon-baby.gif") no-repeat center left;
+    width: 24px;
+    height: 19px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-name a {
+    color: #E2544C;
+    text-transform: uppercase;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-member {
+    text-transform: uppercase;
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-member:before {
+    content: '';
+    background: url("/arquivos/giftlist-icon-member.gif") no-repeat center left;
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 8px 0 3px;
+    vertical-align: middle;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-eventdate {
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-eventdate:before {
+    content: '';
+    background: url("/arquivos/giftlist-icon-date.gif") no-repeat center left;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin: 0 6px 0 1px;
+    vertical-align: middle;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action {
+    display: block;
+    width: 170px;
+    height: 100%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action ul {
+    list-style: none;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action ul li {
+    margin-bottom: 10px;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action ul li a {
+    display: block;
+    padding: 10px;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody .giftlist-body-edit-delete {
+    padding-top: 20px;
+    display: block;
+    clear: both;
+}
+
+#giftlist-manage .giftlistmanager .giftlist-table tbody .giftlist-body-edit-delete a {
+    color: #000000;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+#giftlist-modal-success {
+    z-index: 200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    background: rgba(0, 0, 0, 0.8);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+#giftlist-modal-success>.giftlist-modal-body {
+    background: #ffffff;
+    width: 50%;
+    margin: 10% auto 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    /*     -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+    transform: rotate(1deg); */
+}
+
+#giftlist-modal-success>.giftlist-modal-body>.giftlist-modal-close {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    vertical-align: middle;
+    font-family: 'Open Sans', 'AvertaStd';
+}
+
+#giftlist-modal-success>.giftlist-modal-body>.giftlist-modal-content {
+    /*     -moz-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg); */
+    text-align: center;
+    overflow: auto;
+    max-height: 500px;
+}
+
+#giftlist-modal-success>.giftlist-modal-body>.giftlist-modal-content>h4 {
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px 0 20px 0;
+}
+
+#giftlist-modal-success>.giftlist-modal-body>.giftlist-modal-content>h4 span {
+    color: #E2544C;
+    font-weight: bold;
+}
+
+#giftlist-modal-success>.giftlist-modal-body>.giftlist-modal-content>p .giftlist-btn-default {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@media (max-width: 545px) {
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-image {
+        width: 20%;
+    }
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-name,
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-member,
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-eventdate {
+        display: inline-block;
+        width: 75%;
+        vertical-align: top;
+    }
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+    }
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action ul {
+        text-align: center;
+    }
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action ul li {
+        display: inline;
+        margin: 0 5px;
+    }
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action ul li a {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+    #giftlist-manage .giftlistmanager .giftlist-table tbody .giftlist-body-edit-delete {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1100px) {
+    #giftlist-manage .giftlistmanager .giftlist-table tbody tr {
+        padding: 20px 0;
+    }
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action {
+        right: 0;
+    }
+}
+
+@media (min-width: 546px) and (max-width: 1250px) {
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action {
+        width: 25%;
+    }
+    #giftlist-manage .giftlistmanager .giftlist-table tbody td.giftlist-body-action .giftlist-btn-default {
+        font-size: 9px;
+    }
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-description,
+#giftlist-product .giftlistinfo .giftlistinfo-actions,
+#giftlist-product .giftlistinfo .giftlistinfo-members,
+#giftlist-product .giftlistinfo .giftlistinfo-image,
+#giftlist-product .giftlistinfo .giftlistinfo-link,
+#giftlist-product .giftlistinfo .giftlistinfo-event ul li.location {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlist-product .giftlist-content {
+    padding-bottom: 0;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-title,
+#giftlist-product .giftlistinfo .giftlistinfo-event {
+    display: none;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event {
+    background: #ffffff;
+    padding: 20px;
+    max-width: 380px;
+    margin: 20px auto 20px auto;
+    text-align: left;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>.giftlistinfo-event-img {
+    width: 100%;
+    max-width: 110px;
+    margin-right: 10px;
+    float: left;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>.giftlistinfo-event-img>img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>.event-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>ul>li.baby_name {
+    line-height: 25px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>ul>li.baby_name:before {
+    content: '';
+    background: url("/arquivos/giftlist-icon-baby.gif") no-repeat center left;
+    width: 24px;
+    height: 19px;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>ul>li.baby_name>span {
+    color: #E2544C;
+    text-transform: uppercase;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>ul>li.city {
+    line-height: 25px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>ul>li.city:before {
+    content: '';
+    background: url("/arquivos/giftlist-icon-city.gif") no-repeat center left;
+    width: 17px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 9px 0 3px;
+    vertical-align: middle;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>ul>li.date {
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+#giftlist-product .giftlistinfo .giftlistinfo-event>ul>li.date:before {
+    content: '';
+    background: url("/arquivos/giftlist-icon-date.gif") no-repeat center left;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin: 0 6px 0 0;
+    vertical-align: middle;
+}
+
+#giftlistproduct table.giftlistproductsv2 thead,
+#giftlistproduct .giftlist-remove-sku {
+    display: none !important;
+    visibility: hidden;
+}
+
+.giftlist-product-btns {
+    text-align: center;
+    height: 37px;
+    margin: 20px 0;
+}
+
+.giftlist-product-btns a {
+    margin: 0 5px;
+}
+
+#giftlistproduct {
+    margin-top: 40px;
+    z-index: 200;
+    position: relative;
+}
+
+#giftlistproduct .giftlistproductsv2-loading {
+    text-indent: -999999px;
+}
+
+#giftlistproduct button.giftlist-salvar-favs {
+    margin: 0 auto;
+    display: block;
+    /* &:first-child {
+  			margin-bottom: 20px;
+  		}
+
+  		&:last-child {
+  			margin-top: 20px;
+  		} */
+}
+
+#giftlistproduct table.giftlistproductsv2 {
+    width: 100%;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr {
+    display: inline-table;
+    vertical-align: top;
+    margin: 10px 8px;
+    width: 17.3%;
+    height: 100%;
+    max-height: 260px;
+    padding: 0 5px;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td {
+    display: block;
+    text-align: center;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.image {
+    position: relative;
+    background: #ffffff;
+    padding: 5px;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.image .giftlist-icon-nofav,
+#giftlistproduct table.giftlistproductsv2 tr td.image .giftlist-icon-isfav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 17px;
+    height: 14px;
+    text-indent: -999999px;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.image .giftlist-icon-nofav {
+    background: url("/arquivos/giftlist-icon-nofav.png") no-repeat top left;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.image .giftlist-icon-isfav {
+    background: url("/arquivos/giftlist-icon-isfav.png") no-repeat top left;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.name a.urlproduct {
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 10px;
+    height: 55px;
+    max-height: 55px;
+    overflow: hidden;
+    display: block;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.name a.urlproduct:hover {
+    text-decoration: underline;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.price {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.wished {
+    display: block;
+    margin-top: 10px;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.wished input {
+    width: 40px;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.wished a.giftlist-delete-sku {
+    margin-left: 10px;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td a.inputedit,
+#giftlistproduct table.giftlistproductsv2 tr td a.giftlist-delete-sku,
+#giftlistproduct table.giftlistproductsv2 tr td.purchased {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#giftlistproduct table.giftlistproductsv2 tr td.actions,
+#giftlistproduct table.giftlistproductsv2 tr td.checkuncheck {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlistproduct .ko-grid-pageLinks {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#giftlistproduct .ko-grid-pageLinks span:first-child {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlistproduct .ko-grid-pageLinks .giftlist-btn-circle {
+    display: inline-block;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    vertical-align: middle;
+    margin: 0 3px;
+    line-height: 30px;
+}
+
+#giftlistproduct .ko-grid-pageLinks .giftlist-btn-circle.selected {
+    background-color: #D34E47;
+}
+
+#giftlistproduct .ko-grid-pageLinks a:hover {
+    color: #ffffff;
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+    #giftlist-product .giftlistinfo .giftlistinfo-event {
+        padding: 0;
+    }
+    #giftlist-product .giftlistinfo .giftlistinfo-event .giftlistinfo-event-img {
+        width: 20%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 470px) {
+    #giftlistproduct table.giftlistproductsv2 tr td.image img {
+        width: 60%;
+        height: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+    #giftlistproduct table.giftlistproductsv2 tr {
+        width: 45%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #giftlistproduct table.giftlistproductsv2 tr:nth-child(even) {
+        float: right;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1065px) {
+    #giftlistproduct table.giftlistproductsv2 tr {
+        width: 16.7%;
+    }
+}
+
+@media (min-width: 1066px) and (max-width: 1093px) {
+    #giftlistproduct table.giftlistproductsv2 tr {
+        width: 16.9%;
+    }
+}
+
+@media (min-width: 1094px) and (max-width: 1177px) {
+    #giftlistproduct table.giftlistproductsv2 tr {
+        width: 17%;
+    }
+}
+
+@media (min-width: 1178px) and (max-width: 1222px) {
+    #giftlistproduct table.giftlistproductsv2 tr {
+        width: 17.2%;
+    }
+}
+
+#giftlist-customize .giftlist-content {
+    padding-bottom: 0;
+}
+
+#giftlist-customize .giftlist-content .giftlist-content-description {
+    margin-bottom: 0;
+}
+
+#giftlist-customize .errormessage,
+#giftlist-customize .successmessage {
+    margin-top: 20px;
+}
+
+#giftlist-customize .giftlist-steps-customize {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#giftlist-customize .giftlist-steps-customize>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: url("/arquivos/giftlist-arrow-top.png") no-repeat top center;
+}
+
+#giftlist-customize .giftlist-steps-customize>ul.giftlist-steps-customize-wrapper {
+    background: none;
+    width: 48%;
+    margin: -80px auto 0 auto;
+}
+
+#giftlist-customize .giftlist-steps-customize>ul.giftlist-steps-customize-wrapper .giftlist-steps-customize-item {
+    width: 100%;
+}
+
+#giftlist-customize .giftlist-steps-customize>ul.giftlist-steps-customize-wrapper .giftlist-steps-customize-item:first-child {
+    background: url("/arquivos/giftlist-arrow-left.png") no-repeat top left;
+}
+
+#giftlist-customize .giftlist-steps-customize>ul.giftlist-steps-customize-wrapper .giftlist-steps-customize-item:last-child {
+    background: url("/arquivos/giftlist-arrow-down.png") no-repeat top right;
+}
+
+#giftlist-customize .giftlist-steps-customize>ul.giftlist-steps-customize-wrapper .giftlist-steps-customize-item textarea[name="history"] {
+    margin: 20px auto 0 auto;
+    display: block;
+    width: 80%;
+    height: 100px;
+    text-transform: none;
+    color: #278399;
+    font-weight: normal;
+    border: 1px dashed #A4DBE8;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    font-size: 12px;
+    padding: 5px;
+}
+
+#giftlist-customize .giftlist-steps-customize>ul.giftlist-steps-customize-wrapper .giftlist-steps-customize-item .giftlist-steps-customize-item-desc {
+    width: 80%;
+    display: block;
+    text-transform: initial;
+    color: #000000;
+    font-weight: normal;
+    margin: 15px auto 0 auto;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 49%;
+    color: #E2544C;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item:last-child {
+    padding-top: 40px;
+    background: url("/arquivos/giftlist-arrow-right.png") no-repeat top right;
+    width: 100%;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item .giftlist-btn-circle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    vertical-align: middle;
+    margin: 0 auto 10px auto;
+    cursor: initial;
+    background-color: #D34E47;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li {
+    display: inline;
+    margin: 0 5px;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>label {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    color: transparent;
+    cursor: pointer;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>label.color_text_1 {
+    background: #DE8FA4;
+    border: 1px solid #DE8FA4;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>label.color_text_2 {
+    background: #94CADC;
+    border: 1px solid #94CADC;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>label.color_text_3 {
+    background: #99D18A;
+    border: 1px solid #99D18A;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>label.color_bg_1 {
+    background: #FEFECA;
+    border: 1px solid #FEFECA;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>label.color_bg_2 {
+    background: #7BAEBD;
+    border: 1px solid #7BAEBD;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>label.color_bg_3 {
+    background: #ECD3BB;
+    border: 1px solid #ECD3BB;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>label:before {
+    display: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>input[type=radio]:checked+label {
+    border: 1px solid #E2544C;
+}
+
+#giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>input[type=radio]:checked+label:before {
+    display: block;
+}
+
+#giftlist-customize .giftlist-carousel {
+    padding: 50px 0 0 0;
+}
+
+#giftlist-carousel-upload .giftlist-btn-circle,
+#giftlist-carousel-upload-input {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlist-carousel-upload ul li {
+    margin-bottom: 40px;
+}
+
+#giftlist-customize p.giftlist-form-buttons {
+    margin-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+#giftlist-customize p.giftlist-form-buttons .giftlist-btn-default {
+    padding: 10px 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.giftlist-btn-default.giftlist-update-label {
+    display: block;
+    margin: 10px auto;
+}
+
+#giftlist-customize .giftlist-message-board .giftlist-message-list {
+    list-style: none;
+    margin: 20px 30px 0 30px;
+    padding: 0;
+}
+
+#giftlist-customize .giftlist-message-board .giftlist-message-list .giftlist-message-item {
+    display: block;
+    margin-bottom: 40px;
+}
+
+#giftlist-customize .giftlist-message-board .giftlist-message-list .giftlist-message-item .giftlist-message-item-name,
+#giftlist-customize .giftlist-message-board .giftlist-message-list .giftlist-message-item .giftlist-message-item-text {
+    display: block;
+}
+
+#giftlist-customize .giftlist-message-board .giftlist-message-list .giftlist-message-item .giftlist-message-item-name {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 700px) {
+    #giftlist-customize .giftlist-steps-customize .giftlist-steps-customize-item>ol>li>label {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+    }
+    #giftlist-customize .giftlist-steps-customize>ul.giftlist-steps-customize-wrapper {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+}
+
+#giftlist-share-facebook,
+#giftlist-template .giftlistinfo,
+#giftlist-template .giftlist-products-list .giftlist-print-wrapper,
+#giftlist-template .giftlist-products-list .searchResultsTime,
+#giftlist-template .giftlist-products-list div.sub,
+#giftlist-template .giftlist-products-list .pager.top,
+#giftlist-template ul li .highlight,
+#giftlist-template ul li .thickbox,
+#giftlist-template ul li .quickView,
+#giftlist-template ul li .category,
+#giftlist-template ul li .gift-list-wished,
+#giftlist-template ul li .gift-list-purchased,
+#giftlist-template ul li .discount,
+#giftlist-template ul li .price a,
+#giftlist-template ul li .brand {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlist-template {
+    display: none;
+    z-index: 1;
+}
+
+#giftlist-template .giftlist-bg-baby {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#giftlist-template .giftlist-bg-baby.giftlist-bg-baby-1 {
+    background: url("/arquivos/giftlist-bg-baby-1.png") no-repeat 0 0;
+    height: 469px;
+}
+
+#giftlist-template .giftlist-bg-baby.giftlist-bg-baby-2 {
+    background: url("/arquivos/giftlist-bg-baby-2.png") no-repeat 0 0;
+    height: 448px;
+}
+
+#giftlist-template .giftlist-bg-baby.giftlist-bg-baby-3 {
+    background: url("/arquivos/giftlist-bg-baby-3.png") no-repeat 0 0;
+    height: 458px;
+}
+
+#giftlist-template .giftlist-clouds {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 4;
+}
+
+#giftlist-template h2.giftlist-theme-title {
+    margin: 20px auto 35px auto;
+    width: 343px;
+    height: 343px;
+    background-size: 343px 343px;
+    overflow: hidden;
+    color: transparent;
+    text-indent: -999999px;
+    float: none;
+    position: relative;
+}
+
+#giftlist-template h2.giftlist-theme-title span {
+    display: block;
+    text-align: center;
+    font-family: 'Vidaloka', serif;
+    text-indent: 0;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+
+#giftlist-template h2.giftlist-theme-title span.giftlistinfo-description {
+    color: #000000;
+    font-size: 22px;
+    bottom: 6%;
+    min-height: 55px;
+    line-height: 22px;
+    left: 28%;
+    right: 28%;
+    width: 44%;
+    position: absolute;
+}
+
+#giftlist-template h2.giftlist-theme-title span.giftlistinfo-date {
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+#giftlist-template .giftlist-theme-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#giftlist-template .giftlist-theme-description h3 {
+    font-family: 'Vidaloka', serif;
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+
+#giftlist-template .giftlist-theme-description .giftlist-theme-resume {
+    font-size: 16px;
+    margin: 30px auto;
+    line-height: 22px;
+}
+
+#giftlist-template .giftlist-theme-description .giftlist-theme-resume span {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#giftlist-template .giftlist-theme-description h4 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#giftlist-template .giftlist-theme-description .giftlist-theme-message {
+    font-size: 16px;
+    margin: 0 auto;
+    line-height: 22px;
+}
+
+#giftlist-template h4 {
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+#giftlist-template .slick-prev,
+#giftlist-template .slick-next {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlist-template .giftlist-controller-previous,
+#giftlist-template .giftlist-controller-next {
+    position: absolute;
+    top: 45%;
+    text-indent: -999999px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#giftlist-template .giftlist-controller-previous {
+    left: -5%;
+    background-image: url("/arquivos/giftlist-controller-previous.png");
+}
+
+#giftlist-template .giftlist-controller-next {
+    right: -5%;
+    background-image: url("/arquivos/giftlist-controller-next.png");
+}
+
+#giftlist-template .giftlist-controller-dots {
+    text-align: center;
+    width: 50%;
+    height: 20px;
+    margin: 0 auto;
+    padding: 0;
+    clear: both;
+}
+
+#giftlist-template .giftlist-controller-dots .giftlist-controller-dots-item {
+    list-style: none;
+    max-height: 20px;
+    width: auto !important;
+    height: 20px !important;
+    margin: 0 3px !important;
+    padding: 0 !important;
+    float: none !important;
+    display: inline-block !important;
+    vertical-align: center;
+}
+
+#giftlist-template .giftlist-controller-dots .giftlist-controller-dots-item button {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3px 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    text-indent: -999999px;
+    outline: none;
+}
+
+#giftlist-template .giftlist-controller-dots .giftlist-controller-dots-item.slick-active button {
+    border: 1px dashed #ffffff;
+    width: 18px;
+    height: 18px;
+}
+
+#giftlist-template .giftlist-carousel-photos .giftlist-theme-message {
+    padding-top: 0px;
+    padding-bottom: 40px;
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#giftlist-template .giftlist-carousel-photos .slick-list {
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+#giftlist-template .giftlist-carousel-photos .giftlist-carousel-legend {
+    font-family: 'Open Sans', 'AvertaStd';
+    font-size: 18px;
+}
+
+#giftlist-template .giftlist-theme-fav-products {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: -10%;
+    margin-right: -10%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#giftlist-template .giftlist-theme-fav-products.giftlist-theme-fav-products-slicked {
+    max-height: 415px;
+}
+
+#giftlist-template .giftlist-theme-fav-products.giftlist-theme-fav-products-slicked ul {
+    overflow: hidden;
+}
+
+#giftlist-template .giftlist-theme-fav-products h4 {
+    padding-right: 30px;
+    width: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+#giftlist-template .giftlist-theme-fav-products h4 span:nth-child(2) {
+    text-transform: capitalize;
+}
+
+#giftlist-template .giftlist-theme-fav-products ul.giftlist-theme-fav-products-wrapper li {
+    margin-bottom: 0 !important;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper .giftlist-product-item {
+    min-width: 128px;
+    margin: 0 10px;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper-centered {
+    text-align: center;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper .giftlist-product-item.giftlist-product-item-centered {
+    display: inline-block;
+    float: none;
+}
+
+#giftlist-template .giftlist-products-list {
+    margin-top: 60px;
+}
+
+#giftlist-template .giftlist-products-list h4 span {
+    text-transform: capitalize;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper {
+    overflow: hidden;
+    list-style: none;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li {
+    display: block;
+    width: 15%;
+    height: 275px;
+    margin: 0 2.5% 2.5% 2.5%;
+    padding: 0;
+    float: left;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .productImage,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .productImage,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .productImage,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .productImage,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .productImage,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .productImage,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .productImage,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .productImage,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .productImage {
+    background: #ffffff;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .productImage img,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .productImage img,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .productImage img,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .productImage img,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .productImage img,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .productImage img,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .productImage img,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .productImage img,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .productImage img {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 110px;
+    height: auto;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .productImage .giftlist-icon-nofav,
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .productImage .giftlist-icon-isfav,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .productImage .giftlist-icon-nofav,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .productImage .giftlist-icon-isfav,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .productImage .giftlist-icon-nofav,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .productImage .giftlist-icon-isfav,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .productImage .giftlist-icon-nofav,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .productImage .giftlist-icon-isfav,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .productImage .giftlist-icon-nofav,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .productImage .giftlist-icon-isfav,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .productImage .giftlist-icon-nofav,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .productImage .giftlist-icon-isfav,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .productImage .giftlist-icon-nofav,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .productImage .giftlist-icon-isfav,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .productImage .giftlist-icon-nofav,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .productImage .giftlist-icon-isfav,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .productImage .giftlist-icon-nofav,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .productImage .giftlist-icon-isfav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 17px;
+    height: 14px;
+    text-indent: -999999px;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data {
+    text-align: center;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data h3,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data h3,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data h3,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data h3,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data h3,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data h3,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data h3,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data h3,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data h3 {
+    font-size: 12px;
+    line-height: 18px;
+    height: 55px;
+    max-height: 55px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data h3 a,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data h3 a,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data h3 a,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data h3 a,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data h3 a,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data h3 a,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data h3 a,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data h3 a,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data h3 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data span.productPrice,
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data p.outOfStock,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data span.productPrice,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data p.outOfStock,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data span.productPrice,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data p.outOfStock,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data span.productPrice,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data p.outOfStock,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data span.productPrice,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data p.outOfStock,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data span.productPrice,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data p.outOfStock,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data span.productPrice,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data p.outOfStock,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data span.productPrice,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data p.outOfStock,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data span.productPrice,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data p.outOfStock {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 5px;
+    display: block;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data a.giftlist-btn-default,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data a.giftlist-btn-default,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data a.giftlist-btn-default,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data a.giftlist-btn-default,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data a.giftlist-btn-default,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data a.giftlist-btn-default,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data a.giftlist-btn-default,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data a.giftlist-btn-default,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data a.giftlist-btn-default {
+    display: inline-block;
+    margin: 10px auto 0 auto;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data .product-insertsku,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data .product-insertsku,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data .product-insertsku,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data .product-insertsku,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data .product-insertsku,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data .product-insertsku,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data .product-insertsku,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data .product-insertsku,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data .product-insertsku {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li {
+    width: 100%;
+    margin: 0;
+    float: none;
+    height: auto;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+span:before,
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+label:before,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+span:before,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+label:before,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+span:before,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+label:before,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+span:before,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+label:before,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+span:before,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+label:before,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+span:before,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+label:before,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+span:before,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+label:before,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+span:before,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+label:before,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+span:before,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li input[type=checkbox]+label:before {
+    margin-right: 0;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li .insert-sku-quantity,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li .insert-sku-quantity,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li .insert-sku-quantity,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li .insert-sku-quantity,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li .insert-sku-quantity,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li .insert-sku-quantity,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li .insert-sku-quantity,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li .insert-sku-quantity,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li .insert-sku-quantity {
+    display: block;
+    width: 40px;
+    height: 20px;
+    margin: 5px auto 0 auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    text-align: center;
+}
+
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li .insert-sku-count,
+#giftlist-template .giftlist-theme-fav-products .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li .insert-sku-name,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li .insert-sku-count,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li .insert-sku-name,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li .insert-sku-count,
+#giftlist-template .giftlist-theme-fav-products .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li .insert-sku-name,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li .insert-sku-count,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li .insert-sku-name,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li .insert-sku-count,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li .insert-sku-name,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li .insert-sku-count,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li .insert-sku-name,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li .insert-sku-count,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-products-list-wrapper li .data .product-insertsku fieldset ul li .insert-sku-name,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li .insert-sku-count,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-fav-products-wrapper li .data .product-insertsku fieldset ul li .insert-sku-name,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li .insert-sku-count,
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper li .data .product-insertsku fieldset ul li .insert-sku-name {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlist-template .giftlist-theme-fav-products .pager.bottom,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .pager.bottom,
+#giftlist-template .giftlist-theme-products-by-price .pager.bottom {
+    clear: both;
+    margin-left: -10%;
+    margin-right: -10%;
+    height: 120px;
+}
+
+#giftlist-template .giftlist-theme-fav-products .pager.bottom ul,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .pager.bottom ul,
+#giftlist-template .giftlist-theme-products-by-price .pager.bottom ul {
+    display: none;
+    visibility: none;
+    text-align: center;
+}
+
+#giftlist-template .giftlist-theme-fav-products .pager.bottom ul li.first,
+#giftlist-template .giftlist-theme-fav-products .pager.bottom ul li.previous,
+#giftlist-template .giftlist-theme-fav-products .pager.bottom ul li.next,
+#giftlist-template .giftlist-theme-fav-products .pager.bottom ul li.last,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .pager.bottom ul li.first,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .pager.bottom ul li.previous,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .pager.bottom ul li.next,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .pager.bottom ul li.last,
+#giftlist-template .giftlist-theme-products-by-price .pager.bottom ul li.first,
+#giftlist-template .giftlist-theme-products-by-price .pager.bottom ul li.previous,
+#giftlist-template .giftlist-theme-products-by-price .pager.bottom ul li.next,
+#giftlist-template .giftlist-theme-products-by-price .pager.bottom ul li.last {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlist-template .giftlist-theme-fav-products .pager.bottom ul li.page-number,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .pager.bottom ul li.page-number,
+#giftlist-template .giftlist-theme-products-by-price .pager.bottom ul li.page-number {
+    display: inline-block;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    vertical-align: middle;
+    margin: 40px 3px 5px 3px;
+}
+
+#giftlist-template .giftlist-theme-fav-products .pager.bottom .giftlist-more-products,
+#giftlist-template .giftlist-products-list .resultItemsWrapper .pager.bottom .giftlist-more-products,
+#giftlist-template .giftlist-theme-products-by-price .pager.bottom .giftlist-more-products {
+    padding-top: 60px;
+    text-align: center;
+}
+
+#giftlist-template .send-to-cart-wrapper {
+    display: none;
+    visibility: hidden;
+}
+
+#giftlist-template .giftlist-suggestions {
+    margin-top: 60px;
+}
+
+#giftlist-template .giftlist-theme-products-by-price {
+    margin-top: 60px;
+    min-height: 300px;
+}
+
+#giftlist-template .giftlist-theme-products-by-price h5 {
+    border: 1px dashed #ffffff;
+    width: 30%;
+    margin: 0 0 15px 0;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #DCDCDC;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+#giftlist-template .giftlist-theme-products-by-price h5:nth-of-type(2) {
+    margin-left: 4.5%;
+    margin-right: 4.5%;
+}
+
+#giftlist-template .giftlist-theme-products-by-price h5:hover {
+    background-color: #c3c3c3;
+}
+
+#giftlist-template .giftlist-theme-products-by-price h5 .giftlist-range-wrapper {
+    padding: 15px 20px;
+    display: block;
+}
+
+#giftlist-template .giftlist-theme-products-by-price h5 .giftlist-range-wrapper span {
+    float: right;
+    margin-top: -3px;
+}
+
+#giftlist-template .giftlist-theme-products-by-price h5 .giftlist-range-wrapper span em {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper .giftlist-product-item {
+    min-width: 128px;
+    margin: 0 10px;
+}
+
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper-centered {
+    text-align: center;
+}
+
+#giftlist-template .giftlist-theme-products-by-price .giftlist-theme-products-by-price-wrapper .giftlist-product-item.giftlist-product-item-centered {
+    display: inline-block;
+    float: none;
+}
+
+#giftlist-template .giftlist-theme-messages {
+    padding: 60px 0 0 0;
+}
+
+#giftlist-template .giftlist-theme-messages .giftlist-message-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#giftlist-template .giftlist-theme-messages .giftlist-message-list .giftlist-message-item {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #000;
+    text-align: justify;
+}
+
+#giftlist-template .giftlist-theme-messages .giftlist-message-list .giftlist-message-item:last-child {
+    border-bottom: none;
+}
+
+#giftlist-template .giftlist-theme-messages .giftlist-message-list .giftlist-message-item .giftlist-message-item-name,
+#giftlist-template .giftlist-theme-messages .giftlist-message-list .giftlist-message-item .giftlist-message-item-text {
+    display: block;
+}
+
+#giftlist-template .giftlist-theme-messages .giftlist-message-list .giftlist-message-item .giftlist-message-item-name {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#giftlist-template .giftlist-theme-share-list {
+    text-align: center;
+    padding: 40px 0;
+}
+
+#giftlist-template .giftlist-theme-share-list .giftlist-btn-default.giftlist-btn-default-g {
+    display: inline-block;
+    margin: 0 auto;
+    outline: none;
+    background-color: #4267b2;
+    border-color: #4267b2;
+}
+
+#giftlist-template .giftlist-theme-share-list .giftlist-btn-default.giftlist-btn-default-g:hover {
+    background-color: #365899;
+    border-color: #365899;
+}
+
+#giftlist-template.giftlist-bg-yellow {
+    background: url("/arquivos/giftlist-yellow-bg.png") no-repeat top center;
+    width: 100%;
+}
+
+#giftlist-template.giftlist-bg-yellow .giftlist-clouds {
+    background: url("/arquivos/giftlist-yellow-clouds.png") no-repeat 43% 0;
+    height: 378px;
+}
+
+#giftlist-template.giftlist-bg-yellow .giftlist-theme-fav-products {
+    background-color: #FEFECA;
+}
+
+#giftlist-template.giftlist-bg-blue {
+    background: url("/arquivos/giftlist-blue-bg.png") no-repeat top center;
+    width: 100%;
+}
+
+#giftlist-template.giftlist-bg-blue .giftlist-clouds {
+    background: url("/arquivos/giftlist-blue-clouds.png") no-repeat 43% 0;
+    height: 378px;
+}
+
+#giftlist-template.giftlist-bg-blue .giftlist-theme-fav-products {
+    background-color: #94CADC;
+    color: #ffffff;
+}
+
+#giftlist-template.giftlist-bg-blue .giftlist-theme-fav-products h4 span {
+    color: #ffffff;
+}
+
+#giftlist-template.giftlist-bg-blue .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper li .data h3 a {
+    color: #ffffff;
+}
+
+#giftlist-template.giftlist-bg-beige {
+    background: url("/arquivos/giftlist-beige-bg.png") no-repeat top center;
+    width: 100%;
+}
+
+#giftlist-template.giftlist-bg-beige .giftlist-clouds {
+    background: url("/arquivos/giftlist-beige-clouds.png") no-repeat 43% 0;
+    height: 378px;
+}
+
+#giftlist-template.giftlist-bg-beige .giftlist-theme-fav-products {
+    background-color: #ECD3BB;
+}
+
+.giftlist-theme-share-list .buttons-share-customize-list {
+    display: block;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.giftlist-theme-share-list .buttons-share-customize-list p {
+    display: inline-block;
+    padding: 4px 0px 0px 10px;
+}
+
+.giftlist-theme-share-list .buttons-share-customize-list .page-list-button-customize a {
+    background-color: #E2544C !important;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+#giftlist-template.giftlist-theme-pink h2.giftlist-theme-title {
+    background: url("/arquivos/giftlist-pink-title.png") no-repeat center center;
+}
+
+#giftlist-template.giftlist-theme-pink h2.giftlist-theme-title span.giftlistinfo-date {
+    color: #000;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-theme-description h3 {
+    background: url("/arquivos/giftlist-pink-subtitle-detail.png") no-repeat center bottom;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-theme-description h3 span {
+    color: #DE8FA4;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-theme-fav-products h4 {
+    background: url("/arquivos/giftlist-pink-icon-isfav.png") no-repeat center right;
+}
+
+#giftlist-template.giftlist-theme-pink h4 span {
+    color: #DE8FA4;
+}
+
+#giftlist-template.giftlist-theme-pink form input,
+#giftlist-template.giftlist-theme-pink form select {
+    color: #DE8FA4;
+    border-color: #DE8FA4;
+}
+
+#giftlist-template.giftlist-theme-pink form input[type=checkbox]+span:before,
+#giftlist-template.giftlist-theme-pink form input[type=checkbox]+label:before {
+    background-color: #DE8FA4;
+    border-color: #DE8FA4;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-btn-circle,
+#giftlist-template.giftlist-theme-pink .giftlist-btn-default {
+    background-color: #DE8FA4;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-btn-circle:hover,
+#giftlist-template.giftlist-theme-pink .giftlist-btn-default:hover {
+    color: #ffffff;
+    background-color: #d26884;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-btn-circle:disabled,
+#giftlist-template.giftlist-theme-pink .giftlist-btn-circle[disabled],
+#giftlist-template.giftlist-theme-pink .giftlist-btn-default:disabled,
+#giftlist-template.giftlist-theme-pink .giftlist-btn-default[disabled] {
+    background-color: #f5dee4;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-controller-dots .giftlist-controller-dots-item button {
+    background-color: #eab6c4;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-controller-dots .giftlist-controller-dots-item.slick-active button {
+    background-color: #DE8FA4;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-controller-dots button:hover {
+    background-color: #d26884;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-theme-products-by-price .productImage .giftlist-icon-isfav,
+#giftlist-template.giftlist-theme-pink .giftlist-products-list .productImage .giftlist-icon-isfav,
+#giftlist-template.giftlist-theme-pink .giftlist-theme-fav-products .productImage .giftlist-icon-isfav {
+    background: url("/arquivos/giftlist-pink-icon-isfav.png") no-repeat top left;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-theme-products-by-price .productImage .giftlist-icon-isfav,
+#giftlist-template.giftlist-theme-pink .giftlist-products-list .productImage .giftlist-icon-nofav,
+#giftlist-template.giftlist-theme-pink .giftlist-theme-fav-products .productImage .giftlist-icon-nofav {
+    background: url("/arquivos/giftlist-pink-icon-nofav.png") no-repeat top left;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-products-list .resultItemsWrapper .pager.bottom {
+    background: url("/arquivos/giftlist-pink-bg-pagination.png") no-repeat center center;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-carousel {
+    background: url("/arquivos/giftlist-pink-bg-timeline.png") no-repeat center center;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-theme-products-by-price h5.giftlist-active-range {
+    background-color: #DE8FA4;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-theme-products-by-price h5.giftlist-active-range:hover {
+    background-color: #d26884;
+}
+
+#giftlist-template.giftlist-theme-pink .giftlist-theme-messages .giftlist-message-list .giftlist-message-item {
+    border-color: #DE8FA4;
+}
+
+#giftlist-template.giftlist-theme-blue h2.giftlist-theme-title {
+    background: url("/arquivos/giftlist-blue-title.png") no-repeat center center;
+}
+
+#giftlist-template.giftlist-theme-blue h2.giftlist-theme-title span.giftlistinfo-date {
+    color: #000;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-theme-description h3 {
+    background: url("/arquivos/giftlist-blue-subtitle-detail.png") no-repeat center bottom;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-theme-description h3 span {
+    color: #94CADC;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-theme-fav-products h4 {
+    background: url("/arquivos/giftlist-blue-icon-isfav.png") no-repeat center right;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-theme-fav-products .giftlist-btn-circle {
+    background-color: #7BAEBD;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-theme-fav-products .giftlist-btn-default {
+    background-color: #7BAEBD;
+}
+
+#giftlist-template.giftlist-theme-blue h4 span {
+    color: #94CADC;
+}
+
+#giftlist-template.giftlist-theme-blue form input,
+#giftlist-template.giftlist-theme-blue form select {
+    color: #94CADC;
+    border-color: #94CADC;
+}
+
+#giftlist-template.giftlist-theme-blue form input[type=checkbox]+span:before,
+#giftlist-template.giftlist-theme-blue form input[type=checkbox]+label:before {
+    background-color: #94CADC;
+    border-color: #94CADC;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-btn-circle,
+#giftlist-template.giftlist-theme-blue .giftlist-btn-default {
+    background-color: #94CADC;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-btn-circle:hover,
+#giftlist-template.giftlist-theme-blue .giftlist-btn-default:hover {
+    color: #ffffff;
+    background-color: #6eb7cf;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-btn-circle:disabled,
+#giftlist-template.giftlist-theme-blue .giftlist-btn-circle[disabled],
+#giftlist-template.giftlist-theme-blue .giftlist-btn-default:disabled,
+#giftlist-template.giftlist-theme-blue .giftlist-btn-default[disabled] {
+    background-color: #e1f0f5;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-controller-dots .giftlist-controller-dots-item button {
+    background-color: #badde9;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-controller-dots .giftlist-controller-dots-item.slick-active button {
+    background-color: #cee7ef;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-controller-dots button:hover {
+    background-color: #6eb7cf;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-theme-products-by-price .productImage .giftlist-icon-isfav,
+#giftlist-template.giftlist-theme-blue .giftlist-products-list .productImage .giftlist-icon-isfav,
+#giftlist-template.giftlist-theme-blue .giftlist-theme-fav-products .productImage .giftlist-icon-isfav {
+    background: url("/arquivos/giftlist-blue-icon-isfav.png") no-repeat top left;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-theme-products-by-price .productImage .giftlist-icon-isfav,
+#giftlist-template.giftlist-theme-blue .giftlist-products-list .productImage .giftlist-icon-nofav,
+#giftlist-template.giftlist-theme-blue .giftlist-theme-fav-products .productImage .giftlist-icon-nofav {
+    background: url("/arquivos/giftlist-blue-icon-nofav.png") no-repeat top left;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-products-list .resultItemsWrapper .pager.bottom {
+    background: url("/arquivos/giftlist-blue-bg-pagination.png") no-repeat center center;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-carousel {
+    background: url("/arquivos/giftlist-blue-bg-timeline.png") no-repeat center center;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-theme-products-by-price h5.giftlist-active-range {
+    background-color: #94CADC;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-theme-products-by-price h5.giftlist-active-range:hover {
+    background-color: #6eb7cf;
+}
+
+#giftlist-template.giftlist-theme-blue .giftlist-theme-messages .giftlist-message-list .giftlist-message-item {
+    border-color: #94CADC;
+}
+
+#giftlist-template.giftlist-theme-green h2.giftlist-theme-title {
+    background: url("/arquivos/giftlist-green-title.png") no-repeat center center;
+}
+
+#giftlist-template.giftlist-theme-green h2.giftlist-theme-title span.giftlistinfo-date {
+    color: #000;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-theme-description h3 {
+    background: url("/arquivos/giftlist-green-subtitle-detail.png") no-repeat center bottom;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-theme-description h3 span {
+    color: #99D18A;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-theme-fav-products h4 {
+    background: url("/arquivos/giftlist-green-icon-isfav.png") no-repeat center right;
+}
+
+#giftlist-template.giftlist-theme-green h4 span {
+    color: #99D18A;
+}
+
+#giftlist-template.giftlist-theme-green form input,
+#giftlist-template.giftlist-theme-green form select {
+    color: #99D18A;
+    border-color: #99D18A;
+}
+
+#giftlist-template.giftlist-theme-green form input[type=checkbox]+span:before,
+#giftlist-template.giftlist-theme-green form input[type=checkbox]+label:before {
+    background-color: #99D18A;
+    border-color: #99D18A;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-btn-circle,
+#giftlist-template.giftlist-theme-green .giftlist-btn-default {
+    background-color: #99D18A;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-btn-circle:hover,
+#giftlist-template.giftlist-theme-green .giftlist-btn-default:hover {
+    color: #ffffff;
+    background-color: #79c365;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-btn-circle:disabled,
+#giftlist-template.giftlist-theme-green .giftlist-btn-circle[disabled],
+#giftlist-template.giftlist-theme-green .giftlist-btn-default:disabled,
+#giftlist-template.giftlist-theme-green .giftlist-btn-default[disabled] {
+    background-color: #d9eed3;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-controller-dots .giftlist-controller-dots-item button {
+    background-color: #b9dfaf;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-controller-dots .giftlist-controller-dots-item.slick-active button {
+    background-color: #99D18A;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-controller-dots button:hover {
+    background-color: #79c365;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-theme-products-by-price .productImage .giftlist-icon-isfav,
+#giftlist-template.giftlist-theme-green .giftlist-products-list .productImage .giftlist-icon-isfav,
+#giftlist-template.giftlist-theme-green .giftlist-theme-fav-products .productImage .giftlist-icon-isfav {
+    background: url("/arquivos/giftlist-green-icon-isfav.png") no-repeat top left;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-theme-products-by-price .productImage .giftlist-icon-isfav,
+#giftlist-template.giftlist-theme-green .giftlist-products-list .productImage .giftlist-icon-nofav,
+#giftlist-template.giftlist-theme-green .giftlist-theme-fav-products .productImage .giftlist-icon-nofav {
+    background: url("/arquivos/giftlist-green-icon-nofav.png") no-repeat top left;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-products-list .resultItemsWrapper .pager.bottom {
+    background: url("/arquivos/giftlist-green-bg-pagination.png") no-repeat center center;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-carousel {
+    background: url("/arquivos/giftlist-green-bg-timeline.png") no-repeat center center;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-theme-products-by-price h5.giftlist-active-range {
+    background-color: #99D18A;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-theme-products-by-price h5.giftlist-active-range:hover {
+    background-color: #79c365;
+}
+
+#giftlist-template.giftlist-theme-green .giftlist-theme-messages .giftlist-message-list .giftlist-message-item {
+    border-color: #99D18A;
+}
+
+@media (min-width: 320px) and (max-width: 525px) {
+    #giftlist-template .giftlist-theme-fav-products .giftlist-controller-previous {
+        left: -42px;
+    }
+    #giftlist-template .giftlist-theme-fav-products .giftlist-controller-next {
+        right: -42px;
+    }
+}
+
+@media (min-width: 526px) and (max-width: 1089px) {
+    #giftlist-template .giftlist-theme-fav-products .giftlist-controller-previous {
+        left: -35px;
+    }
+    #giftlist-template .giftlist-theme-fav-products .giftlist-controller-next {
+        right: -35px;
+    }
+}
+
+@media (max-width: 525px) {
+    #giftlist-template h2.giftlist-theme-title {
+        width: 243px;
+        height: 243px;
+        background-size: 243px 243px !important;
+    }
+    #giftlist-template h2.giftlist-theme-title span.giftlistinfo-description {
+        font-size: 20px;
+        bottom: 2%;
+        line-height: 20px;
+    }
+    #giftlist-template h2.giftlist-theme-title span.giftlistinfo-date {
+        font-size: 10px;
+    }
+    #giftlist-template .giftlist-theme-fav-products .giftlist-theme-fav-products-wrapper .giftlist-product-item .productImage img {
+        width: 100%;
+        height: auto;
+    }
+    #giftlist-template ul li .data h3 {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #giftlist-template .giftlist-theme-products-by-price h5 {
+        width: 100%;
+        margin: 0;
+    }
+    #giftlist-template .giftlist-theme-products-by-price h5:nth-of-type(2) {
+        margin: 10px 0;
+    }
+    #giftlist-template .giftlist-theme-products-by-price .giftlist-controller-previous,
+    #giftlist-template .giftlist-theme-products-by-price .giftlist-controller-next {
+        top: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+    #giftlist-template .giftlist-carousel.giftlist-carousel-photos {
+        background-position: center 0;
+        min-height: 400px;
+    }
+    #giftlist-template .giftlist-products-list {
+        margin-top: 0;
+    }
+    #giftlist-template .giftlist-products-list .giftlist-products-list-wrapper li {
+        width: 45% !important;
+        margin-bottom: 15px !important;
+    }
+    #giftlist-template .giftlist-products-list .giftlist-products-list-wrapper li .productImage img {
+        max-width: 65% !important;
+    }
+}
+
+@media (max-width: 1189px) {
+    #giftlist-template .giftlist-bg-baby {
+        display: none;
+    }
+    #giftlist-template .giftlist-controller-previous,
+    #giftlist-template .giftlist-controller-next {
+        width: 25px;
+        height: 25px;
+        background-size: 8px 16px;
+    }
+    #giftlist-template .giftlist-theme-fav-products {
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #giftlist-template .giftlist-carousel-photos {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 1190px) and (max-width: 1485px) {
+    #giftlist-template .giftlist-theme-fav-products {
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1189px) {
+    .giftlist-main .giftlist-clouds,
+    #giftlist-modal-success .giftlist-clouds {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .giftlist-main .giftlist-content,
+    #giftlist-modal-success .giftlist-content {
+        width: 100% !important;
+    }
+    .giftlist-main form .address-list .address-edit,
+    #giftlist-modal-success form .address-list .address-edit,
+    .giftlist-main form .address-list .address-create,
+    #giftlist-modal-success form .address-list .address-create {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .giftlist-main form .address-list .address-edit a,
+    #giftlist-modal-success form .address-list .address-edit a,
+    .giftlist-main form .address-list .address-create a,
+    #giftlist-modal-success form .address-list .address-create a {
+        margin: 5px auto;
+    }
+}
+
+@media (max-width: 1100px) {
+    .giftlist-main h2.giftlist-title,
+    #giftlist-modal-success h2.giftlist-title {
+        margin: 20px auto;
+        float: none;
+    }
+    .giftlist-main .giftlist-content,
+    #giftlist-modal-success .giftlist-content {
+        float: none;
+        width: 495px;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 749px) {
+    .giftlist-main .giftlist-cloud-left,
+    #giftlist-modal-success .giftlist-cloud-left,
+    .giftlist-main .giftlist-cloud-right,
+    #giftlist-modal-success .giftlist-cloud-right {
+        display: none;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 899px) {
+    .giftlist-main .giftlist-cloud-right,
+    #giftlist-modal-success .giftlist-cloud-right {
+        right: -35%;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1189px) {
+    .giftlist-main .giftlist-cloud-right,
+    #giftlist-modal-success .giftlist-cloud-right {
+        right: -20%;
+    }
+}
+
+@media (min-width: 1190px) and (max-width: 1285px) {
+    .giftlist-main .giftlist-cloud-right,
+    #giftlist-modal-success .giftlist-cloud-right {
+        right: -15%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1175px) {
+    .giftlist-main .giftlist-carousel ul li,
+    #giftlist-modal-success .giftlist-carousel ul li {
+        margin: 0 auto 20px auto;
+    }
+    .giftlist-main .giftlist-carousel ul li.giftlist-carousel-item img,
+    #giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item img,
+    .giftlist-main .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty,
+    #giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty {
+        padding: 3px;
+        width: 80%;
+    }
+    .giftlist-main .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty,
+    #giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty {
+        min-width: 129px;
+        min-height: 129px;
+    }
+    .giftlist-main .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty span,
+    #giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item .giftlist-carousel-item-empty span {
+        min-width: 129px;
+        min-height: 129px;
+        line-height: 129px;
+        font-size: 10px;
+    }
+    .giftlist-main .giftlist-carousel ul li.giftlist-carousel-item-photo .giftlist-carousel-wrapper,
+    #giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item-photo .giftlist-carousel-wrapper {
+        min-width: 129px;
+        min-height: 129px;
+        border: 3px solid #ffffff;
+        width: 80%;
+        height: 80%;
+    }
+    .giftlist-main .giftlist-carousel p,
+    #giftlist-modal-success .giftlist-carousel p {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 772px) {
+    #giftlist-modal-success>.giftlist-modal-body {
+        width: 80%;
+        overflow: scroll;
+    }
+    #giftlist-modal-success>.giftlist-modal-body>.giftlist-modal-close {
+        top: 9px;
+        padding: 1px;
+    }
+}
+
+@media (max-width: 700px) {
+    .giftlist-main .giftlist-carousel,
+    #giftlist-modal-success .giftlist-carousel {
+        padding-top: 10px !important;
+        background-position: center 0;
+    }
+    .giftlist-main .giftlist-carousel ul li.giftlist-carousel-item,
+    #giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item {
+        width: 45%;
+    }
+    .giftlist-main .giftlist-carousel ul li:nth-of-type(2),
+    #giftlist-modal-success .giftlist-carousel ul li:nth-of-type(2),
+    .giftlist-main .giftlist-carousel ul li:nth-of-type(4),
+    #giftlist-modal-success .giftlist-carousel ul li:nth-of-type(4),
+    .giftlist-main .giftlist-carousel ul li.giftlist-carousel-item-2,
+    #giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item-2,
+    .giftlist-main .giftlist-carousel ul li.giftlist-carousel-item-4,
+    #giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item-4 {
+        float: right;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1175px) {
+    .giftlist-main .giftlist-carousel ul li.giftlist-carousel-item,
+    #giftlist-modal-success .giftlist-carousel ul li.giftlist-carousel-item {
+        width: 25%;
+    }
+}
+
+
+/*# sourceMappingURL=giftlist-style.css.map */
+
+
+#TB_overlay{
+    z-index: 200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#TB_window{
+    background: #ffffff;
+    width: 50%;
+    margin: 10% auto 0 auto;
+    padding: 0 20px;
+    position: relative;
+    font-family: 'OpenSansLight', 'Open Sans';
+}
+
+
+#TB_closeWindowButton {
+    background-color: #e0524c;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0;
+    font-weight: 100;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: -30px;
+    right: -4px;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    border-radius: 35px;
+    vertical-align: middle;
+}
+
+#TB_closeWindowButton:hover{
+    text-decoration: none;
+}
+
+#TB_closeWindowButton:before {
+    font-size: 14px;
+    content: "Fechar";
+    position: absolute;
+    right: 32px;
+    color: #000;
+    top: 2px;
+}
+
+#TB_closeWindowButton:after{
+    font-size: 18px;
+    content: "\f00d";
+    font-family: FontAwesome;
+    line-height: 1.4;
+}
+
+
+.order-info-total #oi-total,
+.order-info-total label{
+    display: inline;
+}
+.so-msg{
+    display: none;
+}
+
+
+
+.order-info-list {
+    padding: 0;
+    margin: 0;
+}
+
+.order-info .order-info-total label {
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Arial;
+}
+
+
+.order-info .order-info-total div {
+    color: #e0524c;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.order-info-total #oi-disclaimer{
+    display: block;
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+
+/*Estilo para Modal*/
+
+.manage .order-info .order-info-list li .soi-outer,
+.manage .order-info .order-info-list li .soi-outer .soi-inner{
+    border-spacing: 0;
+}
+
+.manage .order-info .order-info-list li .soi-outer > tbody,
+.manage .order-info .order-info-list li .soi-outer > thead:nth-child(even){
+    background: #fff;
+}
+
+.manage .order-info .order-info-list li .soi-outer > thead:nth-child(odd){
+    background: #f3f3f3;
+}
+
+.manage .order-info .order-info-list li .soi-outer .so-nam:before,
+.manage .order-info .order-info-list li .soi-outer .so-dat:before,
+.manage .order-info .order-info-list li .soi-outer .so-mai:before {
+    font-family: FontAwesome;
+    padding-right: 6px;
+}
+.manage .order-info .order-info-list li .soi-outer .so-mai:before{
+    content: "\f003";
+}
+.manage .order-info .order-info-list li .soi-outer .so-nam:before{
+    content: "\f007";
+}
+.manage .order-info .order-info-list li .soi-outer .so-dat:before{
+    content: "\f073";
+}
+
+.manage .order-info .order-info-list li .soi-outer > thead a {
+    text-decoration: underline;
+    color: #000;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+
+.manage .order-info .order-info-list li .soi-outer > tbody .soi-inner .so-h-nam,
+.manage .order-info .order-info-list li .soi-outer > tbody .soi-inner .so-h-qty,
+.manage .order-info .order-info-list li .soi-outer > tbody .soi-inner .so-h-val
+{
+    font-size: 0;
+}
+
+.manage .order-info .order-info-list li .soi-outer > tbody .soi-inner .so-h-nam:before,
+.manage .order-info .order-info-list li .soi-outer > tbody .soi-inner .so-h-qty:before,
+.manage .order-info .order-info-list li .soi-outer > tbody .soi-inner .so-h-val:before{
+    font-size: 13px;
+    line-height: 3;
+    font-weight: bold;
+    padding-left: 16px;
+    font-family: Arial;
+}
+
+.manage .order-info .order-info-list li .soi-outer > tbody .soi-inner .so-h-nam:before{
+    content: 'Produto';
+    padding-left: 0;
+}
+.manage .order-info .order-info-list li .soi-outer > tbody .soi-inner .so-h-qty:before{
+    content: 'Qtd.';
+}
+.manage .order-info .order-info-list li .soi-outer > tbody .soi-inner .so-h-val:before{
+    content: 'Valor';
+}
+
+.manage .order-info .order-info-list li .soi-outer > tbody thead th {
+    padding-bottom: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.manage .order-info .order-info-list li .soi-outer > tbody tbody{
+    text-align: left;
+    font-family: Arial;
+    font-size: 16px;
+}
+
+.manage .order-info .order-info-list li .soi-outer > tbody tbody:nth-child(odd){
+    background: #fff;
+}
+
+.manage .order-info .order-info-list li .soi-outer > tbody tbody:nth-child(even){
+    background: #f3f3f3;
+}
+
+.manage .order-info .order-info-list li .soi-outer > tbody tbody > .sku-wished > .soi-val:before {
+    content: 'R$';
+    padding-right: 5px;
+}
+
+.manage .order-info .order-info-list li .soi-outer > tbody tbody > .sku-wished > .soi-val {
+    color: #e0524c;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px;
+}
+.manage .order-info .order-info-list li .soi-outer > tbody tbody > .sku-wished > .soi-img{
+    padding: 10px;
+}
+
+.manage .order-info .order-info-list li .soi-outer > tbody tbody > .sku-wished > .soi-qty{
+    color: #e0524c;
+    text-align: center;
+}

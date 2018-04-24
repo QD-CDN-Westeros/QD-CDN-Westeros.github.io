@@ -1,0 +1,68 @@
+/*!Estrutura inicial por Quatro Digital*/
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-remove {
+  text-indent: -9999pc;
+  color: transparent;
+  font-size: 0;
+}
+.img-responsive img,
+img.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Desabilitando o responsivo*/
+body {
+  min-width: 930px;
+}
+html body .container {
+  max-width: 1306px;
+  min-width: 930px;
+}
+.container .navbar-header,
+.container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+.rowNoGrid {
+  margin-left: 0;
+  margin-right: 0;
+}
+.navbar-header {
+  float: left;
+}
+.navbar-collapse {
+  display: block;
+  height: auto;
+  padding-bottom: 0;
+  overflow: visible;
+}
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+.navbar-brand {
+  margin-left: 0;
+}
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+.navbar-nav > li > a {
+  padding: 0;
+}
+.navbar-nav.navbar-right {
+  float: right;
+}
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}

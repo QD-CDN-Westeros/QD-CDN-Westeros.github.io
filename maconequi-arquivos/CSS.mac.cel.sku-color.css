@@ -1,0 +1,49 @@
+.vtex-cpSkuIds[class*="VERMELHO"],
+.dimension-Cor[class*="Vermelho"]{
+	background-color: #AD2228!important;
+}
+.vtex-cpSkuIds[class*="AZUL MARINHO"],
+.dimension-Cor[class*="Azul Marinho"]{
+	background: #131347!important;
+}
+.vtex-cpSkuIds[class*="BEGE"],
+.dimension-Cor[class*="Bege"]{
+	background: #E4D1B0!important;
+}
+.vtex-cpSkuIds[class*="BRANCO"],
+.dimension-Cor[class*="Branco"]{
+	background: white!important;
+}
+.vtex-cpSkuIds[class*="CAST"],
+.dimension-Cor[class*="Castanho"]{
+	background: #6C552E!important;
+}
+.vtex-cpSkuIds[class*="MARROM"],
+.dimension-Cor[class*="Marrom"]{
+	background: #986000!important;
+}
+.vtex-cpSkuIds[class*="MEL"],
+.dimension-Cor[class*="Mel"]{
+	background: #FFD65A!important;
+}
+.vtex-cpSkuIds[class*="OLINDA"],
+.dimension-Cor[class*="Olinda"]{
+	background: #EBE3D4!important;
+}
+.vtex-cpSkuIds[class*="PRET"],
+.vtex-cpSkuIds[class*="PRETO"],
+.dimension-Cor[class*="Preto"]{
+	background: black!important;
+}
+.vtex-cpSkuIds[class*="ROSA"],
+.dimension-Cor[class*="Rosa"]{
+	background: #EDBAEE!important;
+}
+.vtex-cpSkuIds[class*="NATURAL"],
+.dimension-Cor[class*="Natural"]{
+	background: #f4efe7!important;
+}
+.vtex-cpSkuIds[class*="BRONZE"],
+.dimension-Cor[class*="Bronze"]{
+	background: #CA8206!important;
+}

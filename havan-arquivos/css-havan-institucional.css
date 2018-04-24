@@ -1,0 +1,236 @@
+/* daniel.escaramusa@havan.com.br */
+.institucional .container-institucional {position:relative; z-index: 4;}
+.institucional .container-institucional.wrapper {
+	margin: 0 auto 20px auto;
+	width: 1000px;
+}
+.wrapper-informacoes {
+	float: left;
+	margin-left: 35px;
+	width: 750px;
+	margin-bottom: 25px;
+}
+.container-institucional h2 {
+	font-weight: bold;
+	font-size: 19px;
+	color: #223163;
+	text-transform: uppercase;
+	margin: 30px 0;
+}
+.wrapper-informacoes p {
+	color:#333;
+	font-size:12px;
+	font-weight:normal;
+	line-height: 18px;
+	text-align: justify;
+}
+.wrapper-informacoes strong{
+	color:#333;
+	margin-bottom: 5px;
+	display: block;
+	font-size: 12px;
+}
+
+/* MENU LATERAL */
+.institucional .container-institucional .container-sidebar {float: left;}	
+.institucional .container-institucional .wrapper-sidebar {
+	background: url('/arquivos/bg-sidebar-transparente.png') no-repeat;
+	margin-bottom: 10px;
+	min-height: 250px;
+	padding: 200px 15px 20px 0;
+	text-align:right;
+	width: 197px;
+}
+
+.institucional .container-institucional .wrapper-sidebar h3,
+.institucional .container-institucional .wrapper-sidebar h5 {
+	background: url('/arquivos/bg-titulo-sidebar.png') right 2px no-repeat;
+	text-align: right;
+	padding: 0 15px 3px 10px;
+	text-transform: uppercase;
+	font-size: 13px;
+	display: inline-block;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #b1bdc9;
+}
+.institucional .container-institucional .wrapper-sidebar h5 {margin:15px 0 5px 0;}
+.institucional .container-institucional .wrapper-sidebar h3 a {color:#666666; font-size: 11px; line-height: 12px;}
+
+.institucional .container-institucional .wrapper-sidebar h4 + ul ,
+.institucional .container-institucional .wrapper-sidebar h5 + ul {margin-bottom:15px}
+.institucional .container-institucional .wrapper-sidebar h4 a,
+.institucional .container-institucional .wrapper-sidebar h5 a {color:#000; display:block; font-size:0.8em; margin-bottom:5px;}
+
+.institucional .container-institucional .wrapper-sidebar ul li {color:#858585; font-size:0.7em;margin: 5px 0 0;}
+.institucional .container-institucional .wrapper-sidebar ul li a {color:#858585; font-size: 11px;}
+.institucional .container-institucional .wrapper-sidebar .ver-filtros {color: #858585; font-size: 11px;}
+/* end MENU LATERAL */
+
+
+/* VITRINE ============================================================================ */
+.institucional .container-institucional .wrapper-resultado {
+	float: left;
+	margin: 20px 0 0 10px;
+	width: 775px;
+}
+
+/* BREADCRUMB */
+.institucional .container-institucional .wrapper-breadcrumb li {
+	border-right:1px solid black;
+	font-size: 10px;
+	padding-right:5px;
+	text-transform: uppercase;
+	display: inline;
+}
+.wrapper-breadcrumb li a {background: #cdcdcd; color: black; padding: 3px 5px;}
+
+.institucional .container-institucional .wrapper-breadcrumb li.last {border-right:0;}
+.institucional .container-institucional .wrapper-breadcrumb li.last a {background:#2f69a5; color: white;}
+/* end VITRINE ============================================================================ */
+
+
+/* LANDING PAGE */
+
+.content-moda-casa {
+	font-family: 'Myriad Pro';
+}
+
+.content-moda-casa h2 {
+	font-size: 20px;
+	font-style: bold;
+	color: #0d3c68;
+	text-transform: none;
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.content-moda-casa .main-banner {
+	margin-top: 1px;
+}
+
+.content-moda-casa [class*="content-block"] {
+	margin: 40px 0;
+}
+
+.content-moda-casa .half-wrapper {
+	width: 50%;
+	float: left;
+}
+
+.content-moda-casa .first-text-block {
+	padding-right: 50px;
+	font-size: 14px;
+	color: #0d3c68;
+	line-height: 18px;
+	text-align: justify;
+}
+
+.content-moda-casa #product-carousel {
+	overflow: hidden;
+	width: 1005px;
+}
+
+.content-moda-casa .jcarousel-container-horizontal {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
+.content-moda-casa ul li.jcarousel-item:last-child{
+	margin: 0 20px;
+}
+
+.content-moda-casa ul li.jcarousel-item{
+	border:2px solid #fff;
+	float:left;
+	min-height:305px;
+	position:relative;
+	z-index: 1;	
+	margin: 0 22px;
+	width: 197px;
+    padding: 0;
+}
+
+.content-moda-casa ul li.jcarousel-item:hover{
+	border:2px solid transparent;
+	transition-duration:0.8s;
+	-moz-transition-duration: 0.8s;
+	-webkit-transition-duration: 0.8s;
+	-o-transition-duration:0.8s;
+}
+
+.content-moda-casa .jcarousel-next {
+	background: url("/arquivos/sua-casa-linda-carrossel-next.png?v=20160418-15-21-15");
+	width: 16px;
+	height: 33px;
+	right: 0;
+}
+
+.content-moda-casa .jcarousel-prev {
+	background: url("/arquivos/sua-casa-linda-carrossel-prev.png?v=20160418-15-21-15");
+	width: 16px;
+	height: 33px;
+	left: 0;
+}
+
+
+.content-moda-casa .content-block-2 [class*="block"] {
+	width: 33%;
+	float: left;
+}
+
+.content-moda-casa .content-block-2 [class*="block"] img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.content-moda-casa .content-block-2 [class*="block"] h3 {
+	display: block;
+	background: #0d3c68;
+	padding: 10px 0;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 10px 46px;
+}
+
+.content-moda-casa .content-block-2 [class*="block"] p {
+	font-size: 14px;
+	color: #0d3c68;
+	line-height: 18px;
+	text-align: justify;
+	margin: 10px 46px;
+}
+
+.content-moda-casa .content-block-2 .block-1 h3 {background: #cb0e6f;}
+.content-moda-casa .content-block-2 .block-2 h3 {background: #202b6d;}
+.content-moda-casa .content-block-2 .block-3 h3 {background: #f4cb22;}
+.content-moda-casa .content-block-2 .block-4 h3 {background: #40898b;}
+
+.social-network {
+	margin: 10px 0;
+}
+
+.content-moda-casa .social-network a {
+	width: 316px;
+	height: 52px;
+	float: left;
+	margin-right: 20px;
+}
+
+.content-moda-casa .social-network .facebook {
+	background: url("/arquivos/sua-casa-linda-facebook-btn.jpg");
+}
+
+.content-moda-casa .social-network .twitter {
+	background: url("/arquivos/sua-casa-linda-twitter-btn.jpg");
+}
+
+.content-moda-casa .social-network .google {
+	background: url("/arquivos/sua-casa-linda-google-btn.jpg");
+	margin-right: 0;
+}

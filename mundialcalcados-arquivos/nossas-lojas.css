@@ -1,0 +1,49 @@
+/*INDEX*/
+
+.wrap-lojas h3 {color: #001265;float: left;clear: both;margin: 10px 0;font-weight: bold;}
+.wrap-lojas p {clear: both;line-height: 2;padding: 0;margin: 0;font-size: 12px;}
+
+.wrap-lojas #sideBar {width: 195px;float: left;margin-right: 50px;}
+.wrap-lojas .locais {padding: 0;}
+.wrap-lojas .locais li {line-height: 2em;font-size: 12px;cursor: pointer;width: 100%;}
+.wrap-lojas .locais li a {display: block;}
+.wrap-lojas .locais li.active,
+.wrap-lojas .locais li:hover {background: #f1f1f1;font-weight: bold;}
+
+
+@media (max-width: 1024px) and (min-width: 1px){
+	.wrap-lojas #sideBar {
+		display: block!important;
+		position: static!important;
+		margin-bottom: 20px!important;
+	}
+	.nossas-lojas .abre-filtro{
+		display: none!important;
+	}
+}
+
+/*MAPAS*/
+.wrap-lojas #content-mapas {width: 720px;float: left;}
+.wrap-lojas #map {float: left;}
+.wrap-lojas #data {float: left;width: 230px;margin-left: 50px;}
+.wrap-lojas .images {float: left;clear: both;position: relative;}
+.images h3 {display: none;}
+.wrap-lojas .images ul {padding: 0;float: left;clear: both;margin: 0;width: 230px}
+.wrap-lojas .images ul li {float: left;width: 55px;height: 55px;margin: 1px;}
+.wrap-lojas .images ul li img {width: 55px;height: 55px;}
+.wrap-lojas .images #prev {position: absolute;left: -20px;top: 20px;cursor: pointer;}
+.wrap-lojas .images #next {position: absolute;right: -20px;top: 20px;cursor: pointer;}
+
+/*caroufredsel*/
+.wrap-lojas .list_carousel {background-color: #ccc;margin: 0 0 30px 60px;width: 360px;}
+.wrap-lojas .list_carousel ul {margin: 0;padding: 0;list-style: none;display: block;}
+.wrap-lojas .list_carousel li {font-size: 40px;color: #999;text-align: center;background-color: #eee;border: 5px solid #999;width: 50px;height: 50px;padding: 0;margin: 6px;display: block;float: left;}
+.wrap-lojas .list_carousel.responsive {width: auto;margin-left: 0;}
+.wrap-lojas .clearfix {float: none;clear: both;}
+.wrap-lojas .prev {float: left;margin-left: 10px;}
+.wrap-lojas .next {float: right;margin-right: 10px;}
+.wrap-lojas .pager {float: left;width: 300px;text-align: center;}
+.wrap-lojas .pager a {margin: 0 5px;text-decoration: none;}
+.wrap-lojas .pager a.selected {text-decoration: underline;}
+.wrap-lojas .timer {background-color: #999;height: 6px;width: 0px;}
+.wrap-lojas .caroufredsel_wrapper {clear: both;}

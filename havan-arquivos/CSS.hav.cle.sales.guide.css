@@ -1,0 +1,74 @@
+/*! Não edite esse arquivo, ele foi gerado de maneira automatizada */
+.sales-guide-qd-v1-title {
+  background: #FFCC33;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.sales-guide-qd-v1-title h2 {
+  color: #000000;
+  font-size: 55px;
+  font-weight: 700;
+}
+.sales-guide-qd-v1-title h3 {
+  color: #000000;
+  font-size: 20px;
+}
+.sales-guide-qd-v1-links a {
+  display: block;
+  font-size: 22px;
+  background: #000000;
+  color: #FFF;
+  padding: 25px 0px;
+  text-align: center;
+  margin: 5px;
+  transition: all 0.2s ease-out;
+  position: relative;
+}
+.sales-guide-qd-v1-links a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  transition: all 0.2s ease-out;
+  background: #000000;
+}
+.sales-guide-qd-v1-links a:hover {
+  text-decoration: none;
+  background: #141414;
+}
+.sales-guide-qd-v1-links a:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 12px;
+  background: #FFCC33;
+}
+.sales-guide-qd-v1-links .sales-guide-qd-link-active {
+  background: #FFCC33;
+  color: #000000;
+  font-weight: 700;
+}
+.sales-guide-qd-v1-links .sales-guide-qd-link-active:before {
+  display: none;
+}
+.sales-guide-qd-v1-arrows .sales-guide-qd-v1-arrow {
+  position: relative;
+  background-color: #FFCC33;
+  width: 35px;
+  height: 35px;
+  transform: rotate(45deg);
+  margin: 0 auto;
+  top: -20px;
+}
+.sales-guide-qd-v1-result {
+  margin-top: 20px;
+}
+.sales-guide-qd-v1-result .sub,
+.sales-guide-qd-v1-result .searchResultsTime {
+  display: none;
+}

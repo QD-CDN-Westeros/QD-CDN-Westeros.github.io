@@ -1,0 +1,1 @@
+$(function(){function b(){var a=$(window).height()-$(".header__fixed").outerHeight(!0)-15;return 300>a?300:a}if($(document.body).is(".qd-arquivos")){var c=$("#qd-main-frame-wrapper");c.parent().addClass("grid_1244");var a=c.find("#qd-main-frame");a.css({height:b()});$(window).resize(function(){a.css({height:b()})});a.attr("src","//ri.drogariasaopaulo.com.br/filemanager2/")}});

@@ -1,0 +1,94 @@
+{
+  "store": [
+    {
+      "title": "Drogaria São Paulo",
+      "address": "Alameda Rio Negro, 877 - Alphaville Comercial, Barueri - SP, 06454-000",
+      "phone": "(11) 4003-3393",
+      "latitude": -23.4982474,
+      "longitude": -46.8488287,
+      "attendance": "Todos os dias: 24h00",
+      "logistics": "Retire na loja - Alphaville"
+    },
+    {
+      "title": "Drogaria São Paulo 24h",
+      "address": "Av. Braz Leme, 2.034 , Santana",
+      "phone": "(11) 2973-6508 / (11) 2976-0083",
+      "latitude": -23.5047496,
+      "longitude": -46.6406438,
+      "attendance": "Todos os dias: 24h00",
+      "logistics": "Retire na loja - Braz Leme"
+    },
+    {
+      "title": "Drogaria São Paulo - Shopping Tamboré I",
+      "address": "Av. Giovanni Gronchi, 5.471 , Morumbi São Paulo, SP 05724-003",
+      "phone": "(11) 3744-2058 / (11) 3746-7448",
+      "latitude": -23.6274618,
+      "longitude": -46.735458,
+      "attendance": "Todos os dias: 24h00",
+      "logistics": "Retire na loja - Morumbi"
+    },
+    {
+      "title": "Drogaria São Paulo",
+      "address": "Avenida Dona Belmira Marin, 800 , Parque Brasil São Paulo, SP 04846-000",
+      "phone": "(11) 2985-7243 / (11) 2305-2146",
+      "latitude": -23.7377379,
+      "longitude": -46.6930276,
+      "attendance": "Todos os dias: 07h00 às 23h00",
+      "logistics": ""
+    },
+    {
+      "title": "Drogaria São Paulo",
+      "address": "Rua Coronel Luiz Tenorio De Brito, 757 Salão 02 , Centro Embu Guaçu, SP 06900-000",
+      "phone": "(11) 4661-3276 / (11) 4661-2335",
+      "latitude": -23.8306916,
+      "longitude": -46.8165465,
+      "attendance": "Todos os dias: 07h00 às 23h00",
+      "logistics": ""
+    },
+    {
+      "title": "Drogaria São Paulo",
+      "address": "Av. Pres. João Goulart, 1028 São Paulo, SP 06036048",
+      "phone": "(11) 2306-4523 / (11) 23064532",
+      "latitude": -23.7217248,
+      "longitude": -46.689078,
+      "attendance": "Todos os dias: 07h00 às 23h00",
+      "logistics": ""
+    },
+    {
+      "title": "Drogaria São Paulo",
+      "address": "Rua Ibitirama , 1212 , Vila Prudente São Paulo, SP 03134-001",
+      "phone": "(11) 2729-2056 / (11) 2729-3293",
+      "latitude": -23.5908754,
+      "longitude": -46.5816119,
+      "attendance": "Todos os dias: 07h00 às 23h00",
+      "logistics": ""
+    },
+    {
+      "title": "Drogaria São Paulo",
+      "address": "Rua Cap. Pacheco E Chaves, 1.238/1.242 , Vila Prudente São Paulo, SP 03126-001",
+      "phone": "(11) 2215-0061 / (11) 2274-8865",
+      "latitude": -23.581448,
+      "longitude": -46.5859986,
+      "attendance": "Seg. à Sab.: 07h00 às 23h00",
+      "logistics": ""
+    },
+    {
+      "title": "Drogaria São Paulo",
+      "address": "Avenida Sapopemba, 3154 , Vila Regente Feijo São Paulo, SP 03345-000",
+      "phone": "(11) 2717-6684 / (11) 2154-6622",
+      "latitude": -23.573707,
+      "longitude": -46.5586343,
+      "attendance": "Todos os dias: 07h00 às 23h00",
+      "logistics": ""
+    },
+    {
+      "title": "Drogaria São Paulo",
+      "address": "Av Doutor Cardoso De Melo, 1747 , Vila Olímpia São Paulo, SP 04548-005",
+      "phone": "(11) 3045-4255 / (11) 3044-4113",
+      "latitude": -23.5963612,
+      "longitude": -46.6899633,
+      "attendance": "Seg. à Sex.: 07h00 às 22h00 / Sáb.: 07h00 às 13h00",
+      "logistics": ""
+    }
+  ]
+}

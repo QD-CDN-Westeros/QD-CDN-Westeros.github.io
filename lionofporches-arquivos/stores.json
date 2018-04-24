@@ -1,0 +1,70 @@
+{
+  "store": [
+    {
+      "title": "LION OF PORCHES 8ª Avenida",
+      "address": "C.C. 8ª Avenida, 0.006S.",
+      "state": "João da Madeira",
+      "phone": "T . +351 966 088 806T",
+      "latitude": 40.887765,
+      "longitude": -8.491484,
+      "addressType": "Todas",
+      "pickme": true,
+      "link": "https://maps.google.pt/maps?q=LION+OF+PORCHES,+Avenida+Doutor+Renato+Ara%C3%BAjo,+S.+Jo%C3%A3o+da+Madeira&hl=pt-PT&ie=UTF8&sll=41.163325,-8.584395&sspn=0.106488,0.154324&oq=LION+OF+PORCHES,+S.+jo&t=h&hq=LION+OF+PORCHES,+Avenida+Doutor+Renato+Ara%C3%BAjo,+"
+    },
+    {
+      "title": "LION OF PORCHES Alameda",
+      "address": "Alameda Shop & Spot, 329",
+      "state": "Porto",
+      "phone": "T . +351 925 906 951T",
+      "latitude": 41.1607232,
+      "longitude": -8.6545543,
+      "addressType": "Todas",
+      "pickme": false,
+      "link": "https://maps.google.pt/maps?q=LION+OF+PORCHES,+porto&hl=pt-PT&sll=38.782157,-9.193025&sspn=0.027566,0.038581&t=h&hq=LION+OF+PORCHES,&hnear=Porto&z=13"
+    },
+    {
+      "title": "LION OF PORCHES AlgarveShopping",
+      "address": "AlgarveShopping, 1.115",
+      "state": "Albufeira",
+      "phone": "T . +351 914 843 243T",
+      "latitude": 37.1275761,
+      "longitude": -8.2800462,
+      "addressType": "Todas",
+      "pickme": true,
+      "link": "https://maps.google.pt/maps?q=LION+OF+PORCHES,+Albufeira&hl=pt-PT&sll=37.221852,-18.827504&sspn=13.961997,19.753418&oq=lion+of+porches+albufe&t=h&hq=LION+OF+PORCHES,&hnear=Albufeira&z=13"
+    },
+    {
+      "title": "LION OF PORCHES Arrábida",
+      "address": "Arrábida Shopping, 117Vila",
+      "state": "Nova de Gaia",
+      "phone": "T . +351 912 348 415T",
+      "latitude": 41.1408327,
+      "longitude": -8.6365817,
+      "addressType": "Todas",
+      "pickme": true,
+      "link": "https://maps.google.pt/maps?q=LION+OF+PORCHES,+Praceta+de+Henrique+Moreira,+Vila+Nova+de+Gaia&hl=pt-PT&sll=41.300894,-8.706579&sspn=0.212529,0.308647&oq=LION+OF+PORCHES,+vila+nova&t=h&hq=LION+OF+PORCHES,&hnear=Praceta+de+Henrique+Moreira&z=17"
+    },
+    {
+      "title": "LION OF PORCHES Aveiro",
+      "address": "Avenida Lourenço Peixinho, 66",
+      "state": "Aveiro",
+      "phone": "T . +351 234 377 619T",
+      "latitude": 40.6421087,
+      "longitude": -8.6505109,
+      "addressType": "Todas",
+      "pickme": false,
+      "link": "https://maps.google.pt/maps?q=TOMMY+HILFIGER+|+LION+OF+PORCHES+Avenida+Aveiro,+Avenida+Doutor+Louren%C3%A7o+Peixinho,+Aveiro&hl=pt-PT&ie=UTF8&sll=40.642052,-8.650491&sspn=0.006708,0.009645&oq=tommy+&t=h&hq=TOMMY+HILFIGER+|+LION+OF+PORCHES+Avenida&hnear=Av"
+    },
+    {
+      "title": "LION OF PORCHES Braga",
+      "address": "Braga Parque, 219 A",
+      "state": "Braga",
+      "phone": "T . +351 914 856 230T",
+      "latitude": 41.558108,
+      "longitude": -8.4059194,
+      "addressType": "Todas",
+      "pickme": true,
+      "link": "https://maps.google.pt/maps?q=LION+OF+PORCHES,+Braga&hl=pt-PT&sll=40.642052,-8.650491&sspn=0.006708,0.009645&t=h&hq=LION+OF+PORCHES,&hnear=Braga&z=14"
+    }
+  ]
+}
