@@ -12,6 +12,8 @@ try {
 		init: function() {
 			Common.toggleMenuMobile();
 			Common.customSelect();
+			Common.applyLoadingClassOnPanels();
+			Common.reportsPanelCarousel();
 		},
 		ajaxStop: function() {},
 		windowOnload: function() {},
@@ -30,14 +32,68 @@ try {
 			modal.click(function(){
 				$(document.body).removeClass('qd-side-menu-on');
 				$(this).removeClass('in');
+				
 			});
 			$('.side-menu .configurations-title').click(function(){
 				$(this).toggleClass('active');
-				$('.side-menu .configurations-links').slideToggle();
+				$('.side-menu .configurations-links').stop().slideToggle();
 			});
 		},
 		customSelect: function() {
 			$(".custom-select").selectBoxIt();
+		},
+		applyLoadingClassOnPanels: function() {
+			// acabou de clicar para abrir qualquer painel
+			$('.panel').on('show.bs.collapse', function() {
+				$(this).find('.panel-body').addClass('qd-loading');	
+			});
+		},
+		reportsPanelCarousel: function() {			
+			function applyCarousel(element) {				
+				element.find('.report-blocks').slick({
+					slidesToShow: 10,
+					slidesToScroll: 10,
+					infinite: true,
+					draggable: false,
+					arrows: false,
+					speed: 700,
+					responsive: [
+						{
+							breakpoint: 992,
+							settings: {
+								slidesToShow: 3,
+								slidesToScroll: 1
+							}
+						},
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
+				});
+			}
+
+			// verifica se já o painel já está aberto, então aplica carrossel
+			$('.panel-collapse.collapse.in').each(function(){
+				applyCarousel($(this));
+			});
+
+			// se o painel estiver fechado, aplica carrosel somente quando abrir
+			$('.panel').on('shown.bs.collapse', function() {
+				
+				// remove loading
+				$(this).find('.panel-body').removeClass('qd-loading');
+				
+				// se já aplicou, retorna
+				if ($(this).find('.slick-initialized').length > 0)
+					return;
+
+				applyCarousel($(this));				
+			});
+
 		}
 	};
 
@@ -56,42 +112,9 @@ try {
 	var Product = {
 		run: function() {},
 		init: function() {
-			// Product.forceImageZoom();
-			Product.setAvailableBodyClass();
 		},
 		ajaxStop: function() {},
-		windowOnload: function() {},
-		setAvailableBodyClass: function() {
-			function checkVisibleNotify(available) {
-				if (available)
-					$(document.body).addClass('qd-product-available').removeClass('qd-product-unavailable');
-				else
-					$(document.body).addClass('qd-product-unavailable').removeClass('qd-product-available');
-			}
-
-			$(document).on("skuSelected.vtex", function(e, id, sku) {
-				checkVisibleNotify(sku.available);
-			});
-
-			checkVisibleNotify(skuJson.available);
-		},
-		forceImageZoom: function() {
-			try {
-				var orig = window.ImageControl;
-				window.ImageControl = function() {
-					$("ul.thumbs a").each(function() {
-						var $t = $(this);
-						if ($t.attr("zoom"))
-							return;
-						var rel = $t.attr("rel");
-						if (rel)
-							$t.attr("zoom", rel.replace(/(ids\/[0-9]+)[0-9-]+/i, "$1-1000-1000"));
-					});
-					orig.apply(this, arguments);
-				}
-			}
-			catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && console.error("Ops, algo saiu errado como zoom :( . Detalhes: " + e.message)); }
-		}
+		windowOnload: function() {}
 	};
 
 	var List = {
