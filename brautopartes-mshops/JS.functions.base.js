@@ -54,7 +54,7 @@ try {
 			});
 		},
 		favicon: function() {
-			$('link[rel="shortcut icon"]').attr('href', 'http://cdn.quatrodigital.com/brautopartes-mshops/images/favicon-brauto.ico');
+			$('link[rel="shortcut icon"]').attr('href', 'http:https://cdn.quatrodigital.com/brautopartes-mshops/images/favicon-brauto.ico');
 		},
 		qdOverlayClass: 'qd-am-on qd-sn-on',
 		qdOverlay: function() {
@@ -125,6 +125,9 @@ try {
 					return;
 
 				for (var i =  0;  i < data.feed.entry.length; i++) {
+					if (!data.feed.entry[i].gsx$urldaimagem.$t.length)
+						continue;
+
 					if (data.feed.entry[i].gsx$tipodobanner.$t == searchFor)
 						elem.append('<a href="' + data.feed.entry[i].gsx$linkdobanner.$t + '" class="' + data.feed.entry[i].gsx$classecssnaoalterar.$t + '"><img src="' + data.feed.entry[i].gsx$urldaimagem.$t + '" alt="' + data.feed.entry[i].gsx$tipodobanner.$t + '" /></a>');
 				}
@@ -318,7 +321,7 @@ try {
 			$('a[href*="$contentImage.link"]').attr('href', '#').removeAttr('target');
 		},
 		formNewsLetter: function () {
-			$.getScript("//cdn.quatrodigital.com/brautopartes-mshops/JS.jquery.validate.min.js");
+			$.getScript("https://cdn.quatrodigital.com/brautopartes-mshops/JS.jquery.validate.min.js");
 
 			$('.newsletter-qd-v1').html('<div class="row"><div class="col-xs-12 col-md-6"><div class="newsletter-qd-v1-banner"></div></div><div class="col-xs-12 col-md-6"><div class="row"><div class="col-xs-12"><div class="newsletter-qd-v1-content"><h3 class="newsletter-qd-v1-title">Receba descontos imperdíveis</h3><p class="newsletter-qd-v1-sub-title">Fique sabendo das nossas promoções, descontos e novidades em primeira mão!</p><div class="newsletter-qd-v1-form"><form> <input class="qd_news_email input-type-text required email" type="text" name="email" placeholder="Digite aqui seu e-mail" /><button class="qd_news_button" type="submit">Enviar <i class="fa fa-paper-plane" aria-hidden="true"></i> </button></form></div><div class="social-qd-v1-list"><ul><li><a href="https://www.facebook.com/brautopartes" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li></ul></div></div></div></div></div></div>');
 			var $form = $(".newsletter-qd-v1-form form");
@@ -738,7 +741,7 @@ try {
 
 			$(document.body).addClass('qd-empty-search');
 
-			$('.search-qd-v1-wrapper').append('<div class="search-empty-qd-v1-wrapper"><div class="row"><div class="col-xs-12 col-md-6 img-responsive"> <img src="//cdn.quatrodigital.com/brautopartes-mshops/images/empty-search-qd-v1.png" alt="" class="center-block"/></div><div class="col-xs-12 col-md-6"><div class="row"><div class="col-xs-12"><div class="search-empty-qd-v1-block"><h4>Ops! O item procurado não pode ser encontrado.</h4><p>Confira se você digitou as palavras corretamente ou tente novamente a busca.</p> <strong>Dicas para melhorar a sua busca:</strong><p>- Verifique se houve erro de digitação;</p><p>- Procure por um termo similar ou sinônimo;</p><p>- Tente procurar por palavras-chave mais gerais e filtrar o resultado de busca;</p><p>- Tente utilizar uma única palavra.</p></div></div></div></div></div></div>');
+			$('.search-qd-v1-wrapper').append('<div class="search-empty-qd-v1-wrapper"><div class="row"><div class="col-xs-12 col-md-6 img-responsive"> <img src="https://cdn.quatrodigital.com/brautopartes-mshops/images/empty-search-qd-v1.png" alt="" class="center-block"/></div><div class="col-xs-12 col-md-6"><div class="row"><div class="col-xs-12"><div class="search-empty-qd-v1-block"><h4>Ops! O item procurado não pode ser encontrado.</h4><p>Confira se você digitou as palavras corretamente ou tente novamente a busca.</p> <strong>Dicas para melhorar a sua busca:</strong><p>- Verifique se houve erro de digitação;</p><p>- Procure por um termo similar ou sinônimo;</p><p>- Tente procurar por palavras-chave mais gerais e filtrar o resultado de busca;</p><p>- Tente utilizar uma única palavra.</p></div></div></div></div></div></div>');
 		}
 	};
 
@@ -746,7 +749,7 @@ try {
 		run: function() {},
 		init: function() {
 			Product.pageStructure();
-			Product.imageStructure();
+			// Product.imageStructure();
 			Product.bannerTop();
 			Product.qdSeeDescription();
 			Product.facebookComments();
@@ -897,11 +900,11 @@ try {
 			// var tabContent = '';
 			var prodInfo = $('.categoriesPath').text().trim() + ($('input#title').val() || '');
 
-			// var htmlFeminino = '<div class="img-responsive"> <img src="//cdn.quatrodigital.com/brautopartes-mshops/images/Feminino.png" /> </div>';
-			// var htmlMasculino = '<div class="img-responsive"> <img src="//cdn.quatrodigital.com/brautopartes-mshops/images/Masculino.png" /> </div>';
-			// var htmlMoletom = '<div class="img-responsive"> <img src="//cdn.quatrodigital.com/brautopartes-mshops/images/Moletom.png" /> </div>';
-			// var htmlRaglan = '<div class="img-responsive"> <img src="//cdn.quatrodigital.com/brautopartes-mshops/images/Raglan.png" /> </div>';
-			// var htmlPoster = '<div class="img-responsive"> <img src="//cdn.quatrodigital.com/brautopartes-mshops/images/Poster.png" /> </div>';
+			// var htmlFeminino = '<div class="img-responsive"> <img src="https://cdn.quatrodigital.com/brautopartes-mshops/images/Feminino.png" /> </div>';
+			// var htmlMasculino = '<div class="img-responsive"> <img src="https://cdn.quatrodigital.com/brautopartes-mshops/images/Masculino.png" /> </div>';
+			// var htmlMoletom = '<div class="img-responsive"> <img src="https://cdn.quatrodigital.com/brautopartes-mshops/images/Moletom.png" /> </div>';
+			// var htmlRaglan = '<div class="img-responsive"> <img src="https://cdn.quatrodigital.com/brautopartes-mshops/images/Raglan.png" /> </div>';
+			// var htmlPoster = '<div class="img-responsive"> <img src="https://cdn.quatrodigital.com/brautopartes-mshops/images/Poster.png" /> </div>';
 
 			// if(prodInfo.toLowerCase().indexOf('feminin') > -1) tabContent += htmlFeminino;
 			// if(prodInfo.toLowerCase().indexOf('masculin') > -1) tabContent += htmlMasculino;
@@ -1023,6 +1026,7 @@ try {
 			$('.ch-g1 .mainWrapper').attr('class', 'container').before('<div class="product-qd-v1-banner hidden-xs hidden-sm"></div>').before('<div class="product-qd-v1-banner-mobile visible-xs visible-sm"></div>');
 			$('.ch-container.oneColumn').attr('class', 'row');
 			$('.ch-g4-10').attr('class', 'col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-0');
+			//A linha acima está influenciando no tamanho do zoom na página de produto
 			$('.ch-g6-10').attr('class', 'col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 product-qd-v1-sku-selection-fixed');
 			$('.component.vip').addClass('product-qd-v1-sku-selection-box');
 			$('.ms-shipping-calculator-container').insertAfter($('.product-qd-v1-sku-selection-box'));
