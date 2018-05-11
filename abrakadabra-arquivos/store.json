@@ -10,7 +10,8 @@
             "businessHours": "Segunda a Sexta das 10h às 19h, Sábados das 10h às 18h",
             "email": "reboucas@abrakadabra.com.br",
             "latitude": -23.5659944,
-            "longitude": -46.6810118
+            "longitude": -46.6810118,
+            "mapURL" : "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14628.265221177173!2d-46.680886!3d-23.566062!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x22502d6106f8ca1b!2sAbrakadabra+Rebou%C3%A7as+-+Pinheiros!5e0!3m2!1spt-BR!2sbr!4v1526049156715"
         },
         {
             "title": "Abrakadabra - Moema",
@@ -22,7 +23,8 @@
             "businessHours": "Segunda a Sexta das 10h às 19h, Sábados das 10h às 18h",
             "email": "moema@abrakadabra.com.br",
             "latitude": -23.6075431,
-            "longitude": -46.6697406
+            "longitude": -46.6697406,
+            "mapURL": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14623.649411892147!2d-46.6698993!3d-23.6074761!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb43c718d664da24c!2sAbrakadabra+Moema!5e0!3m2!1spt-BR!2sbr!4v1526058770669"
         },
         {
             "title": "Abrakadabra - Tatuapé",
@@ -34,7 +36,8 @@
             "businessHours": "Segunda a Sexta das 10h às 19h, Sábados das 10h às 18h",
             "email": "tatuape@abrakadabra.com.br",
             "latitude": -23.5489794,
-            "longitude": -46.5628888
+            "longitude": -46.5628888,
+            "mapURL": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14630.15979180567!2d-46.5629151!3d-23.5490436!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x15e294a921c12889!2sAbrakadabra+Tatuap%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1526058711026"
         },
         {
             "title": "Abrakadabra - Água Branca",
@@ -46,19 +49,8 @@
             "businessHours": "Segunda a Sexta das 09h às 18h30hs",
             "email": "sara@abrakadabra.com.br",
             "latitude": -23.5166425,
-            "longitude": -46.6913611
-        },
-        {
-            "title": "Abrakadabra - João Pessoa - Paraíba",
-            "address":"Av. Vandik Pinto Filgueiras, 111- Tambauzinho",
-            "city": "João Pessoa",
-            "state": "PB",
-            "phone": "(83) 3506-6486 / (83) 98701-0269",
-            "openOnHolidays": false,
-            "businessHours": "Segunda a Sexta das 09h às 18hs, Sábados das 9h às 13h",
-            "email": "paraiba@abrakadabra.com.br",
-            "latitude": -7.1207882,
-            "longitude": -34.8432757
+            "longitude": -46.6913611,
+            "mapURL": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14633.763215256235!2d-46.689172!3d-23.516643!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd762058ec32e5c61!2sAbrakadabra+Sara!5e0!3m2!1spt-BR!2sbr!4v1526058837723"
         },
         {
             "title": "Abrakadabra - Campinas - SP",
@@ -70,7 +62,21 @@
             "businessHours": "Segunda a Sexta das 09h às 18hs, Sábados das 9h às 15h",
             "email": "campinas@abrakadabra.com.br",
             "latitude": -22.8949201,
-            "longitude": -47.060506
+            "longitude": -47.060506,
+            "mapURL": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14702.00017998882!2d-47.060506!3d-22.89492!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x207b90a7ebec1d6c!2sAbrakadabra+-+Campinas!5e0!3m2!1spt-BR!2sbr!4v1526059113616"
+        },
+        {
+            "title": "Abrakadabra - João Pessoa - Paraíba",
+            "address":"Av. Vandik Pinto Filgueiras, 111- Tambauzinho",
+            "city": "João Pessoa",
+            "state": "PB",
+            "phone": "(83) 3506-6486 / (83) 98701-0269",
+            "openOnHolidays": false,
+            "businessHours": "Segunda a Sexta das 09h às 18hs, Sábados das 9h às 13h",
+            "email": "paraiba@abrakadabra.com.br",
+            "latitude": -7.1207882,
+            "longitude": -34.8432757,
+            "mapURL": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15836.180641224422!2d-34.840931!3d-7.120765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc4947865a794d7ff!2sAbrakadabra+Festas+e+Fantasias!5e0!3m2!1spt-BR!2sbr!4v1526059329081"
         }
     ]
 }
