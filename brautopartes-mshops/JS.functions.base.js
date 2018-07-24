@@ -1025,9 +1025,9 @@ try {
 			$('.ch-g1.wrapper').addClass('qd-loaded');
 			$('.ch-g1 .mainWrapper').attr('class', 'container').before('<div class="product-qd-v1-banner hidden-xs hidden-sm"></div>').before('<div class="product-qd-v1-banner-mobile visible-xs visible-sm"></div>');
 			$('.ch-container.oneColumn').attr('class', 'row');
-			$('.ch-g4-10').attr('class', 'col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-0');
+			$('.ch-g4-10').attr('class', 'col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-0');
 			//A linha acima está influenciando no tamanho do zoom na página de produto
-			$('.ch-g6-10').attr('class', 'col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-0 product-qd-v1-sku-selection-fixed');
+			$('.ch-g6-10').attr('class', 'col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-1 product-qd-v1-sku-selection-fixed');
 			$('.component.vip').addClass('product-qd-v1-sku-selection-box');
 			$('.ms-shipping-calculator-container').insertAfter($('.product-qd-v1-sku-selection-box'));
 			$('.addCart').after('<span class="product-qd-v1-details">Ver detalhes do produto</span>');
