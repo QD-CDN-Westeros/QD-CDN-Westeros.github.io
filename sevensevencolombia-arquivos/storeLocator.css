@@ -1,0 +1,137 @@
+.storeLocator .mainContent .site-locator {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: box;
+    display: flex;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-around;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 20px 0
+}
+
+.storeLocator .mainContent .site-locator .search-tools {
+    -webkit-flex-basis: 30%;
+    flex-basis: 30%;
+    -ms-flex: 30%;
+    padding-right: 20px
+}
+
+.storeLocator .mainContent .site-locator .search-tools h3 {
+    text-transform: uppercase;
+    font-size: 1.2rem
+}
+
+.storeLocator .mainContent .site-locator .search-tools select {
+    background: url(/arquivos/flechaMenuMobile.png) 95% center no-repeat #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.storeLocator .mainContent .site-locator .search-tools #storeContent h2 {
+    text-align: left;
+    border-bottom: 1px solid #161615;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.storeLocator .mainContent .site-locator .search-tools #storeContent h2:before {
+    display: none;
+}
+
+.storeLocator .mainContent .site-locator .search-tools #storeContent #bodyContent {
+    margin-bottom: 20px
+}
+
+.storeLocator .mainContent .site-locator .search-tools #storeContent #bodyContent p {
+    padding: 5px 0
+}
+
+.storeLocator .mainContent .site-locator .search-tools #stores {
+    height: 250px;
+    overflow: auto;
+    background-color: #fff;
+    border: 5px solid #ccc;
+    padding: 15px
+}
+
+.storeLocator .mainContent .site-locator .search-tools #stores ul {
+    color: #999;
+    list-style: none;
+    padding: 0;
+}
+
+.storeLocator .mainContent .site-locator .search-tools #stores ul li {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.storeLocator .mainContent .site-locator .search-tools #stores ul li:hover {
+    color: #000
+}
+
+.storeLocator .mainContent .site-locator #map-canvas {
+    -webkit-flex-basis: 70%;
+    flex-basis: 70%;
+    -ms-flex: 70%;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray
+}
+
+.storeLocator .mainContent .site-locator #map-canvas .gm-style-iw #bodyContent p {
+    max-width: 300px;
+    padding: 3px 0
+}
+
+@media screen and (max-width: 1023px) {
+    .storeLocator .mainContent .site-locator .search-tools {
+        -webkit-flex-basis:100%;
+        flex-basis: 100%;
+        -ms-flex: 100%;
+        padding-right: 0
+    }
+
+    .storeLocator .mainContent .site-locator .search-tools #stores {
+        display: none
+    }
+
+    .storeLocator .mainContent .site-locator #map-canvas {
+        -webkit-flex-basis: 100%;
+        flex-basis: 100%;
+        -ms-flex: 100%;
+        margin-top: 20px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .storeLocator .mainContent .site-locator {
+        margin:0 0 20px
+    }
+
+    .storeLocator .mainContent .site-locator .search-tools h3 {
+        text-align: center;
+        font-size: 1rem
+    }
+
+    .storeLocator .mainContent .site-locator .search-tools p {
+        padding: 10px 0
+    }
+
+    .storeLocator .mainContent .site-locator #map-canvas .gm-style-iw #bodyContent p {
+        max-width: 250px;
+        padding: 3px 0
+    }
+}
