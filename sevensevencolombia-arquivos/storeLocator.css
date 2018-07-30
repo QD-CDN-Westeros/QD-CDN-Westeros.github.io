@@ -26,11 +26,8 @@
 }
 
 .storeLocator .mainContent .site-locator .search-tools select {
-    background: url(/arquivos/flechaMenuMobile.png) 95% center no-repeat #fff;
     border: 1px solid #ccc;
     border-radius: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     padding: 5px 10px;
     margin-bottom: 10px;

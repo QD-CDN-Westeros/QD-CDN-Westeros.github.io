@@ -56,13 +56,13 @@
 .staticPages .institucional-qd-v1-content .boxContent .content .accordian ul li h3 {
     padding: 10px 12px;
     cursor: pointer;
-    background: url("/arquivos/icoMas.png") right center no-repeat;
+    background: url("//sevensevencolombia.vteximg.com.br/arquivos/icoMas.png") right center no-repeat;
     letter-spacing: 1px;
     font-size: 14px;
 }
 
 .staticPages .institucional-qd-v1-content .boxContent .content .accordian ul li .active {
-    background: url("/arquivos/icoMenos.png") right center no-repeat;
+    background: url("//sevensevencolombia.vteximg.com.br/arquivos/icoMenos.png") right center no-repeat;
 }
 
 .staticPages .institucional-qd-v1-content .boxContent .content .accordian ul li div {
