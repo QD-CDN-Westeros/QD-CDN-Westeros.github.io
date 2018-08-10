@@ -9,21 +9,28 @@ Array.prototype.indexOf||(Array.prototype.indexOf=function(d,e){var a;if(null==t
 try {
 	var Common = {
 		iframeDocument: '',
-		run: function() {},
 		init: function() {
 			Common.setHash();
 		},
-		windowOnload: function() {},
 		setHash: function() {
-			$('main > iframe').on("load", function(){
+			var date = new Date();
+			var inicio = date.toISOString();
+			date.setMonth(date.getMonth()-6);
+			var fim = date.toISOString();
+			var src = '/admin/iframe/checkout#/orders?f_creationDate=creationDate:%5B' + fim + '%20TO%20' + inicio + '%5D&orderBy=creationDate,desc';
+
+			$('main > iframe').attr('src', src).on("load", function(){
+				$('body').removeClass('loading');
 				Common.iframeDocument = $(this.contentDocument);
+				Common.iframeDocument.find('html').removeClass('no-csstransforms3d');
 				// seta lingua para inglês
 				this.contentWindow.vtex.topbar.service.Locale.setLocale('en-US');
-				SellerAdmin.run();
-				
+				SellerAdmin.init();
+
 				window.location.hash = this.contentWindow.location.hash;
 				$(this.contentWindow).on("hashchange", function(){
 					window.location.hash = this.location.hash;
+					Common.setPage(this.location.hash);
 				})
 			});
 		},
@@ -33,16 +40,24 @@ try {
 				Common.iframeDocument.find(insideSelector)[0].click();
 			});
 		},
+		setPage: function(hash) {
+			if(hash.split('/')[2])
+				SellerAdmin.handleOrderPage(hash.split('/')[2].split('?')[0]);
+		}
 	};
 
 	var SellerAdmin = {
-		run: function() {
-			SellerAdmin.bindActionButtons();
+		init: function() {
+			// SellerAdmin.bindActionButtons();
 		},
-		init: function() {},
-		windowOnload: function() {},
 		bindActionButtons: function() {
-			Common.createExternalButton('a.first', 'vt-filter-summary a');
+			// Common.createExternalButton('a.first', 'vt-filter-summary a');
+		},
+		handleOrderPage: function(orderId) {
+			$('.sideMenu').prepend($('<h3>').text('Order: ').append($('<span>').text(orderId)));
+			$('.actionMenu ul').append($('<li></li>').addClass('ld__map-block').append($('<a>').attr('href', '#').addClass('send-invoice').text('Send Invoice')));
+			Common.createExternalButton('.actionMenu a.send-invoice', '.packages-wrap .btn-success');
+
 		}
 	};
 
@@ -51,22 +66,9 @@ catch (e) {(typeof console !== "undefined" && typeof console.error === "function
 
 try {
 	(function() {
-		var body, windowLoad;
-
-		windowLoad = function() {
-			Common.windowOnload();
-			if (body.is(".seller-admin")) SellerAdmin.windowOnload();
-		};
-
-		$(function() {
-			body = $(document.body);
-			Common.init();
-			if (body.is(".seller-admin")) SellerAdmin.init();
-			$(window).load(windowLoad);
-			body.addClass('jsFullLoaded');
-		});
-
-		Common.run();
+		var body = $(document.body);
+		Common.init();
+		body.addClass('jsFullLoaded');
 	})();
 }
 catch (e) {(typeof console !== "undefined" && typeof console.error === "function" && $("body").addClass('jsFullLoaded jsFullLoadedError') && console.error("Houve um erro ao iniciar os objetos. Detalhes: " + e.message)); }
