@@ -1,0 +1,1 @@
+$('.qd-v1-modal').clone().appendTo(document.body).addClass('qd-v1-modal-id-product').removeClass('qd-v1-modal').modal().find('.modal-body').append('<p> Id do Produto: ' + $('input[name="itemId"]').val() + '</p>');
