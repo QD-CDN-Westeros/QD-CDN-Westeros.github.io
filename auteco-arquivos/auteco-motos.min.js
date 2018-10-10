@@ -1,2 +1,2 @@
-/* Wartodle - 09/10/2018 11:22:57 GMT-0300 */
-var qdStoreLocator_jsMotos={moto:[{title:"NS 160 PRO",brand:"Pulsar",displacement:"0km",max_power:"15.3 HP @ 8500 rpm",max_torque:"14.6 Nm @ 6500 rpm",transmission:"14:42"},{title:"200 DUKE",brand:"KTM",displacement:"10000km",max_power:"25.5 HP @ 10000 rpm",max_torque:"14.6 Nm @ 6500 rpm",transmission:"22:72"}]};
+/* Tyranitar - 10/10/2018 10:23:59 GMT-0300 */
+var QD_jsMotos={mydata:[{key:"NS 160 PRO",value1:"Pulsar",value2:"0km",value3:"15.3 HP @ 8500 rpm",value4:"14.6 Nm @ 6500 rpm",value5:"14:42",value6:""},{key:"200 DUKE",value1:"KTM",value2:"10000km",value3:"25.5 HP @ 10000 rpm",value4:"14.6 Nm @ 6500 rpm",value5:"22:72",value6:""}]};
