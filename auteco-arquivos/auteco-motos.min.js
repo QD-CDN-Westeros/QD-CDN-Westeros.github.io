@@ -1,2 +1,2 @@
-/* Tyranitar - 10/10/2018 10:23:59 GMT-0300 */
-var QD_jsMotos={mydata:[{key:"NS 160 PRO",value1:"Pulsar",value2:"0km",value3:"15.3 HP @ 8500 rpm",value4:"14.6 Nm @ 6500 rpm",value5:"14:42",value6:""},{key:"200 DUKE",value1:"KTM",value2:"10000km",value3:"25.5 HP @ 10000 rpm",value4:"14.6 Nm @ 6500 rpm",value5:"22:72",value6:""}]};
+/* Wartodle - 15/10/2018 16:29:21 GMT-0300 */
+var QD_jsMotos={mydata:[{key:"Pulsar",value1:"NS 160 PRO",value2:"",value3:"",value4:"",value5:"",value6:""},{key:"KTM",value1:"200 DUKE",value2:"",value3:"",value4:"",value5:"",value6:""}]};
