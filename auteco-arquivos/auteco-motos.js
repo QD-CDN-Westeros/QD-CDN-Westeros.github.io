@@ -1,2 +1,2 @@
-/* Wartodle - 18/10/2018 13:46:09 GMT-0300 */
+/* Wartodle - 18/10/2018 18:00:33 GMT-0300 */
 var QD_jsMotos={mydata:[{key:"Pulsar",value1:"NS 160 PRO",value2:"",value3:"",value4:"",value5:"",value6:""},{key:"KTM",value1:"200 DUKE",value2:"",value3:"",value4:"",value5:"",value6:""}]};
