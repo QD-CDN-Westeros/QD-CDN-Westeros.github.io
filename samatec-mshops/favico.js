@@ -1,0 +1,1 @@
+$(function(){$('link[rel="shortcut icon"]').attr("href","../IMAGES/favicon.ico")});
