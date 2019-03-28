@@ -1,0 +1,86 @@
+h5.COR + ul .filtro-ativo.amarelo,
+.COR li a[title="Amarelo"]{
+    background: #FFFF00;
+}
+h5.COR + ul .filtro-ativo.azul,
+.COR li a[title="Azul"]{
+    background: #0000FF;
+}
+h5.COR + ul .filtro-ativo.branco,
+.COR li a[title="Branco"]{
+    background: #fff;
+}
+h5.COR + ul .filtro-ativo.bege,
+.COR li a[title="Bege"]{
+    background: #FFE4C4;
+}
+h5.COR + ul .filtro-ativo.caqui,
+.COR li a[title="Caqui"]{
+    background: #D2B48C;
+}
+h5.COR + ul .filtro-ativo.cinza,
+.COR li a[title="Cinza"]{
+    background: #808080;
+}
+h5.COR + ul .filtro-ativo.laranja,
+.COR li a[title="Laranja"]{
+    background: #FF4500;
+}
+h5.COR + ul .filtro-ativo.lilas,
+.COR li a[title="Lilás"]{
+    background: #7B68EE;
+}
+h5.COR + ul .filtro-ativo.marrom,
+.COR li a[title="Marrom"]{
+    background: #8B4513;
+}
+h5.COR + ul .filtro-ativo.preto,
+.COR li a[title="Preto"]{
+    background: #000;
+}
+h5.COR + ul .filtro-ativo.rosa,
+.COR li a[title="Rosa"]{
+    background: #FF1493;
+}
+h5.COR + ul .filtro-ativo.roxo,
+.COR li a[title="Roxo"]{
+    background: #800080;
+}
+h5.COR + ul .filtro-ativo.verde,
+.COR li a[title="Verde"]{
+    background: #80cc00;
+}
+h5.COR + ul .filtro-ativo.vermelho,
+.COR li a[title="Vermelho"]{
+    background: #FF0000;
+}
+h5.COR + ul .filtro-ativo.vinho,
+.COR li a[title="Vinho"]{
+    background: #880000;
+}
+h5.COR + ul .filtro-ativo.marfim,
+.COR li a[title="Marfim"]{
+    background: #fffff0;
+}
+h5.COR + ul .filtro-ativo.areia,
+.COR li a[title="Areia"]{
+    background: #c2b280;
+}
+h5.COR + ul .filtro-ativo.rose,
+.COR li a[title="Rose"]{
+    background: #B19DB1;
+}
+h5.COR + ul .filtro-ativo.turquesa,
+.COR li a[title="Turquesa"]{
+    background: #40e0d0;
+}
+h5.COR + ul .filtro-ativo.estampado,
+.COR li a[title="Estampado"]{
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARUlEQVQoU2O0O3X+PwMUHDIzZISx0WlGihU+uGEHt0lB4xAjTqvIV1hxHmFFh+Eh3J6hSOGnmXFwj/ClLwLbgtUqihQCACBuMAtgioIxAAAAAElFTkSuQmCC) repeat;
+}
+
+
+
+
+
+
