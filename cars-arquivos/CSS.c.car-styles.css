@@ -204,6 +204,8 @@ main .main-section-gallery .row > div:nth-child(7) {
   margin-top: 30px;
   margin-bottom: 30px; }
   main .main-section-gallery .row > div:nth-child(7) h2 {
+    width: 100%;
+    margin-bottom: 30px;
     font-size: 25px; }
 @media (max-width: 768px) {
   main .main-section-gallery .row > div {
@@ -422,4 +424,4 @@ footer .footer-rights {
       display: block;
       margin: 20px auto; } }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=CSS.c.car-styles.css.map */
