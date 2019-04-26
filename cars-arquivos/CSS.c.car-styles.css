@@ -93,7 +93,7 @@ header {
     header nav .navbar-toggler {
       width: 32px;
       height: 32px;
-      background-image: url(../img/menu.png);
+      background-image: url(https://qdcars.vteximg.com.br/arquivos/menu.png);
       background-position: center center;
       background-repeat: no-repeat; }
     @media (max-width: 768px) {
@@ -117,7 +117,7 @@ header {
       font-size: 13px;
       padding-right: 15px !important;
       text-transform: uppercase;
-      background-image: url(../img/seta-baixo.jpg);
+      background-image: url(https://qdcars.vteximg.com.br/arquivos/seta-baixo.jpg);
       background-position: 95% center;
       background-repeat: no-repeat; }
     @media (max-width: 768px) {
@@ -144,7 +144,7 @@ header {
           padding-bottom: 0;
           margin-top: 0 !important;
           background-color: transparent;
-          background-image: url(../img/lupa.jpg);
+          background-image: url(https://qdcars.vteximg.com.br/arquivos/lupa.jpg);
           background-position: 95% bottom;
           background-repeat: no-repeat;
           border: none; }
@@ -155,7 +155,7 @@ header {
       header nav .navbar-collapse .header-form-blockcar .header-navbar-blockcar {
         justify-content: flex-end;
         width: 125px;
-        background-image: url(../img/carrinho.jpg);
+        background-image: url(https://qdcars.vteximg.com.br/arquivos/carrinho.jpg);
         background-repeat: no-repeat; }
         @media (max-width: 768px) {
           header nav .navbar-collapse .header-form-blockcar .header-navbar-blockcar {
@@ -235,7 +235,7 @@ main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline {
     main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-blackstar span {
       height: 25px;
       background-color: #000000;
-      background-image: url(../img/estrela.jpg); }
+      background-image: url(https://qdcars.vteximg.com.br/arquivos/estrela.jpg); }
     main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer {
       align-items: flex-end; }
       main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer div:first-child {
@@ -243,12 +243,12 @@ main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline {
         main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer div:first-child span {
           height: 25px;
           background-color: #0082a7;
-          background-image: url(../img/caminhao.jpg); }
+          background-image: url(https://qdcars.vteximg.com.br/arquivos/caminhao.jpg); }
       main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer div:last-child span {
         width: 65px;
         height: 25px;
         background-color: #de006f;
-        background-image: url(../img/ic-bolinha.jpg); }
+        background-image: url(https://qdcars.vteximg.com.br/arquivos/ic-bolinha.jpg); }
   main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-image {
     position: relative;
     bottom: 10px;
@@ -276,7 +276,7 @@ main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline {
     font-size: 13px;
     font-family: 'Lato', sans-serif;
     padding-left: 15px;
-    background-image: url(../img/ic-comprar.jpg);
+    background-image: url(https://qdcars.vteximg.com.br/arquivos/ic-comprar.jpg);
     background-repeat: no-repeat;
     background-position: 7% center;
     border: 1px solid #009200;
@@ -309,7 +309,7 @@ main .main-section-news {
       outline: none;
       padding-left: 50px;
       background-color: transparent;
-      background-image: url(../img/ic-email.jpg);
+      background-image: url(https://qdcars.vteximg.com.br/arquivos/ic-email.jpg);
       background-position: 5% center;
       background-repeat: no-repeat;
       border-radius: 0;
