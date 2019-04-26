@@ -140,8 +140,7 @@ header {
         header nav .navbar-collapse .header-form-blockcar .form-inline fieldset input {
           color: #999999;
           font-size: 12px;
-          padding-left: 0;
-          padding-bottom: 0;
+          padding: 6px 0;
           margin-top: 0 !important;
           background-color: transparent;
           background-image: url(https://qdcars.vteximg.com.br/arquivos/lupa.jpg);
@@ -150,7 +149,7 @@ header {
           border: none; }
         header nav .navbar-collapse .header-form-blockcar .form-inline div {
           height: 2px;
-          width: 140px;
+          width: 120px;
           background-color: #999999; }
       header nav .navbar-collapse .header-form-blockcar .header-navbar-blockcar {
         justify-content: flex-end;
