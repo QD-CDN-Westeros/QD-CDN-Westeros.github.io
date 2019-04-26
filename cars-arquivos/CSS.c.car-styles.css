@@ -58,31 +58,33 @@ main .main-section-gallery .row > div:nth-child(7) h2, main .main-section-galler
 header {
   padding-top: 10px;
   background-color: #333333; }
-  header .header-firstbar .row div:first-child {
-    font-size: 13px;
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 300;
-    color: #FFFFFF; }
-    @media (max-width: 768px) {
-      header .header-firstbar .row div:first-child {
-        justify-content: flex-start; } }
-  header .header-firstbar .row div:last-child {
-    justify-content: flex-end; }
-    @media (max-width: 768px) {
-      header .header-firstbar .row div:last-child {
-        justify-content: flex-start; } }
-    header .header-firstbar .row div:last-child ul {
-      width: 180px;
-      justify-content: space-between; }
-      header .header-firstbar .row div:last-child ul li {
-        margin-right: 10px; }
-        header .header-firstbar .row div:last-child ul li a {
-          font-size: 13px;
-          font-family: 'Ubuntu';
-          font-style: normal;
-          font-weight: 300;
-          color: #FFFFFF; }
+  header .header-firstbar .row {
+    justify-content: space-between; }
+    header .header-firstbar .row div:first-child {
+      font-size: 13px;
+      font-family: 'Ubuntu';
+      font-style: normal;
+      font-weight: 300;
+      color: #FFFFFF; }
+      @media (max-width: 768px) {
+        header .header-firstbar .row div:first-child {
+          justify-content: flex-start; } }
+    header .header-firstbar .row div:last-child {
+      justify-content: flex-end; }
+      @media (max-width: 768px) {
+        header .header-firstbar .row div:last-child {
+          justify-content: flex-start; } }
+      header .header-firstbar .row div:last-child ul {
+        width: 180px;
+        justify-content: space-between; }
+        header .header-firstbar .row div:last-child ul li {
+          margin-right: 10px; }
+          header .header-firstbar .row div:last-child ul li a {
+            font-size: 13px;
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 300;
+            color: #FFFFFF; }
   header nav {
     padding-left: 0 !important; }
     @media (min-width: 768px) {
@@ -135,7 +137,7 @@ header {
         @media (max-width: 768px) {
           header nav .navbar-collapse .header-form-blockcar .form-inline {
             order: 1; } }
-        header nav .navbar-collapse .header-form-blockcar .form-inline input {
+        header nav .navbar-collapse .header-form-blockcar .form-inline fieldset input {
           color: #999999;
           font-size: 12px;
           padding-left: 0;
