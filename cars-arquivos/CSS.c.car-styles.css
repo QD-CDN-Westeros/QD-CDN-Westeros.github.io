@@ -1,0 +1,425 @@
+/*Reset 2.0*/
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body h1, body h2, ul li, ul li a, body p, body span, body input {
+  font-family: 'Ubuntu', sans-serif; }
+
+header .header-firstbar .row div:last-child, header .header-firstbar .row div:last-child ul, header nav .navbar-collapse .header-form-blockcar, header nav .navbar-collapse .header-form-blockcar .form-inline, header nav .navbar-collapse .header-form-blockcar .header-navbar-blockcar, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest span, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-image, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description div, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description a, main .main-section-news .container .row > div:nth-child(3) .form-group, main .main-section-news .container .row > div:nth-child(3) ul, footer .footer-block-info .container .row div:nth-child(2), footer .footer-block-info .container .row div:nth-child(2) ul, footer .footer-block-info .container .row div:last-child, footer .footer-block-info .container .row div:last-child ul li:first-child, footer .footer-block-info .container .row div:last-child ul li, footer .footer-block-brands .container .row div {
+  display: flex; }
+
+header nav .navbar-collapse .header-form-blockcar, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest span, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-image, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description div, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description a, footer .footer-block-info .container .row div:nth-child(2), footer .footer-block-info .container .row div:last-child ul li:first-child {
+  align-items: center; }
+
+main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-image, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description div, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description a, footer .footer-block-info .container .row div:nth-child(2) {
+  justify-content: center; }
+
+header nav .navbar-collapse .header-form-blockcar .form-inline, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description, footer .footer-block-info .container .row div:nth-child(2), footer .footer-block-info .container .row div:last-child {
+  flex-direction: column; }
+
+main .main-section-gallery .row > div:nth-child(7) h2, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description .main-blcproduct-span1, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description a, main .main-section-news .container .row > div:nth-child(1) h2, main .main-section-news .container .row > div:nth-child(3) h3, footer .footer-block-info .container .row div:first-child h2, footer .footer-block-info .container .row div:last-child h2, footer .footer-block-brands .container .row div h2 {
+  text-transform: uppercase; }
+
+main .main-section-gallery .row > div:nth-child(7) h2, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest span, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description .main-blcproduct-span1, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description div span, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description .main-blcproduct-span2, main .main-section-news .container .row > div:nth-child(1) h2 {
+  text-align: center; }
+
+main .main-section-gallery .row > div:nth-child(7) h2, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description a, main .main-section-news .container .row > div:nth-child(1) h2, footer .footer-block-brands .container .row div h2 {
+  font-weight: bold; }
+
+header {
+  padding-top: 10px;
+  background-color: #333333; }
+  header .header-firstbar .row div:first-child {
+    font-size: 13px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    color: #FFFFFF; }
+    @media (max-width: 768px) {
+      header .header-firstbar .row div:first-child {
+        justify-content: flex-start; } }
+  header .header-firstbar .row div:last-child {
+    justify-content: flex-end; }
+    @media (max-width: 768px) {
+      header .header-firstbar .row div:last-child {
+        justify-content: flex-start; } }
+    header .header-firstbar .row div:last-child ul {
+      width: 180px;
+      justify-content: space-between; }
+      header .header-firstbar .row div:last-child ul li {
+        margin-right: 10px; }
+        header .header-firstbar .row div:last-child ul li a {
+          font-size: 13px;
+          font-family: 'Ubuntu';
+          font-style: normal;
+          font-weight: 300;
+          color: #FFFFFF; }
+  header nav {
+    padding-left: 0 !important; }
+    @media (min-width: 768px) {
+      header nav {
+        padding-right: 0 !important; } }
+    header nav .navbar-toggler {
+      width: 32px;
+      height: 32px;
+      background-image: url(../img/menu.png);
+      background-position: center center;
+      background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      header nav .navbar-collapse {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start; } }
+    @media (min-width: 768px) {
+      header nav .navbar-collapse {
+        display: flex;
+        justify-content: space-between; } }
+    @media (max-width: 768px) {
+      header nav .navbar-collapse .navbar-nav {
+        order: 2; } }
+    @media (min-width: 768px) {
+      header nav .navbar-collapse .navbar-nav li:first-child a {
+        padding-left: 0px !important; } }
+    header nav .navbar-collapse .navbar-nav li a {
+      color: #FFFFFF;
+      font-size: 13px;
+      padding-right: 15px !important;
+      text-transform: uppercase;
+      background-image: url(../img/seta-baixo.jpg);
+      background-position: 95% center;
+      background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      header nav .navbar-collapse .navbar-brand {
+        order: 0; } }
+    header nav .navbar-collapse .header-form-blockcar {
+      justify-content: space-between; }
+      @media (max-width: 768px) {
+        header nav .navbar-collapse .header-form-blockcar {
+          width: 100%;
+          order: 3;
+          margin-top: 10px;
+          margin-bottom: 10px; } }
+      header nav .navbar-collapse .header-form-blockcar .form-inline {
+        align-items: flex-start;
+        justify-content: flex-start; }
+        @media (max-width: 768px) {
+          header nav .navbar-collapse .header-form-blockcar .form-inline {
+            order: 1; } }
+        header nav .navbar-collapse .header-form-blockcar .form-inline input {
+          color: #999999;
+          font-size: 12px;
+          padding-left: 0;
+          padding-bottom: 0;
+          margin-top: 0 !important;
+          background-color: transparent;
+          background-image: url(../img/lupa.jpg);
+          background-position: 95% bottom;
+          background-repeat: no-repeat;
+          border: none; }
+        header nav .navbar-collapse .header-form-blockcar .form-inline div {
+          height: 2px;
+          width: 140px;
+          background-color: #999999; }
+      header nav .navbar-collapse .header-form-blockcar .header-navbar-blockcar {
+        justify-content: flex-end;
+        width: 125px;
+        background-image: url(../img/carrinho.jpg);
+        background-repeat: no-repeat; }
+        @media (max-width: 768px) {
+          header nav .navbar-collapse .header-form-blockcar .header-navbar-blockcar {
+            order: 0; } }
+        header nav .navbar-collapse .header-form-blockcar .header-navbar-blockcar ul {
+          margin-left: 40px; }
+          header nav .navbar-collapse .header-form-blockcar .header-navbar-blockcar ul li {
+            font-size: 13px;
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 300;
+            color: #FFFFFF;
+            margin-bottom: 3px; }
+
+@media (min-width: 768px) {
+  main .main-section-gallery .row > div:first-child {
+    margin-bottom: 51px; } }
+@media (min-width: 768px) {
+  main .main-section-gallery .row > div:nth-child(2) {
+    padding-right: 5px !important;
+    margin-bottom: 22px; } }
+@media (min-width: 768px) {
+  main .main-section-gallery .row > div:nth-child(3) {
+    padding-left: 5px !important;
+    margin-bottom: 22px; } }
+@media (min-width: 768px) {
+  main .main-section-gallery .row > div:nth-child(4) {
+    padding-right: 5px !important; } }
+@media (min-width: 768px) {
+  main .main-section-gallery .row > div:nth-child(5) {
+    padding-left: 5px !important; } }
+@media (min-width: 768px) {
+  main .main-section-gallery .row > div:nth-child(5) {
+    padding-right: 5px !important; } }
+@media (min-width: 768px) {
+  main .main-section-gallery .row > div:nth-child(6) {
+    padding-left: 5px !important; } }
+@media (max-width: 768px) {
+  main .main-section-gallery .row > div:nth-child(1), main .main-section-gallery .row > div:nth-child(2), main .main-section-gallery .row > div:nth-child(3), main .main-section-gallery .row > div:nth-child(4), main .main-section-gallery .row > div:nth-child(5), main .main-section-gallery .row > div:nth-child(6) {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    main .main-section-gallery .row > div:nth-child(1) img, main .main-section-gallery .row > div:nth-child(2) img, main .main-section-gallery .row > div:nth-child(3) img, main .main-section-gallery .row > div:nth-child(4) img, main .main-section-gallery .row > div:nth-child(5) img, main .main-section-gallery .row > div:nth-child(6) img {
+      max-width: 280px; } }
+main .main-section-gallery .row > div:nth-child(7) {
+  border-top: 2px solid #E4E4E4;
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  main .main-section-gallery .row > div:nth-child(7) h2 {
+    font-size: 25px; }
+@media (max-width: 768px) {
+  main .main-section-gallery .row > div {
+    margin-bottom: 10px; } }
+@media (max-width: 768px) {
+  main .main-section-gallery .row .main-blcproduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px; } }
+main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline {
+  width: 255px; }
+  main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest {
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1; }
+    main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest span {
+      font-size: 12px;
+      color: #FFFFFF;
+      justify-content: center;
+      padding: 10px 15px 10px 30px;
+      background-position: 13% center;
+      background-repeat: no-repeat; }
+    main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-blackstar span {
+      height: 25px;
+      background-color: #000000;
+      background-image: url(../img/estrela.jpg); }
+    main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer {
+      align-items: flex-end; }
+      main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer div:first-child {
+        margin-bottom: 3px; }
+        main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer div:first-child span {
+          height: 25px;
+          background-color: #0082a7;
+          background-image: url(../img/caminhao.jpg); }
+      main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer div:last-child span {
+        width: 65px;
+        height: 25px;
+        background-color: #de006f;
+        background-image: url(../img/ic-bolinha.jpg); }
+  main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-image {
+    position: relative;
+    bottom: 10px;
+    z-index: 0;
+    margin-bottom: 30px; }
+  main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description .main-blcproduct-span1 {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 20px; }
+  main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description div span:first-child {
+    color: #999999;
+    margin-right: 2px;
+    text-decoration: line-through; }
+  main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description div span:last-child {
+    color: #F8595F;
+    margin-left: 2px; }
+  main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description .main-blcproduct-span2 {
+    color: #000000;
+    margin-bottom: 20px; }
+  main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description a {
+    width: 125px;
+    height: 30px;
+    color: #009200;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    padding-left: 15px;
+    background-image: url(../img/ic-comprar.jpg);
+    background-repeat: no-repeat;
+    background-position: 7% center;
+    border: 1px solid #009200;
+    cursor: pointer; }
+main .main-section-news {
+  margin-top: 45px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #e4e4e4; }
+  main .main-section-news .container .row > div:nth-child(1) {
+    margin-bottom: 30px; }
+    main .main-section-news .container .row > div:nth-child(1) h2 {
+      color: #000000;
+      font-size: 40px;
+      font-style: normal; }
+  main .main-section-news .container .row > div:nth-child(3) h3 {
+    font-size: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #333333;
+    margin-bottom: 30px;
+    line-height: 20px; }
+  main .main-section-news .container .row > div:nth-child(3) .form-group {
+    justify-content: space-between;
+    margin-top: 25px; }
+    main .main-section-news .container .row > div:nth-child(3) .form-group input {
+      width: 310px;
+      color: #333333;
+      font-size: 13px;
+      border: none;
+      outline: none;
+      padding-left: 50px;
+      background-color: transparent;
+      background-image: url(../img/ic-email.jpg);
+      background-position: 5% center;
+      background-repeat: no-repeat;
+      border-radius: 0;
+      border-bottom: 2px solid #333333; }
+    main .main-section-news .container .row > div:nth-child(3) .form-group button {
+      width: 145px;
+      height: 40px;
+      color: #FFFFFF;
+      font-family: 'Ubuntu', sans-serif;
+      background-color: #333333;
+      outline: none;
+      border: none; }
+  main .main-section-news .container .row > div:nth-child(3) ul {
+    width: 150px;
+    justify-content: space-between;
+    margin-top: 30px; }
+
+footer .footer-block-info {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-color: #333333; }
+  @media (max-width: 768px) {
+    footer .footer-block-info .container .row div:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px; } }
+  footer .footer-block-info .container .row div:first-child h2 {
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-bottom: 15px; }
+  footer .footer-block-info .container .row div:first-child ul li {
+    margin-bottom: 5px; }
+    footer .footer-block-info .container .row div:first-child ul li a {
+      color: #FFFFFF;
+      font-size: 12px; }
+      footer .footer-block-info .container .row div:first-child ul li a:hover {
+        text-decoration: none; }
+  footer .footer-block-info .container .row div:nth-child(2) img {
+    margin-bottom: 20px; }
+  footer .footer-block-info .container .row div:nth-child(2) ul {
+    width: 250px;
+    justify-content: space-between; }
+    footer .footer-block-info .container .row div:nth-child(2) ul li a {
+      color: #FFFFFF;
+      font-size: 11px; }
+      footer .footer-block-info .container .row div:nth-child(2) ul li a:hover {
+        text-decoration: none; }
+  footer .footer-block-info .container .row div:last-child {
+    align-items: flex-end; }
+    @media (max-width: 768px) {
+      footer .footer-block-info .container .row div:last-child {
+        align-items: center;
+        margin-top: 20px; } }
+    footer .footer-block-info .container .row div:last-child h2 {
+      color: #FFFFFF;
+      font-size: 15px;
+      margin-bottom: 15px; }
+    footer .footer-block-info .container .row div:last-child ul li:first-child {
+      justify-content: flex-end; }
+      footer .footer-block-info .container .row div:last-child ul li:first-child span {
+        color: #FFFFFF; }
+      footer .footer-block-info .container .row div:last-child ul li:first-child a {
+        font-size: 20px;
+        width: auto !important; }
+    footer .footer-block-info .container .row div:last-child ul li {
+      margin-bottom: 5px; }
+      footer .footer-block-info .container .row div:last-child ul li a {
+        width: 100%;
+        text-align: right;
+        color: #FFFFFF;
+        font-size: 14px; }
+        footer .footer-block-info .container .row div:last-child ul li a:hover {
+          text-decoration: none; }
+footer .footer-block-brands {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #e4e4e4; }
+  footer .footer-block-brands .container .row div {
+    align-items: flex-start; }
+    footer .footer-block-brands .container .row div h2 {
+      color: #000000;
+      margin-top: 3px; }
+      @media (max-width: 768px) {
+        footer .footer-block-brands .container .row div h2 {
+          width: 100%;
+          text-align: center; } }
+    footer .footer-block-brands .container .row div img {
+      margin-left: 15px; }
+      @media (max-width: 768px) {
+        footer .footer-block-brands .container .row div img {
+          display: block;
+          margin: 10px auto; } }
+  @media (max-width: 768px) {
+    footer .footer-block-brands .container .row div:first-child {
+      justify-content: center;
+      flex-direction: column; } }
+  @media (max-width: 768px) {
+    footer .footer-block-brands .container .row div:last-child {
+      justify-content: center;
+      flex-direction: column; } }
+footer .footer-rights {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  footer .footer-rights .row div:first-child p {
+    color: #999999;
+    font-size: 14px; }
+    @media (max-width: 768px) {
+      footer .footer-rights .row div:first-child p {
+        text-align: center; } }
+  @media (max-width: 768px) {
+    footer .footer-rights .row div:last-child img {
+      display: block;
+      margin: 20px auto; } }
+
+/*# sourceMappingURL=styles.css.map */
