@@ -34,7 +34,7 @@ table {
 body h1, body h2, ul li, ul li a, body p, body span, body input {
   font-family: 'Ubuntu', sans-serif; }
 
-header .header-firstbar .row div:last-child, header .header-firstbar .row div:last-child ul, header nav .navbar-collapse .header-form-blockcar, header nav .navbar-collapse .header-form-blockcar .form-inline, header nav .navbar-collapse .header-form-blockcar .header-navbar-blockcar, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest span, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-image, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description div, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description a, main .main-section-news .container .row > div:nth-child(3) .form-group, main .main-section-news .container .row > div:nth-child(3) ul, footer .footer-block-info .container .row div:nth-child(2), footer .footer-block-info .container .row div:nth-child(2) ul, footer .footer-block-info .container .row div:last-child, footer .footer-block-info .container .row div:last-child ul li:first-child, footer .footer-block-info .container .row div:last-child ul li, footer .footer-block-brands .container .row div {
+header .header-firstbar .row .header-firstbar-div2, header .header-firstbar .row .header-firstbar-div2 ul, header nav .navbar-collapse .header-form-blockcar, header nav .navbar-collapse .header-form-blockcar .form-inline, header nav .navbar-collapse .header-form-blockcar .header-navbar-blockcar, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest span, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest .main-blcprouct-fret-offer, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-image, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description div, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description a, main .main-section-news .container .row > div:nth-child(3) .form-group, main .main-section-news .container .row > div:nth-child(3) ul, footer .footer-block-info .container .row div:nth-child(2), footer .footer-block-info .container .row div:nth-child(2) ul, footer .footer-block-info .container .row div:last-child, footer .footer-block-info .container .row div:last-child ul li:first-child, footer .footer-block-info .container .row div:last-child ul li, footer .footer-block-brands .container .row div {
   display: flex; }
 
 header nav .navbar-collapse .header-form-blockcar, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-dest span, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-image, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description div, main .main-section-gallery .row .main-blcproduct .main-blcproduct-verticalline .main-blcproduct-description a, footer .footer-block-info .container .row div:nth-child(2), footer .footer-block-info .container .row div:last-child ul li:first-child {
@@ -60,26 +60,26 @@ header {
   background-color: #333333; }
   header .header-firstbar .row {
     justify-content: space-between; }
-    header .header-firstbar .row div:first-child {
+    header .header-firstbar .row .header-firstbar-div1 {
       font-size: 13px;
       font-family: 'Ubuntu';
       font-style: normal;
       font-weight: 300;
       color: #FFFFFF; }
       @media (max-width: 768px) {
-        header .header-firstbar .row div:first-child {
+        header .header-firstbar .row .header-firstbar-div1 {
           justify-content: flex-start; } }
-    header .header-firstbar .row div:last-child {
+    header .header-firstbar .row .header-firstbar-div2 {
       justify-content: flex-end; }
       @media (max-width: 768px) {
-        header .header-firstbar .row div:last-child {
+        header .header-firstbar .row .header-firstbar-div2 {
           justify-content: flex-start; } }
-      header .header-firstbar .row div:last-child ul {
+      header .header-firstbar .row .header-firstbar-div2 ul {
         width: 180px;
         justify-content: space-between; }
-        header .header-firstbar .row div:last-child ul li {
+        header .header-firstbar .row .header-firstbar-div2 ul li {
           margin-right: 10px; }
-          header .header-firstbar .row div:last-child ul li a {
+          header .header-firstbar .row .header-firstbar-div2 ul li a {
             font-size: 13px;
             font-family: 'Ubuntu';
             font-style: normal;
