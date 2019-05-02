@@ -425,4 +425,16 @@ footer .footer-rights {
       display: block;
       margin: 20px auto; } }
 
+.prateleira ul li {
+  margin-bottom: 35px; }
+  .prateleira ul li .main-blcproduct .main-blcproduct-verticalline > fieldset {
+    margin-bottom: 20px; }
+    .prateleira ul li .main-blcproduct .main-blcproduct-verticalline > fieldset label {
+      color: #333;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-left: 10px; }
+  .prateleira ul li .main-blcproduct .main-blcproduct-verticalline .buy-button-normal {
+    margin-top: 20px; }
+
 /*# sourceMappingURL=CSS.c.car-styles.css.map */
