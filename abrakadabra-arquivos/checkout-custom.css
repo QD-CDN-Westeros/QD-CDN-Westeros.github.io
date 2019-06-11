@@ -1,0 +1,416 @@
+/** RESET **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, dd, dt, dl {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+input, textarea {
+    outline: none;
+    font: 13px 'vag_rounded_light_ssilight';
+    padding: 10px;
+    color: #6d6d6d;
+    border: 1px solid #c1c1c1;
+}
+
+select {
+    background: url('/arquivos/arrow-select.png') no-repeat center right 5px;
+    line-height: 1;
+    -webkit-appearance: none;
+    padding: 7px 20px 7px 5px;
+    color: #6d6d6d;
+    border: 1px solid #c1c1c1;
+}
+
+input[type=radio] {
+    margin: 3px 3px 3px 0;
+}
+
+div:after, ol:after, form:after, ul:after, dl:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+    FONTES
+--------------------------------------------------------------*/
+@font-face {
+    font-family: 'banda_regularregular';
+    src: url('/arquivos/banda-regular-webfont.eot.css.css');
+    src: url('/arquivos/banda-regular-webfont.eot.css?#iefix') format('embedded-opentype'),
+         url('/arquivos/banda-regular-webfont.woff.css') format('woff'),
+         url('/arquivos/banda-regular-webfont.ttf.css') format('truetype'),
+         url('/arquivos/banda-regular-webfont.svg.css#banda_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'vag_roundedbold';
+    src: url('/arquivos/vag_rounded_bold-webfont.eot.css');
+    src: url('/arquivos/vag_rounded_bold-webfont.eot.css?#iefix') format('embedded-opentype'),
+         url('/arquivos/vag_rounded_bold-webfont.woff.css') format('woff'),
+         url('/arquivos/vag_rounded_bold-webfont.ttf.css') format('truetype'),
+         url('/arquivos/vag_rounded_bold-webfont.svg.css#vag_roundedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'porkysregular';
+    src: url('/arquivos/porkys_-webfont.eot.css');
+    src: url('/arquivos/porkys_-webfont.eot.css?#iefix') format('embedded-opentype'),
+         url('/arquivos/porkys_-webfont.woff.css') format('woff'),
+         url('/arquivos/porkys_-webfont.ttf.css') format('truetype'),
+         url('/arquivos/porkys_-webfont.svg.css#porkysregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'vag_rounded_light_ssilight';
+    src: url('/arquivos/vag_rounded_light_ssi_light-webfont.eot.css');
+    src: url('/arquivos/vag_rounded_light_ssi_light-webfont.eot.css?#iefix') format('embedded-opentype'),
+         url('/arquivos/vag_rounded_light_ssi_light-webfont.woff.css') format('woff'),
+         url('/arquivos/vag_rounded_light_ssi_light-webfont.ttf.css') format('truetype'),
+         url('/arquivos/vag_rounded_light_ssi_light-webfont.svg.css#vag_rounded_light_ssilight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*--------------------------------------------------------------
+    GERAL
+--------------------------------------------------------------*/
+body {
+    font: 12px "banda_regularregular", Myriad Pro, Arial, sans-serif;
+    color: #363636;
+    background: #fff !important;
+}
+
+div {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 18px;
+}
+
+a {
+    color: #464646;
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+a:hover {
+    color: #c11f26;
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+input[type="button"], a {
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+select option {
+    color: #000;
+}
+
+.last {
+    margin-right: 0 !important;
+}
+
+.left {
+    float: left;
+}
+
+#ajaxBusy {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.clear {
+    clear: both;
+}
+.container{}
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.clear-zebra {
+    clear: both;
+    background: url('/arquivos/linha-zebra.png') repeat-x;
+    min-height: 1px;
+    width: 100%;
+    display: block;
+}
+
+@media(max-width: 640px){
+  .full-cart .cart-links-bottom .btn-success {
+    width: 83%;
+    display: block;
+    margin: 30px auto 0;
+  }
+}
+
+/*--------------------------------------------------------------
+    HEADER
+--------------------------------------------------------------*/
+header {
+    background: #901418;
+ /* Old browsers */
+    background: -moz-linear-gradient(top,  #901418 0%, #cb2128 100%);
+ /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#901418), color-stop(100%,#cb2128));
+ /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #901418 0%,#cb2128 100%);
+ /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #901418 0%,#cb2128 100%);
+ /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #901418 0%,#cb2128 100%);
+ /* IE10+ */
+    background: linear-gradient(to bottom,  #901418 0%,#cb2128 100%);
+ /* W3C */
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+header .clear-zebra {
+    height: 4px;
+    background-position-x: 145px;
+}
+header #main-header{
+    height: 100px;    
+}
+
+header #main-header .left-col {
+    float: left;
+}
+header #main-header .right-col{
+    float: right;
+}
+
+header #main-header .left-col,
+header #main-header .right-col {
+    margin: 15px 5px 0;
+}
+
+header #main-header .left-col h1 {
+    position: relative;
+}
+
+header #main-header .left-col h1 a {
+    position: relative;
+    background: url('/arquivos/logo.png') no-repeat;
+    width: 264px;
+    height: 57px;
+    font-size: 0;
+    display: block;
+    margin: auto;
+}
+
+@media(max-width: 640px){
+    .wrapper,
+    .container {
+        width: 90%;
+    }
+    #main-header {
+        display: block;
+        width: 100%;
+        text-align:center;
+    }
+    #main-header > div {
+        display: block;
+        width: 100%;
+        text-align:center;
+        float: none;
+    }
+    #main-header > div.right-col {
+        display: none;
+    }
+}
+
+/*--------------------------------------------------------------
+    FOOTER
+--------------------------------------------------------------*/
+footer {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+footer .clear-zebra {
+    height: 4px;
+    background-position-x: 200px;
+}
+
+#payment-bar {
+    margin: 25px 0 0px;
+    padding: 15px 0 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+#payment-bar .payment {
+    width: 320px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#payment-bar .payment li {
+    float: left;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+
+#payment-bar .selos {
+    width: 440px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#payment-bar .selos li {
+    float: left;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+
+#payment-bar .powered {
+    width: 160px;
+    margin-right: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#payment-bar .powered li {
+    float: left;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+
+#payment-bar .copyright {
+    margin: 15px 45px;
+    text-align: center;
+    font: 9px Verdana, Arial;
+    color: #999;
+}
+
+#payment-bar a.etiqueta {
+    background: #ff1520;
+    display: block;
+    float: right;
+    padding: 5px 13px;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+#payment-bar a.etiqueta:after {
+    content: "";
+    display: block;
+    background: url('/arquivos/sprite.png') no-repeat -203px -6px;
+    width: 14px;
+    height: 23px;
+}
+
+
+/*--------------------------------------------------------------
+    CART
+--------------------------------------------------------------*/
+.container-cart{
+    margin: 20px auto;
+}
+h1{
+    display: block;
+    font: 24px 'vag_roundedbold';
+    color: #f4882c;
+    margin-bottom: 40px;
+}
+
+.container-cart table th{
+    font: 18px "vag_roundedbold";
+    color: #666;
+    padding: 3px 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+.coupon.summary-coupon.pull-right {
+    width: 100%;
+    text-align: center;
+}
+
+p.coupon-data.pull-right {
+    float: none;
+}
+
+@media (max-width: 640px) {
+    #payment-bar .selos li {
+        float: none;
+        margin: 20px 0;
+        display: inline-block;
+        width: 120px;
+    }   
+    #payment-bar .wrapper .payment {
+        display: block;
+        float:none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    #payment-bar .powered li {
+        float: none;
+        display: inline-block;
+        margin: 15px;
+    }
+
+    #payment-bar .wrapper .selos {
+        display: block;
+        float:none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    #payment-bar .wrapper .powered {
+        display: block;
+        float:none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+}
