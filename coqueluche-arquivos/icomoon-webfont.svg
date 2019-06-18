@@ -5,13 +5,13 @@
 <defs>
 <font id="icomoonregular" horiz-adv-x="682" >
 <font-face units-per-em="2048" ascent="1920" descent="-128" />
-<missing-glyph horiz-adv-x="1820" />
+<missing-glyph horiz-adv-x="1024" />
 <glyph horiz-adv-x="0" d="M0 0z" />
 <glyph horiz-adv-x="0" d="M0 0z" />
 <glyph />
 <glyph horiz-adv-x="0" d="M0 0z" />
-<glyph unicode=" " horiz-adv-x="1820" d="M0 0z" />
-<glyph unicode="&#xa0;" horiz-adv-x="1820" d="M0 0z" />
+<glyph unicode=" " horiz-adv-x="1024" d="M0 0z" />
+<glyph unicode="&#xa0;" horiz-adv-x="1024" d="M0 0z" />
 <glyph unicode="&#x2000;" />
 <glyph unicode="&#x2001;" horiz-adv-x="1365" />
 <glyph unicode="&#x2002;" />
