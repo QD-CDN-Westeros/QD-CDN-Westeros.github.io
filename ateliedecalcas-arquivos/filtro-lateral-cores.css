@@ -1,0 +1,79 @@
+.QDs__nav .filtro_cor label[title='Preto'] {
+    /*Amarela*/
+    background-color: #FFD700 !important;
+}
+
+.QDs__nav .filtro_cor label[title='Azul'] {
+    /*Azul*/
+    background-color: #3A5FCD !important;
+}
+
+.QDs__nav .filtro_cor label[title='Bege'] {
+    /*Bege*/
+    background-color: #FFE7BA !important;
+}
+
+.QDs__nav .filtro_cor label[title='Branco'] {
+    /*Branco*/
+    background-color: #FFFFF0 !important;
+}
+
+.QDs__nav .filtro_cor label[title='Cinza'] {
+    /*Cinza*/
+    background-color: #CFCFCF !important;
+}
+
+.QDs__nav .filtro_cor label[title='Jeans'] {
+    /*Jeans*/
+    background-color: #104E8B !important;
+}
+
+.QDs__nav .filtro_cor label[title='Laranja'] {
+    /*Laranja*/
+    background-color: #EE7942 !important;
+}
+
+.QDs__nav .filtro_cor label[title='Marrom'] {
+    /*Marrom*/
+    background-color: #8B5742 !important;
+}
+
+.QDs__nav .filtro_cor label[title='Preta'] {
+    /*Preta*/
+    background-color: #1C1C1C !important;
+}
+
+.QDs__nav .filtro_cor label[title='Rosa'] {
+    /*Rosa*/
+    background-color: #FF6EB4 !important;
+}
+
+.QDs__nav .filtro_cor label[title='Roxa'] {
+    /*Roxa*/
+    background-color: #9A32CD !important;
+}
+
+.QDs__nav .filtro_cor label[title='Verde'] {
+    /*Verde*/
+    background-color: #006400 !important;
+}
+
+.QDs__nav .filtro_cor label[title='Vermelha'] {
+    /*Vermelha*/
+    background-color: #CD0000 !important;
+}
+
+.QDs__nav .filtro_cor label[title='Vinho'] {
+    /*Vinho*/
+    background-color: #8B0000 !important;
+}
+
+.QDs__nav .filtro_cor label[title='Xadrez'] {
+    /*Xadrez*/
+    background-color: #EEEEE0 !important;
+}
+
+.QDs__nav .filtro_cor label[title='Listrado'] {
+    /*Listrado*/
+    background-color: #EEEEE0 !important;
+}
