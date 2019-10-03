@@ -1,79 +1,79 @@
-.QDs__nav .filtro_cor label[title='Preto'] {
+.QDs__nav .filtro_cor label[title='Preto'] .sr_box {
     /*Amarela*/
     background-color: #FFD700 !important;
 }
 
-.QDs__nav .filtro_cor label[title='Azul'] {
+.QDs__nav .filtro_cor label[title='Azul'] .sr_box {
     /*Azul*/
     background-color: #3A5FCD !important;
 }
 
-.QDs__nav .filtro_cor label[title='Bege'] {
+.QDs__nav .filtro_cor label[title='Bege'] .sr_box {
     /*Bege*/
     background-color: #FFE7BA !important;
 }
 
-.QDs__nav .filtro_cor label[title='Branco'] {
+.QDs__nav .filtro_cor label[title='Branco'] .sr_box {
     /*Branco*/
     background-color: #FFFFF0 !important;
 }
 
-.QDs__nav .filtro_cor label[title='Cinza'] {
+.QDs__nav .filtro_cor label[title='Cinza'] .sr_box {
     /*Cinza*/
     background-color: #CFCFCF !important;
 }
 
-.QDs__nav .filtro_cor label[title='Jeans'] {
+.QDs__nav .filtro_cor label[title='Jeans'] .sr_box {
     /*Jeans*/
     background-color: #104E8B !important;
 }
 
-.QDs__nav .filtro_cor label[title='Laranja'] {
+.QDs__nav .filtro_cor label[title='Laranja'] .sr_box {
     /*Laranja*/
     background-color: #EE7942 !important;
 }
 
-.QDs__nav .filtro_cor label[title='Marrom'] {
+.QDs__nav .filtro_cor label[title='Marrom'] .sr_box {
     /*Marrom*/
     background-color: #8B5742 !important;
 }
 
-.QDs__nav .filtro_cor label[title='Preta'] {
+.QDs__nav .filtro_cor label[title='Preta'] .sr_box {
     /*Preta*/
     background-color: #1C1C1C !important;
 }
 
-.QDs__nav .filtro_cor label[title='Rosa'] {
+.QDs__nav .filtro_cor label[title='Rosa'] .sr_box {
     /*Rosa*/
     background-color: #FF6EB4 !important;
 }
 
-.QDs__nav .filtro_cor label[title='Roxa'] {
+.QDs__nav .filtro_cor label[title='Roxa'] .sr_box {
     /*Roxa*/
     background-color: #9A32CD !important;
 }
 
-.QDs__nav .filtro_cor label[title='Verde'] {
+.QDs__nav .filtro_cor label[title='Verde'] .sr_box {
     /*Verde*/
     background-color: #006400 !important;
 }
 
-.QDs__nav .filtro_cor label[title='Vermelha'] {
+.QDs__nav .filtro_cor label[title='Vermelha'] .sr_box {
     /*Vermelha*/
     background-color: #CD0000 !important;
 }
 
-.QDs__nav .filtro_cor label[title='Vinho'] {
+.QDs__nav .filtro_cor label[title='Vinho'] .sr_box {
     /*Vinho*/
     background-color: #8B0000 !important;
 }
 
-.QDs__nav .filtro_cor label[title='Xadrez'] {
+.QDs__nav .filtro_cor label[title='Xadrez'] .sr_box {
     /*Xadrez*/
     background-color: #EEEEE0 !important;
 }
 
-.QDs__nav .filtro_cor label[title='Listrado'] {
+.QDs__nav .filtro_cor label[title='Listrado'] .sr_box {
     /*Listrado*/
     background-color: #EEEEE0 !important;
 }
