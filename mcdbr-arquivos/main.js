@@ -398,6 +398,12 @@
                                 })
                             },
                             init: function () {
+                                //verificando nomeLoja
+                                if(window.jsnomeLoja=="devmcdbr"){
+                                    window.lojaDev="https://mcdbr.myvtex.com";
+                                }else{
+                                    window.lojaDev="";
+                                }
 
                                 null !== window.MCDGlobal.address.closest ? window.vtexjs.checkout.getOrderForm().then(function (e) {
                                     if (e.shippingData) {
@@ -417,6 +423,9 @@
                                         var t = e.logisticsInfo[0].slas[0].id;
                                         console.log("dockId B", t),
                                             window.MCDGlobal.Menu.checkOperation(t)
+                                    }else{
+                                        //quando não existir loja perto, usa GRU como referência.
+                                        window.MCDGlobal.Menu.checkOperation("GRU");
                                     }
                                 });
                                 //Forçando reset do localStorage na pagina inicial (Evitar bug de quando usuário não digitar nenhum endereço, o ultimo endereço seja usado)
@@ -475,7 +484,7 @@
                             checkOperation: function (e) {
                                 console.log("Regular");
                                 return $.ajax({
-                                    url: "https://mcdbr.myvtex.com/api/io/checking_hours/checking?restaurant=" + e,
+                                    url: window.lojaDev+"/api/io/checking_hours/checking?restaurant=" + e,
                                     type: "GET",
                                     dataType: "json",
                                     headers: {
@@ -656,7 +665,9 @@
                                 window.vtexjs.checkout.getOrderForm().done(function (orderForm) {
                                     var ofAddress = orderForm.shippingData.address;
                                     //formatando novo address
-                                    var newAddress = (ofAddress.street ? ofAddress.street + ", " : "") +
+                                    var street = (ofAddress.street ? ofAddress.street + ", " : "");
+                                    street= street.includes("undefined")?street.replace("undefined ",""):street;
+                                    var newAddress = street +
                                         (ofAddress.neighborhood ? ofAddress.neighborhood + ", " : "") +
                                         (ofAddress.city ? ofAddress.city + " - " : "") +
                                         (ofAddress.state ? ofAddress.state + ", " : "") +
@@ -900,7 +911,7 @@
             }
             return e.prototype.checkOperation = function (e) {
                     return $.ajax({
-                        url: "https://mcdbr.myvtex.com/api/io/checking_hours/checking?restaurant=" + e,
+                        url: window.lojaDev+"/api/io/checking_hours/checking?restaurant=" + e,
                         type: "GET",
                         dataType: "json",
                         headers: {
@@ -971,10 +982,10 @@
                         a = JSON.parse(window.localStorage.getItem("address")),
                         n = this.Utils.getUrlParameter("utm_campaign") ? this.Utils.getUrlParameter("utm_campaign") : this.Utils.getCookie("IPS") ? this.Utils.getCookie("IPS").split("=")[1] : "";
                     if (window.vtxctx.categoryName && window.vtxctx.searchTerm)
-                        e = "https://mcdbr.myvtex.com/api/io/query/combos-of-the-day-seller?categorySlug=" + this.Utils.slugify(window.vtxctx.categoryName) + "&searchTerm=" + window.vtxctx.searchTerm + "&utm=" + n + "&lng=" + a.lng + "&lat=" + a.lat + "&dockId=" + a.closest.deliveryIds[0].dockId + "&workspace=master";
+                        e = window.lojaDev+"/api/io/query/combos-of-the-day-seller?categorySlug=" + this.Utils.slugify(window.vtxctx.categoryName) + "&searchTerm=" + window.vtxctx.searchTerm + "&utm=" + n + "&lng=" + a.lng + "&lat=" + a.lat + "&dockId=" + a.closest.deliveryIds[0].dockId + "&workspace=master";
                     else {
                         var i = window.vtxctx.categoryName ? "?categorySlug=" + this.Utils.slugify(window.vtxctx.categoryName) : window.vtxctx.searchTerm ? "?searchTerm=" + window.vtxctx.searchTerm : "";
-                        e = "https://mcdbr.myvtex.com/api/io/query/combos-of-the-day-seller" + i + (i ? "&utm=" + n : "") + "&lng=" + a.lng + "&lat=" + a.lat + "&dockId=" + a.closest.deliveryIds[0].dockId + "&workspace=master"
+                        e = window.lojaDev+"/api/io/query/combos-of-the-day-seller" + i + (i ? "&utm=" + n : "") + "&lng=" + a.lng + "&lat=" + a.lat + "&dockId=" + a.closest.deliveryIds[0].dockId + "&workspace=master"
                     }
                     var r = $(".mcd-plp-content .prateleira");
                     $.ajax({
