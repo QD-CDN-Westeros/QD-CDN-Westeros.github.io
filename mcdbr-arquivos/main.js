@@ -400,7 +400,7 @@
                             init: function () {
                                 //verificando nomeLoja
                                 if(window.jsnomeLoja=="devmcdbr"){
-                                    window.lojaDev="https://mcdbr.myvtex.com";
+                                    window.lojaDev="https://mcdelivery.mcdonalds.com.br";
                                 }else{
                                     window.lojaDev="";
                                 }
@@ -493,6 +493,7 @@
                                 }).done(function (e) {
                                     var t = "Regular";
                                     //mz
+                                    // e.data.operational=false;
                                     window.localStorage.setItem("isOpen", e.data.operational);
                                     1 == e.data.operational ? $("body").removeClass("no-working") : ($("body").is(".no-delivery") ? $("body").removeClass("no-working") : $("body").addClass("no-working"),
                                             e.data.operation && ($(".McCheckOperation .mcd-check-operation-start").text(e.data.operation.start),
@@ -659,7 +660,6 @@
                         //se é diferente, ajuste o endereço do topo
                         // localStorage.removeItem("newAddress");
                         if (window.localStorage.shippingData) {
-                            console.log("hueheuheue");
                             var sp = JSON.parse(window.localStorage.shippingData);
                             if (sp.address.street.includes("undefined")) {
                                 window.vtexjs.checkout.getOrderForm().done(function (orderForm) {
@@ -668,6 +668,7 @@
                                     var street = (ofAddress.street ? ofAddress.street + ", " : "");
                                     street= street.includes("undefined")?street.replace("undefined ",""):street;
                                     var newAddress = street +
+                                        (ofAddress.number?ofAddress.number+", ":"" )+
                                         (ofAddress.neighborhood ? ofAddress.neighborhood + ", " : "") +
                                         (ofAddress.city ? ofAddress.city + " - " : "") +
                                         (ofAddress.state ? ofAddress.state + ", " : "") +
@@ -696,6 +697,7 @@
                                 &&
                                 $("#autocomplete").val(window.MCDHome.address.formatted_address)
                             ),
+                            //removendo no-delivery para que a mensagem do botão seja indicada corretamente ao retornar no menu para a home (quando o endereço não for atendido)
                             void 0 !== window.MCDHome.address.formatted_address && null === window.MCDHome.address.closest && $("body").addClass("no-delivery"),
                             null !== window.MCDHome.address.closest && $("body").addClass("has-delivery"),
                             void 0 === window.MCDHome.address.formatted_address && $(".mcd-home-search-area button").attr({
@@ -848,7 +850,8 @@
                         };
                         JSON.parse(window.localStorage.getItem("address"));
                         window.vtexjs.checkout.getOrderForm().then(function () {
-                            return delete e.logisticsInfo, window.vtexjs.checkout.sendAttachment("shippingData", e)
+                            console.log(e);
+                            return delete e.logisticsInfo, window.vtexjs.checkout.sendAttachment("shippingData", e);
                         }).then(function () {
                             t()
                         }).fail(function () {
