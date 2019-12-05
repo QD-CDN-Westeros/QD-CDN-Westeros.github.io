@@ -171,7 +171,7 @@ span#spnRatingProdutoTop {
 }
 
 body {
-    line-height: 1
+    line-height: 1;
 }
 
 img {
@@ -1140,7 +1140,7 @@ body.product .btn-fixed a.btn-loading:before {
     z-index: 8
 }
 
-body.departamento .scrolling-menu-wrapper {
+/* body.departamento .scrolling-menu-wrapper {
     height: 48px;
     width: 100%;
     overflow: hidden;
@@ -1173,9 +1173,9 @@ body.departamento .scrolling-menu-wrapper .category-page ul li a {
     line-height: 23pt;
     display: block;
     text-decoration: none
-}
+} */
 
-body.departamento .scrolling-menu-wrapper .category-page ul li a figure {
+/* body.departamento .scrolling-menu-wrapper .category-page ul li a figure {
     background-image: none !important
 }
 
@@ -1234,7 +1234,7 @@ body.departamento .prateleira ul li {
     text-align: center;
     border-bottom: 2px solid #d6d6d6;
     border-right: 2px solid #d6d6d6;
-    /* border-left: 2px solid #d6d6d6; */
+     border-left: 2px solid #d6d6d6; 
     -webkit-transition: all .3s;
     transition: all .3s
 }
@@ -1323,7 +1323,7 @@ body.departamento .prateleira ul li .personalizar-product-link {
     background: -ms-linear-gradient(top, #fac301 0, #fac301 45%, #f9b202 100%);
     background: linear-gradient(180deg, #fac301 0, #fac301 45%, #f9b202);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fac301", endColorstr="#f9b202", GradientType=0)
-}
+} */
 
 @media (max-width:767px) {
     body.mcmenu .mcmenu-content {
