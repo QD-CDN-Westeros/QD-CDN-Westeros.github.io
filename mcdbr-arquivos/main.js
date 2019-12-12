@@ -404,6 +404,8 @@
                                 }else{
                                     window.lojaDev="";
                                 }
+                                //adicionando html do loading 
+                                console.log( $(".mcd-home-search-area").find("button").append("<span class='loader'></span>"));                              
 
                                 null !== window.MCDGlobal.address.closest ? window.vtexjs.checkout.getOrderForm().then(function (e) {
                                     if (e.shippingData) {
@@ -413,32 +415,39 @@
                                             window.MCDGlobal.Menu.checkOperation(t);
                                     }
                                 }) : window.MCDGlobal.simulate(window.MCDGlobal.address.lng, window.MCDGlobal.address.lat).done(function (e) {
-                                    // if (window.MCDGlobal.setClosest(e),
-                                    //     void 0 != e.logisticsInfo[0].slas[0]) {
-                                    //     var t = e.logisticsInfo[0].slas[0].id;
-                                    //     console.log("dockId B", t),
-                                    //         window.MCDGlobal.Menu.checkOperation(t)
-                                    // }
-                                    if (void 0 != e.logisticsInfo[0].slas[0]) {
+                                    if (window.MCDGlobal.setClosest(e),
+                                        void 0 != e.logisticsInfo[0].slas[0]) {
                                         var t = e.logisticsInfo[0].slas[0].id;
                                         console.log("dockId B", t),
                                             window.MCDGlobal.Menu.checkOperation(t)
-                                    }else{
-                                        //quando não existir loja perto, usa GRU como referência.
-                                        window.MCDGlobal.Menu.checkOperation("GRU");
                                     }
+                                    // if (void 0 != e.logisticsInfo[0].slas[0]) {
+                                    //     var t = e.logisticsInfo[0].slas[0].id;
+                                    //     console.log("dockId B", t),
+                                    //         window.MCDGlobal.Menu.checkOperation(t)
+                                    // }else{
+                                    //     //quando não existir loja perto, usa GRU como referência.
+                                    //     //não está mais em uso pois ver o menu foi desativado
+                                    //     window.MCDGlobal.Menu.checkOperation("GRU");
+                                    // }
                                 });
                                 //Forçando reset do localStorage na pagina inicial (Evitar bug de quando usuário não digitar nenhum endereço, o ultimo endereço seja usado)
-                                if ($("body.home").length > 0) {
-                                    console.log(">0")
-                                    var e = Object.getOwnPropertyNames(window.localStorage);
-                                    e.length && e.forEach(function (e) {
-                                        window.localStorage.removeItem(e);
-                                    });
-                                    $(".mcd-home-search-area button").attr({
-                                        disabled: !0
-                                    });
-                                }
+                                // if ($("body.home").length > 0) {
+                                //     console.log(">0")
+                                //     var e = Object.getOwnPropertyNames(window.localStorage);
+                                //     e.length && e.forEach(function (e) {
+                                //         window.localStorage.removeItem(e);
+                                //     });
+                                // if(window.MCDGlobal.dockId && window.MCDGlobal.address && !$("body").is("no-delivery") && !$("body").is("no-working")){
+                                //     console.log("working");
+                                //     $(".mcd-home-search-area button").attr({disabled:false});                                    
+                                // }
+
+                                $("#autocomplete").on("focus",function(e){
+                                    window.MCDHome.clearSession();
+                                });
+                                   
+                                // }
                             },
                             checkBreakfestDocks: function (e) {
                                 var t = e || !1,
@@ -492,10 +501,15 @@
                                     }
                                 }).done(function (e) {
                                     var t = "Regular";
-                                    //mz
+                                    //mz simular loja fechada
                                     // e.data.operational=false;
                                     window.localStorage.setItem("isOpen", e.data.operational);
-                                    1 == e.data.operational ? $("body").removeClass("no-working") : ($("body").is(".no-delivery") ? $("body").removeClass("no-working") : $("body").addClass("no-working"),
+                                    1 == e.data.operational ? $("body").removeClass("no-working") : ($("body").is(".no-delivery") ? $("body").removeClass("no-working") : $("body").addClass("no-working")
+                                    //mz
+                                    &&
+                                    $(".mcd-home-search-area button").attr({disabled:true})&&
+                                    window.MCDHome.addressModal.modal(),
+                                    //mz
                                             e.data.operation && ($(".McCheckOperation .mcd-check-operation-start").text(e.data.operation.start),
                                                 $(".McCheckOperation .mcd-check-operation-end").text(e.data.operation.end))),
                                         e.data.breakfast && (t = "Desayuno");
@@ -661,7 +675,7 @@
                         // localStorage.removeItem("newAddress");
                         if (window.localStorage.shippingData) {
                             var sp = JSON.parse(window.localStorage.shippingData);
-                            if (sp.address.street.includes("undefined")) {
+                            if (sp.address.street.includes("undefined") && window.vtexjs.checkout.orderForm) {
                                 window.vtexjs.checkout.getOrderForm().done(function (orderForm) {
                                     var ofAddress = orderForm.shippingData.address;
                                     //formatando novo address
@@ -714,6 +728,8 @@
                             };
                         if (e) {
                             e.addEventListener("blur", function (e) {
+                               //adicionando loading aqui, pois é o primeiro evento ao selecionar um endereço
+                               $(".mcd-home-search-area button").addClass("loading");                              
                                     setTimeout(function () {
                                         ! function (e, t) {
                                             console.log("el", $(e.currentTarget).val()),
@@ -724,8 +740,12 @@
                                                         $(".pac-container").show(),
                                                             $(e.currentTarget).focus()
                                                     }, 300),
-                                                    console.log("Não selecionou o endereço na lista"))
+                                                    console.log("Não selecionou o endereço na lista"),
+                                                    $(".mcd-home-search-area button").removeClass("loading"))
+                                                    //removendo loading caso não escolha endereço da lista
+
                                         }(e, window.MCDHome.address)
+                                        
                                     }, 700)
                                 }, !1),
                                 $(window).width() <= 768 && (e.addEventListener("focus", t, !1),
@@ -750,6 +770,7 @@
                             if (e.messages.length)
                                 $("body").removeClass("no-working"),
                                 $("body").addClass("no-delivery"),
+                                $(".mcd-home-search-area button").removeClass("loading"),
                                 window.MCDHome.addressModal.modal();
                             else {
                                 var t = e.logisticsInfo[0].slas[0];
@@ -770,6 +791,9 @@
                         null !== window.MCDHome.address.closest && $("body").addClass("has-delivery")
                     },
                     this.fillInAddress = function () {
+                        //removendo loading após endereço ser retornado
+                        // $(".mcd-home-search-area button").removeClass("loading");
+                        //
                         var e = Object.getOwnPropertyNames(window.localStorage);
                         e.length && e.forEach(function (e) {
                             window.localStorage.removeItem(e)
@@ -841,9 +865,10 @@
                         //     }),
                             console.log("E disabled:", !0);
                         var t = function () {
-                            $(".mcd-home-search-area button").removeClass("loading").attr({
+                            console.log("enable")
+                            $(".mcd-home-search-area button").attr({
                                     disabled: !1
-                                })
+                                }).removeClass("loading")
                                 ,
                                window.localStorage.isOpen&&goToMenu?
                                 window.location.href = "/mcmenu":""
@@ -1214,6 +1239,7 @@
                                     for (o = 0; o < i.length; o++)
                                         i[o].attachments && !i[o].attachments.length && (i[o].quantity = i[o].quantity + a,
                                             a++);
+                                        console.log(i);
                                     window.vtexjs.checkout.addToCart(i).then(function (e) {
                                         window.MCDProduct.callbackAddToCart()
                                     })
@@ -1496,7 +1522,8 @@
                         }, 200)
                 },
                 e.prototype.init = function () {
-                    this.loadProduct();
+                    // this.loadProduct();
+                    //pausando pois o script novo está renderizando os produtos
                 },
                 e
         }()
