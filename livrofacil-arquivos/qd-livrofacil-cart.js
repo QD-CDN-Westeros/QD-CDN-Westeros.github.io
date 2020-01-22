@@ -655,7 +655,7 @@
                             return;
                         }
 
-                        var items = vtexjs.checkout.orderForm.items;
+                        var items = vtexjs.checkout.orderForm ?vtexjs.checkout.orderForm.items :[];
                         var removeItems = [];
                         //console.log('items', items);
                         for(var i=0; i < items.length; i++) {
