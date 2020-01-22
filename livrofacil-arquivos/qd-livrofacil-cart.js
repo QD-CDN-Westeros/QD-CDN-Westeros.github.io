@@ -606,6 +606,7 @@
                             else {
                                 var n = e.skusaprovados.split(",");
                                 t.wishlist = n
+                                window.vtexjs.checkout.getOrderForm();
                                 /*window.vtexjs.checkout.getOrderForm().then(function(orderForm) {
                                     var postalCode =  orderForm.shippingData.address.postalCode;
                                     var bodyData = {
