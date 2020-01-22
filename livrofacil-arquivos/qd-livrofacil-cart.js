@@ -606,9 +606,13 @@
                             else {
                                 var n = e.skusaprovados.split(",");
                                 t.wishlist = n
-                                window.vtexjs.checkout.getOrderForm();
-                                /*window.vtexjs.checkout.getOrderForm().then(function(orderForm) {
+                                window.vtexjs.checkout.getOrderForm().then(function(orderForm) {
                                     var postalCode =  orderForm.shippingData.address.postalCode;
+                                    if(!postalCode) {
+                                        t.loading = !1;
+                                        return;
+                                    }
+
                                     var bodyData = {
                                         'items':[],
                                         "country": "BRA",
@@ -635,10 +639,10 @@
                                         for(var k=0; k<result.items.length; k++) {
                                             t.availability[result.items[k].id] = t.availability[result.items[k].id] && result.items[k].availability=="available";
                                         } 
+                                        t.loading = !1
                                     });
                                         
-                                })*/
-                                t.loading = !1
+                                })
                             }
                         }).fail(function(t) {
                             console.log(t)
