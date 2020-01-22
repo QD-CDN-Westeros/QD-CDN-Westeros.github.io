@@ -1,3 +1,4 @@
+// V_20200122-1840
 (function(t) {
     function e(e) {
         for (var i, o, a = e[0], c = e[1], u = e[2], d = 0, p = []; d < a.length; d++) o = a[d], r[o] && p.push(r[o][0]), r[o] = 0;
@@ -18,10 +19,10 @@
         return t
     }
     var i = {},
-        r = {
-            app: 0
-        },
-        s = [];
+    r = {
+        app: 0
+    },
+    s = [];
 
     function o(e) {
         if (i[e]) return i[e].exports;
@@ -155,7 +156,8 @@
                         attrs: {
                             skuId: e,
                             block: t.actionBlocked,
-                            checkedItems: t.checkedItems
+                            checkedItems: t.checkedItems,
+                            availability: t.availability[e]
                         },
                         on: {
                             blocked: t.onBlock
@@ -256,7 +258,7 @@
                     staticClass: "r-content"
                 }, [n("div", {
                     staticClass: "title"
-                }, [t._v("\n                    " + t._s(t.product.productName) + "\n                ")])]), n("div", {
+                }, [t._v("\n                    " + t._s(t.product.productName) + "\n                ")]),]), n("div", {
                     staticClass: "l-content"
                 }, [n("div", {
                     staticClass: "close"
@@ -266,13 +268,18 @@
                         click: function(e) {
                             return t.removeItem(t.skuId)
                         }
+                    },
+                    staticStyle: {
+                        background: "white !important",
+                        padding: "0px 0px 0px 77px"
                     }
                 }, [n("i", {
-                    staticClass: "fa fa-times",
+                    staticClass: "far fa-trash-alt",
                     staticStyle: {
-                        color: "grey"
+                        color: "grey",
+                        cursor: "pointer"
                     }
-                })]), t._v("\n                    Remover\n                ")])])]), n("div", {
+                })])])])]), n("div", {
                     staticClass: "two-row"
                 }, [n("div", {
                     staticClass: "r-content"
@@ -408,6 +415,7 @@
                 components: {},
                 props: {
                     block: Boolean,
+                    availability: Boolean,
                     checkedItems: Array,
                     skuId: String
                 },
@@ -488,15 +496,18 @@
                             e = this,
                             n = this.skuId;
                             //mz
-                            var sc= $.cookie("VTEXSC")?$.cookie("VTEXSC"):"";
+                        var sc= $.cookie("VTEXSC")?$.cookie("VTEXSC"):"";
                         window.$.get("/api/catalog_system/pub/products/search?fq=skuId:" + n+"&"+sc).then(function(n) {
+                            if(!n[0]) return;
+
                             t.product = n[0], t.item = n[0].items[0];
                             var i = n[0].items[0];
                             if (t.item.imageUrl = t.item.images[0].imageUrl, e.stockLoaded = !0, i) {
                                 var r = i.sellers[0];
-                                r && (console.log("comercial offer" + r.commertialOffer.AvailableQuantity), r.commertialOffer.AvailableQuantity <= 0 ? e.showStock = !0 : e.item.sellingPrice = r.commertialOffer.Price)
+                                // fazer verificação do estoque
+                                // console.log("comercial offer" + r.commertialOffer.AvailableQuantity)
+                                r && (r.commertialOffer.AvailableQuantity <= 0 ? e.showStock = !0 : e.item.sellingPrice = r.commertialOffer.Price)
                             }
-                            console.log(t)
                         })
                     },
                     checkItem: function(t) {
@@ -549,6 +560,7 @@
                     return {
                         checkedItems: [],
                         wishlist: [],
+                        availability: [],
                         loading: !0,
                         actionBlocked: !1,
                         studentData: {
@@ -594,19 +606,75 @@
                             else {
                                 var n = e.skusaprovados.split(",");
                                 t.wishlist = n
+                                /*window.vtexjs.checkout.getOrderForm().then(function(orderForm) {
+                                    var postalCode =  orderForm.shippingData.address.postalCode;
+                                    var bodyData = {
+                                        'items':[],
+                                        "country": "BRA",
+                                        "postalCode": postalCode
+                                    };
+                                    for(var i=0; i<n.length; i++) {
+                                        bodyData.items.push({
+                                            "id": n[i],
+                                            "quantity": 1,
+                                            "seller": "1"
+                                        });
+                                    }
+                                    
+                                    
+                                    $.ajax({
+                                        url:"/api/checkout/pub/orderforms/simulation",
+                                        type: "POST",
+                                        dataType: 'json',
+                                        contentType: 'application/json',
+                                        data: JSON.stringify(bodyData)
+                                    }).then(function(result) {
+                                        console.log('result',result);
+                                        t.availability = [];
+                                        for(var k=0; k<result.items.length; k++) {
+                                            t.availability[result.items[k].id] = t.availability[result.items[k].id] && result.items[k].availability=="available";
+                                        } 
+                                    });
+                                        
+                                })*/
+                                t.loading = !1
                             }
-                            t.loading = !1
                         }).fail(function(t) {
                             console.log(t)
                         })
                     },
                     addAllFilteredProducts: function(t) {
-                        0 == this.conditionValue ? y.a.fire({
-                            title: "",
-                            text: 'Aceite o termo "Li e Aceito as Condições"',
-                            icon: "error",
-                            confirmButtonText: "OK"
-                        }) : window.location.href = "/checkout?listSlas=true"
+                        if(this.conditionValue==0) {
+                            y.a.fire({
+                                title: "",
+                                text: 'Aceite o termo "Li e Aceito as Condições"',
+                                icon: "error",
+                                confirmButtonText: "OK"
+                            });
+                            return;
+                        }
+
+                        var items = vtexjs.checkout.orderForm.items;
+                        var removeItems = [];
+                        //console.log('items', items);
+                        for(var i=0; i < items.length; i++) {
+                            //console.log('item', items[i]);
+                            //console.log(items[i].availability, !(items[i].availability=='available'));
+                            if(!(items[i].availability=='available'))
+                                removeItems.push({
+                                    index: i,
+                                    quantity: 0
+                                });
+                        }
+                        //console.log('removeItems', removeItems);
+                        if(removeItems.length)
+                            vtexjs.checkout.updateItems(removeItems, null, false).done(function() {
+                                console.log('itemsAfterRemove', vtexjs.checkout.orderForm.items);
+                                window.location.href = "/checkout?listSlas=true"
+                            });
+                        else {
+                            window.location.href = "/checkout?listSlas=true";
+                        }
                     },
                     addToCart: function(t) {
                         var e = t.length,
@@ -864,455 +932,455 @@
         i["default"].use(h["a"]);
         var st = function(t, e, n) {
                 console.log("cvalue", e), console.log("cname", t), sessionStorage.setItem(t, e)
-            },
-            ot = function(t) {
-                for (var e = t + "=", n = document.cookie.split(";"), i = 0; i < n.length; i++) {
-                    var r = n[i];
-                    while (" " == r.charAt(0)) r = r.substring(1, r.length);
-                    if (0 == r.indexOf(e)) return r.substring(e.length, r.length)
+        },
+        ot = function(t) {
+            for (var e = t + "=", n = document.cookie.split(";"), i = 0; i < n.length; i++) {
+                var r = n[i];
+                while (" " == r.charAt(0)) r = r.substring(1, r.length);
+                if (0 == r.indexOf(e)) return r.substring(e.length, r.length)
+            }
+            return null
+        },
+        at = function(t) {
+            return sessionStorage.getItem(t)
+        },
+        ct = function() {
+            var t = ot("VTEXSC");
+            return tt()(t ? t.split("=")[1] : 1)
+        },
+        ut = function(t) {
+            var e = "";
+            return t && null !== t && "" !== t && (e = t.split("&fq=skuId:").map(function(t) {
+                var e = t.split("-");
+                if (2 === e.length) {
+                    var n = e[0],
+                        i = e[1];
+                    return !n && /^\s*$/.test(n) || !i && /^\s*$/.test(i) ? null : {
+                        sku: n,
+                        qty: i
+                    }
                 }
                 return null
+            }).filter(function(t) {
+                return null !== t
+            }).map(function(t) {
+                return "&fq=skuId:" + t.sku + "-" + t.qty
+            }).join("")), e
+        },
+        lt = function(t) {
+            var e = [];
+            return ut(t).split("fq=skuId:").filter(function(t) {
+                return "" !== t
+            }).map(function(t) {
+                var e = t.split("-");
+                return e[0] > 0 ? {
+                    id: Y()(e[0]),
+                    quantity: Y()(e[1]),
+                    seller: "1"
+                } : null
+            }).filter(function(t) {
+                return null !== t
+            }).reduce(function(t, n) {
+                return t[n.id] || (t[n.id] = {
+                    quantity: 0,
+                    id: n.id,
+                    seller: "1"
+                }, e.push(t[n.id])), t[n.id].quantity += n.quantity, t
+            }, {}), e
+        },
+        dt = function(t) {
+            return t.map(function(t) {
+                return "fq=skuId:" + t.id + "-" + t.quantity
+            })
+        },
+        pt = function(t) {
+            var e = t.clientProfileData;
+            return t.loggedIn ? t.loggedIn : "callCenterOperator" === t.userType && !!e && null !== e && null !== e.email
+        },
+        mt = new h["a"].Store({
+            state: {
+                orderForm: null,
+                wishlist: null,
+                productSwitch: null,
+                requestsQueue: [],
+                sending: !1,
+                doneUpdateItem: null,
+                currentRemoving: null
             },
-            at = function(t) {
-                return sessionStorage.getItem(t)
+            mutations: {
+                saveOrderForm: function(t, e) {
+                    e && (t.orderForm = e)
+                },
+                saveWishlist: function(t, e) {
+                    e && (t.wishlist = e)
+                },
+                saveProductSwitch: function(t, e) {
+                    t.productSwitch = e
+                },
+                switchAll: function(t, e) {
+                    var n = t.productSwitch,
+                        i = X()(n).reduce(function(t, n) {
+                            return t[n] = {
+                                substituteType: e
+                            }, t
+                        }, {});
+                    t.productSwitch = i, st("substituicaoProduto", u()(t.productSwitch), {
+                        expires: "",
+                        path: "/"
+                    })
+                },
+                saveSwitchOption: function(t, e) {
+                    var n = X()(e).reduce(function(t, n) {
+                            return "sku" !== n && (t[n] = e[n]), t
+                        }, {}),
+                        i = t.productSwitch,
+                        r = X()(i).reduce(function(t, n) {
+                            return n !== e.sku && (t[n] = i[n]), t
+                        }, {});
+                    r[e.sku] = n, t.productSwitch = r, st("substituicaoProduto", u()(t.productSwitch), {
+                        expires: "",
+                        path: "/"
+                    })
+                },
+                quantityUpdated: function(t, e) {
+                    t.doneUpdateItem = e
+                },
+                addToRequestsQueue: function(t, e) {
+                    t.requestsQueue.push(e)
+                },
+                removeFromRequestsQueue: function(t) {
+                    t.requestsQueue.shift()
+                },
+                requestStarted: function(t) {
+                    t.sending = !0
+                },
+                requestEnded: function(t) {
+                    t.sending = !1
+                },
+                saveCurrentRemoving: function(t, e) {
+                    t.currentRemoving = e
+                }
             },
-            ct = function() {
-                var t = ot("VTEXSC");
-                return tt()(t ? t.split("=")[1] : 1)
-            },
-            ut = function(t) {
-                var e = "";
-                return t && null !== t && "" !== t && (e = t.split("&fq=skuId:").map(function(t) {
-                    var e = t.split("-");
-                    if (2 === e.length) {
-                        var n = e[0],
-                            i = e[1];
-                        return !n && /^\s*$/.test(n) || !i && /^\s*$/.test(i) ? null : {
-                            sku: n,
-                            qty: i
+            actions: {
+                orderItems: function(t, e) {
+                    for (var n = t.commit, i = J()({}, e), r = 0; r < i.items.length; r++) i.items[r]["cbyUniqueId"] = r + "+" + i.items[r].uniqueId;
+                    var s = i.items,
+                        o = JSON.parse(at("itemsOrdination"));
+                    if (o) {
+                        var a = o.criteria,
+                            c = o.ascending;
+                        if ("price" === a || "name" === a || "category" === a) {
+                            var l = c ? "asc" : "desc",
+                                d = "name";
+                            "price" === a ? d = "sellingPrice" : "category" === a && (d = "category", s = rt()(s, function(t) {
+                                var e = t;
+                                return e["category"] = e.productCategories[e.productCategoryIds.split("/")[1]], e
+                            })), s = nt()(s, d, l), i.items = s
                         }
                     }
-                    return null
-                }).filter(function(t) {
-                    return null !== t
-                }).map(function(t) {
-                    return "&fq=skuId:" + t.sku + "-" + t.qty
-                }).join("")), e
-            },
-            lt = function(t) {
-                var e = [];
-                return ut(t).split("fq=skuId:").filter(function(t) {
-                    return "" !== t
-                }).map(function(t) {
-                    var e = t.split("-");
-                    return e[0] > 0 ? {
-                        id: Y()(e[0]),
-                        quantity: Y()(e[1]),
-                        seller: "1"
-                    } : null
-                }).filter(function(t) {
-                    return null !== t
-                }).reduce(function(t, n) {
-                    return t[n.id] || (t[n.id] = {
-                        quantity: 0,
-                        id: n.id,
-                        seller: "1"
-                    }, e.push(t[n.id])), t[n.id].quantity += n.quantity, t
-                }, {}), e
-            },
-            dt = function(t) {
-                return t.map(function(t) {
-                    return "fq=skuId:" + t.id + "-" + t.quantity
-                })
-            },
-            pt = function(t) {
-                var e = t.clientProfileData;
-                return t.loggedIn ? t.loggedIn : "callCenterOperator" === t.userType && !!e && null !== e && null !== e.email
-            },
-            mt = new h["a"].Store({
-                state: {
-                    orderForm: null,
-                    wishlist: null,
-                    productSwitch: null,
-                    requestsQueue: [],
-                    sending: !1,
-                    doneUpdateItem: null,
-                    currentRemoving: null
-                },
-                mutations: {
-                    saveOrderForm: function(t, e) {
-                        e && (t.orderForm = e)
-                    },
-                    saveWishlist: function(t, e) {
-                        e && (t.wishlist = e)
-                    },
-                    saveProductSwitch: function(t, e) {
-                        t.productSwitch = e
-                    },
-                    switchAll: function(t, e) {
-                        var n = t.productSwitch,
-                            i = X()(n).reduce(function(t, n) {
-                                return t[n] = {
-                                    substituteType: e
-                                }, t
-                            }, {});
-                        t.productSwitch = i, st("substituicaoProduto", u()(t.productSwitch), {
-                            expires: "",
-                            path: "/"
+                    var p = sessionStorage.getItem("substituicaoProduto");
+                    if (p) m = JSON.parse(p), e.items.forEach(function(t) {
+                        var e = m[t.id];
+                        e || (m[t.id] = {
+                            substituteType: "6"
                         })
-                    },
-                    saveSwitchOption: function(t, e) {
-                        var n = X()(e).reduce(function(t, n) {
-                                return "sku" !== n && (t[n] = e[n]), t
-                            }, {}),
-                            i = t.productSwitch,
-                            r = X()(i).reduce(function(t, n) {
-                                return n !== e.sku && (t[n] = i[n]), t
-                            }, {});
-                        r[e.sku] = n, t.productSwitch = r, st("substituicaoProduto", u()(t.productSwitch), {
-                            expires: "",
-                            path: "/"
-                        })
-                    },
-                    quantityUpdated: function(t, e) {
-                        t.doneUpdateItem = e
-                    },
-                    addToRequestsQueue: function(t, e) {
-                        t.requestsQueue.push(e)
-                    },
-                    removeFromRequestsQueue: function(t) {
-                        t.requestsQueue.shift()
-                    },
-                    requestStarted: function(t) {
-                        t.sending = !0
-                    },
-                    requestEnded: function(t) {
-                        t.sending = !1
-                    },
-                    saveCurrentRemoving: function(t, e) {
-                        t.currentRemoving = e
-                    }
-                },
-                actions: {
-                    orderItems: function(t, e) {
-                        for (var n = t.commit, i = J()({}, e), r = 0; r < i.items.length; r++) i.items[r]["cbyUniqueId"] = r + "+" + i.items[r].uniqueId;
-                        var s = i.items,
-                            o = JSON.parse(at("itemsOrdination"));
-                        if (o) {
-                            var a = o.criteria,
-                                c = o.ascending;
-                            if ("price" === a || "name" === a || "category" === a) {
-                                var l = c ? "asc" : "desc",
-                                    d = "name";
-                                "price" === a ? d = "sellingPrice" : "category" === a && (d = "category", s = rt()(s, function(t) {
-                                    var e = t;
-                                    return e["category"] = e.productCategories[e.productCategoryIds.split("/")[1]], e
-                                })), s = nt()(s, d, l), i.items = s
-                            }
-                        }
-                        var p = sessionStorage.getItem("substituicaoProduto");
-                        if (p) m = JSON.parse(p), e.items.forEach(function(t) {
-                            var e = m[t.id];
-                            e || (m[t.id] = {
+                    }), n("saveProductSwitch", m), st("substituicaoProduto", u()(m), {
+                        expires: "",
+                        path: "/"
+                    });
+                    else {
+                        var m = {};
+                        e.items.forEach(function(t) {
+                            m[t.id] = {
                                 substituteType: "6"
-                            })
+                            }
                         }), n("saveProductSwitch", m), st("substituicaoProduto", u()(m), {
                             expires: "",
                             path: "/"
-                        });
-                        else {
-                            var m = {};
-                            e.items.forEach(function(t) {
-                                m[t.id] = {
-                                    substituteType: "6"
-                                }
-                            }), n("saveProductSwitch", m), st("substituicaoProduto", u()(m), {
-                                expires: "",
-                                path: "/"
-                            })
-                        }
-                        if (pt(e)) {
-                            var f = e.items.length ? e.items.map(function(t) {
-                                    return "&fq=skuId:" + t.id + "-" + t.quantity
-                                }).join("") : "",
-                                v = e.userProfileId;
-                            null !== v && (st("carrinho_persistido_id", v, {
-                                expires: "",
-                                path: "/"
-                            }), st("carrinho_persistido_v2", f, {
-                                expires: "",
-                                path: "/"
-                            }), $.ajax({
-                                url: "/api/dataentities/CP/documents/" + v,
-                                type: "PATCH",
-                                data: u()({
-                                    json_sku: f
-                                }),
-                                headers: {
-                                    Accept: "application/json",
-                                    "Content-Type": "application/json; charset=utf-8"
-                                }
-                            }))
-                        }
-                        n("saveOrderForm", i)
-                    },
-                    getOrderForm: function() {
-                        var t = Object(W["a"])(regeneratorRuntime.mark(function t(e) {
-                            var n;
-                            return regeneratorRuntime.wrap(function(t) {
-                                while (1) switch (t.prev = t.next) {
-                                    case 0:
-                                        return n = e.dispatch, e.commit, t.abrupt("return", new V.a(function(t, e) {
-                                            window.vtexjs.checkout.getOrderForm().then(function(e) {
-                                                n("orderItems", e), t(e)
-                                            }).fail(function(t) {
-                                                e(t)
-                                            })
-                                        }));
-                                    case 2:
-                                    case "end":
-                                        return t.stop()
-                                }
-                            }, t)
-                        }));
+                        })
+                    }
+                    if (pt(e)) {
+                        var f = e.items.length ? e.items.map(function(t) {
+                                return "&fq=skuId:" + t.id + "-" + t.quantity
+                            }).join("") : "",
+                            v = e.userProfileId;
+                        null !== v && (st("carrinho_persistido_id", v, {
+                            expires: "",
+                            path: "/"
+                        }), st("carrinho_persistido_v2", f, {
+                            expires: "",
+                            path: "/"
+                        }), $.ajax({
+                            url: "/api/dataentities/CP/documents/" + v,
+                            type: "PATCH",
+                            data: u()({
+                                json_sku: f
+                            }),
+                            headers: {
+                                Accept: "application/json",
+                                "Content-Type": "application/json; charset=utf-8"
+                            }
+                        }))
+                    }
+                    n("saveOrderForm", i)
+                },
+                getOrderForm: function() {
+                    var t = Object(W["a"])(regeneratorRuntime.mark(function t(e) {
+                        var n;
+                        return regeneratorRuntime.wrap(function(t) {
+                            while (1) switch (t.prev = t.next) {
+                                case 0:
+                                    return n = e.dispatch, e.commit, t.abrupt("return", new V.a(function(t, e) {
+                                        window.vtexjs.checkout.getOrderForm().then(function(e) {
+                                            n("orderItems", e), t(e)
+                                        }).fail(function(t) {
+                                            e(t)
+                                        })
+                                    }));
+                                case 2:
+                                case "end":
+                                    return t.stop()
+                            }
+                        }, t)
+                    }));
 
-                        function e(e) {
-                            return t.apply(this, arguments)
-                        }
-                        return e
-                    }(),
-                    getWishlist: function() {
-                        var t = Object(W["a"])(regeneratorRuntime.mark(function t(e) {
-                            var n;
-                            return regeneratorRuntime.wrap(function(t) {
-                                while (1) switch (t.prev = t.next) {
-                                    case 0:
-                                        return n = e.dispatch, e.commit, t.abrupt("return", new V.a(function(t, e) {
-                                            var i = ot("qd_sss_wishlist_id");
-                                            $.ajax({
-                                                url: "/api/dataentities/wishlist/documents/" + i + "?_schema=qd-sss-wishlist&_fields=items",
+                    function e(e) {
+                        return t.apply(this, arguments)
+                    }
+                    return e
+                }(),
+                getWishlist: function() {
+                    var t = Object(W["a"])(regeneratorRuntime.mark(function t(e) {
+                        var n;
+                        return regeneratorRuntime.wrap(function(t) {
+                            while (1) switch (t.prev = t.next) {
+                                case 0:
+                                    return n = e.dispatch, e.commit, t.abrupt("return", new V.a(function(t, e) {
+                                        var i = ot("qd_sss_wishlist_id");
+                                        $.ajax({
+                                            url: "/api/dataentities/wishlist/documents/" + i + "?_schema=qd-sss-wishlist&_fields=items",
+                                            type: "GET",
+                                            headers: {
+                                                Accept: "application/json",
+                                                "REST-range": "resources=0-50",
+                                                "Content-Type": "application/json; charset=utf-8"
+                                            }
+                                        }).done(function(e) {
+                                            n("wishlistItems", e), t(e), console.log(e)
+                                        }).fail(function(t) {
+                                            console.log(t)
+                                        })
+                                    }));
+                                case 2:
+                                case "end":
+                                    return t.stop()
+                            }
+                        }, t)
+                    }));
+
+                    function e(e) {
+                        return t.apply(this, arguments)
+                    }
+                    return e
+                }(),
+                syncPersistedCart: function() {
+                    var t = Object(W["a"])(regeneratorRuntime.mark(function t(e) {
+                        var n;
+                        return regeneratorRuntime.wrap(function(t) {
+                            while (1) switch (t.prev = t.next) {
+                                case 0:
+                                    return n = e.dispatch, e.commit, t.abrupt("return", new V.a(function(t, e) {
+                                        vtexjs.checkout.getOrderForm().then(function(i) {
+                                            pt(i) ? $.ajax({
+                                                url: "/api/dataentities/CP/documents/" + i.userProfileId + "?_fields=json_sku",
                                                 type: "GET",
                                                 headers: {
                                                     Accept: "application/json",
                                                     "REST-range": "resources=0-50",
                                                     "Content-Type": "application/json; charset=utf-8"
                                                 }
-                                            }).done(function(e) {
-                                                n("wishlistItems", e), t(e), console.log(e)
-                                            }).fail(function(t) {
-                                                console.log(t)
-                                            })
-                                        }));
-                                    case 2:
-                                    case "end":
-                                        return t.stop()
-                                }
-                            }, t)
-                        }));
-
-                        function e(e) {
-                            return t.apply(this, arguments)
-                        }
-                        return e
-                    }(),
-                    syncPersistedCart: function() {
-                        var t = Object(W["a"])(regeneratorRuntime.mark(function t(e) {
-                            var n;
-                            return regeneratorRuntime.wrap(function(t) {
-                                while (1) switch (t.prev = t.next) {
-                                    case 0:
-                                        return n = e.dispatch, e.commit, t.abrupt("return", new V.a(function(t, e) {
-                                            vtexjs.checkout.getOrderForm().then(function(i) {
-                                                pt(i) ? $.ajax({
-                                                    url: "/api/dataentities/CP/documents/" + i.userProfileId + "?_fields=json_sku",
-                                                    type: "GET",
-                                                    headers: {
-                                                        Accept: "application/json",
-                                                        "REST-range": "resources=0-50",
-                                                        "Content-Type": "application/json; charset=utf-8"
-                                                    }
-                                                }).done(function(r) {
-                                                    if (r) {
-                                                        var s = dt(i.items);
-                                                        s = lt(s.join("&")), s = dt(s);
-                                                        var o = lt(r.json_sku);
-                                                        o = dt(o);
-                                                        var a = lt(o.join("&")),
-                                                            c = r.json_sku; - 1 !== c.indexOf("clearOrderForm") ? i.items.length && (new Date).toDateString() === new Date(new Number(c.split("-")[1])).toDateString() ? (console.log("CP", "clearOrderForm"), vtexjs.checkout.removeAllItems().done(function(e) {
-                                                            $.ajax({
-                                                                url: "/api/dataentities/CP/documents/" + e.userProfileId,
-                                                                type: "PATCH",
-                                                                data: u()({
-                                                                    json_sku: ""
-                                                                }),
-                                                                headers: {
-                                                                    Accept: "application/json",
-                                                                    "Content-Type": "application/json; charset=utf-8"
-                                                                }
-                                                            }), n("orderItems", e), t(e)
-                                                        })) : (n("orderItems", i), t(i)) : i.items.length ? u()(s.sort()) !== u()(o.sort()) && a.length ? vtexjs.checkout.removeAllItems().done(function(e) {
-                                                            vtexjs.checkout.addToCart(a, null, ct()).done(function(e) {
-                                                                n("orderItems", e), t(e)
-                                                            })
-                                                        }).fail(function(t) {
-                                                            e(t)
-                                                        }) : (n("orderItems", i), t(i)) : a.length ? vtexjs.checkout.addToCart(a, null, ct()).done(function(e) {
+                                            }).done(function(r) {
+                                                if (r) {
+                                                    var s = dt(i.items);
+                                                    s = lt(s.join("&")), s = dt(s);
+                                                    var o = lt(r.json_sku);
+                                                    o = dt(o);
+                                                    var a = lt(o.join("&")),
+                                                        c = r.json_sku; - 1 !== c.indexOf("clearOrderForm") ? i.items.length && (new Date).toDateString() === new Date(new Number(c.split("-")[1])).toDateString() ? (console.log("CP", "clearOrderForm"), vtexjs.checkout.removeAllItems().done(function(e) {
+                                                        $.ajax({
+                                                            url: "/api/dataentities/CP/documents/" + e.userProfileId,
+                                                            type: "PATCH",
+                                                            data: u()({
+                                                                json_sku: ""
+                                                            }),
+                                                            headers: {
+                                                                Accept: "application/json",
+                                                                "Content-Type": "application/json; charset=utf-8"
+                                                            }
+                                                        }), n("orderItems", e), t(e)
+                                                    })) : (n("orderItems", i), t(i)) : i.items.length ? u()(s.sort()) !== u()(o.sort()) && a.length ? vtexjs.checkout.removeAllItems().done(function(e) {
+                                                        vtexjs.checkout.addToCart(a, null, ct()).done(function(e) {
                                                             n("orderItems", e), t(e)
-                                                        }) : (n("orderItems", i), t(i))
-                                                    } else n("orderItems", i), t(i)
-                                                }).fail(function(t) {
-                                                    e(t)
-                                                }) : (n("orderItems", i), t(i))
+                                                        })
+                                                    }).fail(function(t) {
+                                                        e(t)
+                                                    }) : (n("orderItems", i), t(i)) : a.length ? vtexjs.checkout.addToCart(a, null, ct()).done(function(e) {
+                                                        n("orderItems", e), t(e)
+                                                    }) : (n("orderItems", i), t(i))
+                                                } else n("orderItems", i), t(i)
                                             }).fail(function(t) {
                                                 e(t)
-                                            })
-                                        }));
-                                    case 2:
-                                    case "end":
-                                        return t.stop()
-                                }
-                            }, t)
-                        }));
-
-                        function e(e) {
-                            return t.apply(this, arguments)
-                        }
-                        return e
-                    }(),
-                    updateItems: function() {
-                        var t = Object(W["a"])(regeneratorRuntime.mark(function t(e, n) {
-                            var i;
-                            return regeneratorRuntime.wrap(function(t) {
-                                while (1) switch (t.prev = t.next) {
-                                    case 0:
-                                        return i = e.dispatch, e.commit, console.log("Item para remover!", n), t.abrupt("return", new V.a(function(t, e) {
-                                            var r = new vtexjs.Checkout;
-                                            r.updateItems(n).then(function(e) {
-                                                console.log("Item removido!"), i("orderItems", e), t()
-                                            }).fail(function(t) {
-                                                e(t)
-                                            })
-                                        }));
-                                    case 3:
-                                    case "end":
-                                        return t.stop()
-                                }
-                            }, t)
-                        }));
-
-                        function e(e, n) {
-                            return t.apply(this, arguments)
-                        }
-                        return e
-                    }(),
-                    showMessages: function(t, e) {
-                        t.dispatch, t.commit;
-                        if (e)
-                            for (var n = 0; n < e.messages.length; n++) {
-                                var r = e.messages[n];
-                                r.text && i["default"].notify({
-                                    group: r.status,
-                                    text: r.text
-                                })
+                                            }) : (n("orderItems", i), t(i))
+                                        }).fail(function(t) {
+                                            e(t)
+                                        })
+                                    }));
+                                case 2:
+                                case "end":
+                                    return t.stop()
                             }
-                    },
-                    removeItem: function() {
-                        var t = Object(W["a"])(regeneratorRuntime.mark(function t(e, n) {
-                            var i, r, s, o;
-                            return regeneratorRuntime.wrap(function(t) {
-                                while (1) switch (t.prev = t.next) {
-                                    case 0:
-                                        return t.prev = 0, e.commit("requestStarted"), t.next = 4, window.vtexjs.checkout.getOrderForm();
-                                    case 4:
-                                        return i = t.sent, r = m()(i.items, {
-                                            id: n
-                                        }), s = [{
-                                            index: r,
-                                            quantity: 0
-                                        }], t.next = 9, vtexjs.checkout.removeItems(s);
-                                    case 9:
-                                        o = t.sent, console.log("itemRemoved", o), e.commit("requestEnded"), t.next = 17;
-                                        break;
-                                    case 14:
-                                        t.prev = 14, t.t0 = t["catch"](0), console.error(t.t0);
-                                    case 17:
-                                    case "end":
-                                        return t.stop()
-                                }
-                            }, t, null, [
-                                [0, 14]
-                            ])
-                        }));
+                        }, t)
+                    }));
 
-                        function e(e, n) {
-                            return t.apply(this, arguments)
-                        }
-                        return e
-                    }(),
-                    addToRequestsQueue: function(t, e) {
-                        var n = t.dispatch,
-                            i = t.commit;
-                        t.state;
-                        i("addToRequestsQueue", e), n("start")
-                    },
-                    removeFromRequestsQueue: function() {
-                        var t = Object(W["a"])(regeneratorRuntime.mark(function t(e) {
-                            var n, i, r;
-                            return regeneratorRuntime.wrap(function(t) {
-                                while (1) switch (t.prev = t.next) {
-                                    case 0:
-                                        return e.dispatch, n = e.commit, i = e.state, r = i.requestsQueue[0], n("removeFromRequestsQueue"), t.abrupt("return", r);
-                                    case 4:
-                                    case "end":
-                                        return t.stop()
-                                }
-                            }, t)
-                        }));
-
-                        function e(e) {
-                            return t.apply(this, arguments)
-                        }
-                        return e
-                    }(),
-                    callRequest: function(t, e) {
-                        var n = t.dispatch,
-                            i = t.commit,
-                            r = t.state,
-                            s = e.item,
-                            o = (e.qtd, new window.vtexjs.Checkout);
-                        n("getWishlist"), o.getOrderForm().then(function(t) {
-                            var e = m()(t.items, {
-                                uniqueId: s.uniqueId,
-                                id: s.id
-                            });
-                            if (-1 !== e) {
-                                var n = {
-                                    index: e,
-                                    quantity: 0
-                                };
-                                return o.removeItems([n])
-                            }
-                        }).then(function(t) {
-                            i("quantityUpdated", s), r.requestsQueue.length ? n("removeFromRequestsQueue").then(function(t) {
-                                i("saveCurrentRemoving", t), n("callRequest", t)
-                            }) : (i("saveCurrentRemoving", null), i("requestEnded"), n("getOrderForm"), n("start"))
-                        }).fail(function(t) {
-                            console.error("Removing item: ", items, t), i("requestEnded"), n("start")
-                        })
-                    },
-                    start: function(t) {
-                        var e = t.dispatch,
-                            n = t.commit,
-                            i = t.state;
-                        !i.sending && i.requestsQueue.length && e("removeFromRequestsQueue").then(function(t) {
-                            t ? (n("saveCurrentRemoving", t), console.log("%cstarting", "font-size:14px;color:red;", t), n("requestStarted"), e("callRequest", t)) : (console.log("%cempty queue", "font-size:14px;color:red;"), n("requestEnded"))
-                        })
+                    function e(e) {
+                        return t.apply(this, arguments)
                     }
+                    return e
+                }(),
+                updateItems: function() {
+                    var t = Object(W["a"])(regeneratorRuntime.mark(function t(e, n) {
+                        var i;
+                        return regeneratorRuntime.wrap(function(t) {
+                            while (1) switch (t.prev = t.next) {
+                                case 0:
+                                    return i = e.dispatch, e.commit, console.log("Item para remover!", n), t.abrupt("return", new V.a(function(t, e) {
+                                        var r = new vtexjs.Checkout;
+                                        r.updateItems(n).then(function(e) {
+                                            console.log("Item removido!"), i("orderItems", e), t()
+                                        }).fail(function(t) {
+                                            e(t)
+                                        })
+                                    }));
+                                case 3:
+                                case "end":
+                                    return t.stop()
+                            }
+                        }, t)
+                    }));
+
+                    function e(e, n) {
+                        return t.apply(this, arguments)
+                    }
+                    return e
+                }(),
+                showMessages: function(t, e) {
+                    t.dispatch, t.commit;
+                    if (e)
+                        for (var n = 0; n < e.messages.length; n++) {
+                            var r = e.messages[n];
+                            r.text && i["default"].notify({
+                                group: r.status,
+                                text: r.text
+                            })
+                        }
+                },
+                removeItem: function() {
+                    var t = Object(W["a"])(regeneratorRuntime.mark(function t(e, n) {
+                        var i, r, s, o;
+                        return regeneratorRuntime.wrap(function(t) {
+                            while (1) switch (t.prev = t.next) {
+                                case 0:
+                                    return t.prev = 0, e.commit("requestStarted"), t.next = 4, window.vtexjs.checkout.getOrderForm();
+                                case 4:
+                                    return i = t.sent, r = m()(i.items, {
+                                        id: n
+                                    }), s = [{
+                                        index: r,
+                                        quantity: 0
+                                    }], t.next = 9, vtexjs.checkout.removeItems(s);
+                                case 9:
+                                    o = t.sent, console.log("itemRemoved", o), e.commit("requestEnded"), t.next = 17;
+                                    break;
+                                case 14:
+                                    t.prev = 14, t.t0 = t["catch"](0), console.error(t.t0);
+                                case 17:
+                                case "end":
+                                    return t.stop()
+                            }
+                        }, t, null, [
+                            [0, 14]
+                        ])
+                    }));
+
+                    function e(e, n) {
+                        return t.apply(this, arguments)
+                    }
+                    return e
+                }(),
+                addToRequestsQueue: function(t, e) {
+                    var n = t.dispatch,
+                        i = t.commit;
+                    t.state;
+                    i("addToRequestsQueue", e), n("start")
+                },
+                removeFromRequestsQueue: function() {
+                    var t = Object(W["a"])(regeneratorRuntime.mark(function t(e) {
+                        var n, i, r;
+                        return regeneratorRuntime.wrap(function(t) {
+                            while (1) switch (t.prev = t.next) {
+                                case 0:
+                                    return e.dispatch, n = e.commit, i = e.state, r = i.requestsQueue[0], n("removeFromRequestsQueue"), t.abrupt("return", r);
+                                case 4:
+                                case "end":
+                                    return t.stop()
+                            }
+                        }, t)
+                    }));
+
+                    function e(e) {
+                        return t.apply(this, arguments)
+                    }
+                    return e
+                }(),
+                callRequest: function(t, e) {
+                    var n = t.dispatch,
+                        i = t.commit,
+                        r = t.state,
+                        s = e.item,
+                        o = (e.qtd, new window.vtexjs.Checkout);
+                    n("getWishlist"), o.getOrderForm().then(function(t) {
+                        var e = m()(t.items, {
+                            uniqueId: s.uniqueId,
+                            id: s.id
+                        });
+                        if (-1 !== e) {
+                            var n = {
+                                index: e,
+                                quantity: 0
+                            };
+                            return o.removeItems([n])
+                        }
+                    }).then(function(t) {
+                        i("quantityUpdated", s), r.requestsQueue.length ? n("removeFromRequestsQueue").then(function(t) {
+                            i("saveCurrentRemoving", t), n("callRequest", t)
+                        }) : (i("saveCurrentRemoving", null), i("requestEnded"), n("getOrderForm"), n("start"))
+                    }).fail(function(t) {
+                        console.error("Removing item: ", items, t), i("requestEnded"), n("start")
+                    })
+                },
+                start: function(t) {
+                    var e = t.dispatch,
+                        n = t.commit,
+                        i = t.state;
+                    !i.sending && i.requestsQueue.length && e("removeFromRequestsQueue").then(function(t) {
+                        t ? (n("saveCurrentRemoving", t), console.log("%cstarting", "font-size:14px;color:red;", t), n("requestStarted"), e("callRequest", t)) : (console.log("%cempty queue", "font-size:14px;color:red;"), n("requestEnded"))
+                    })
                 }
-            }),
-            ft = n("d847"),
-            vt = n.n(ft),
-            ht = new i["default"];
+            }
+        }),
+        ft = n("d847"),
+        vt = n.n(ft),
+        ht = new i["default"];
 
         function gt(t) {
             vt()(t.prototype, {
@@ -1352,14 +1420,14 @@
                         }
                     })
                 }
-            },
-            kt = wt,
-            bt = n("00e7"),
-            _t = n.n(bt),
-            Ct = n("ee98"),
-            yt = n.n(Ct),
-            xt = n("589d"),
-            It = n.n(xt);
+        },
+        kt = wt,
+        bt = n("00e7"),
+        _t = n.n(bt),
+        Ct = n("ee98"),
+        yt = n.n(Ct),
+        xt = n("589d"),
+        It = n.n(xt);
         i["default"].use(_t.a), i["default"].use(kt), i["default"].use(gt), i["default"].use(yt.a, {
             velocity: It.a
         }), window.console && window.console.log && (window.console.log("%c    ", "font-size: 80px; line-height:50px; background: url(http://codeby.com.br/imagem/cby-logo.png) no-repeat;"), window.console.log(" ")), i["default"].config.productionTip = !1, window["cbySellerName"] = "livrofacil", window.$(window).on({
@@ -1369,7 +1437,7 @@
             render: function(t) {
                 return t(H)
             }
-        }).$mount("#app")
+        }).$mount("#app");
     },
     "5c0b": function(t, e, n) {
         "use strict";
