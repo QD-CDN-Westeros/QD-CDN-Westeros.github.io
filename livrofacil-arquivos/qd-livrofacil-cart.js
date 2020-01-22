@@ -607,7 +607,7 @@
                                 var n = e.skusaprovados.split(",");
                                 t.wishlist = n
                                 window.vtexjs.checkout.getOrderForm().then(function(orderForm) {
-                                    var postalCode =  orderForm.shippingData.address.postalCode;
+                                    var postalCode =  orderForm.shippingData.address ?orderForm.shippingData.address.postalCode :'';
                                     if(!postalCode) {
                                         t.loading = !1;
                                         return;
