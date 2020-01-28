@@ -508,7 +508,8 @@
                                 method:"GET"
                             }
                             var globalWarehouse = "14a6497";
-                            var schoolWarehouse = School.listData._dockid;
+                            var schoolWarehouse = dockId;
+                            console.log(dockId);
                             $.ajax(opt).done(function(result){
                                 var isAvailable=false;
                                 console.log(result)
