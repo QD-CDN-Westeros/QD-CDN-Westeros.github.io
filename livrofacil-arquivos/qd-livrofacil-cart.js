@@ -311,7 +311,7 @@
                     staticClass: "available"
                 }, [n("div", {
                     staticClass: "l-content"
-                }, [t._v("\n                    Total    "), n("strong", [t._v(t._s(t._f("priceFilter")(t.item.sellingPrice)))])])]) : n("div", {
+                }, [t._v("\n                    Total    "), n("strong", [t._v(t._s(t._f("priceFilter")(t.item.sellers[0].commertialOffer.Price)))])])]) : n("div", {
                     staticClass: "unavailable"
                 }, [n("div", {
                     staticClass: "first"
@@ -494,7 +494,7 @@
                             n = this.skuId;
                             //mz
                             var sc= $.cookie("VTEXSC")?$.cookie("VTEXSC"):"";
-                            var dockId = window.location.search.replace("?dockId=","").split('-')[0];
+                            var dockId = window.location.search.replace("?dockId=","")
                         window.$.get("/api/catalog_system/pub/products/search?fq=skuId:" + n+"&"+sc).then(function(n) {
                             t.product = n[0], t.item = n[0].items[0];
                             var i = n[0].items[0];
@@ -508,11 +508,10 @@
                                 method:"GET"
                             }
                             var globalWarehouse = "14a6497";
-                            var schoolWarehouse = dockId;
-                            console.log(dockId);
+                            var schoolWarehouse = dockId.split('-')[0];
                             $.ajax(opt).done(function(result){
                                 var isAvailable=false;
-                                console.log(result)
+
                                 for(var j=0;j<result.length;j++){
                                     if(isAvailable){
                                         break;
@@ -523,7 +522,6 @@
                                         isAvailable=true;                                       
                                     }                                    
                                 }
-                                console.log(isAvailable)
                             // if (t.item.imageUrl = t.item.images[0].imageUrl, e.stockLoaded = !0, i) {
                             if (e.stockLoaded = !0, i) {
                                 var r = i.sellers[0];
