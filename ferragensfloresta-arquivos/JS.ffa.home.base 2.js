@@ -1,0 +1,2 @@
+/* MacBook-Pro - 26/06/2020 09:57:33 GMT */
+function checkOffset(){if($(".whatsapp-button").offset().top+$(".whatsapp-button").height()>=$("footer").offset().top-10)$(".whatsapp-button").css("bottom","15%");if($(document).scrollTop()+window.innerHeight<$("footer").offset().top)$(".whatsapp-button").css({position:"fixed",bottom:"10px"})}$(document).scroll(function(){checkOffset()});
