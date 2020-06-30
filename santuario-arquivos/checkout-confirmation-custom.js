@@ -1,0 +1,2 @@
+/* dan - 26/06/2020 17:11:09 GMT-0300 */
+var Checkout={init:function(){Checkout.applyFlowProgressBuy()},applyFlowProgressBuy:function(){var imageFlow=$(".mz-flowbuy img");var urlOrderPlaced=window.location.href;var regexHTML=/orderPlaced\/\?og=/g;function validadeURL(urlForTest){return regexHTML.test(urlForTest)}if(validadeURL(urlOrderPlaced)==true){imageFlow.attr("src","/arquivos/sant-fllowbuy4.png");$(".mz-flowbuy").show()}}};$(function(){Checkout.init()});
