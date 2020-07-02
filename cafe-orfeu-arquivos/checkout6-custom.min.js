@@ -1,2 +1,2 @@
-/* Anonymouswill - 15/06/2020 07:40:21 GMT */
+/* Lugia - 02/07/2020 11:10:45 GMT */
 function fixInput(){$(window).load(function(){$("#ship-receiverName").on("keydown",function(e){if(e.keyCode==8&&$(this).val().length==1){$(this).val("")}})})}fixInput();
