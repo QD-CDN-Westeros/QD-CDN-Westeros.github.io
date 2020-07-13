@@ -167,7 +167,7 @@
     flex-wrap: wrap;
   }
 }
-.login .x-login__main .user-login .login-buttons .facebook-login {
+.login .x-login__main .user-login .login-buttons .fb-share {
   border-radius: 8px;
   width: 26%;
   font-size: 14px;
@@ -178,12 +178,12 @@
   border: 1px solid #365899; */
 }
 @media (max-width: 1023px) {
-  .login .x-login__main .user-login .login-buttons .facebook-login {
+  .login .x-login__main .user-login .login-buttons .fb-share {
     width: 48%;
     height: 40px;
   }
 }
-.login .x-login__main .user-login .login-buttons .facebook-login:before {
+.login .x-login__main .user-login .login-buttons .fb-share:before {
   font-family: "fontawesome";
   content: "\f230";
   line-height: 0;
@@ -198,7 +198,7 @@
   /* right: 10px; */
 }
 @media (max-width: 1180px) {
-  .login .x-login__main .user-login .login-buttons .facebook-login:before {
+  .login .x-login__main .user-login .login-buttons .fb-share:before {
     right: 0;
   }
 }
