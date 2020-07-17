@@ -29,23 +29,23 @@
     padding: 0 20px;
   }
 }
-.login .x-login__main .user-login #user-login-heading {
+/* .login .x-login__main .user-login #user-login-heading {
   text-align: left;
   font-weight: 700;
   color: #000;
   /* /* font-family: Margem; */
   /* font-size: 36px; */
-}
+/* }  */
 .login .x-login__main .user-login .user-login-text {
-  font-size: 17px;
-  margin: 15px 0;
+  /* font-size: 17px;
+  margin: 15px 0; */
   /* /* font-family: Margem; */
-  font-weight: 400;
+  /* font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.4;
   letter-spacing: normal;
-  color: #333333;
+  color: #333333; */
 }
 .login .x-login__main .user-login #user-login-form {
   position: relative;
@@ -155,23 +155,23 @@
   }
 }
 .login .x-login__main .user-login .login-buttons {
-  display: -ms-flexbox;
+  /* display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 25px 0;
+  margin: 25px 0; */
 }
 @media (max-width: 1023px) {
-  .login .x-login__main .user-login .login-buttons {
+  /* .login .x-login__main .user-login .login-buttons {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-  }
+  } */
 }
 .login .x-login__main .user-login .login-buttons .fb-share {
-  border-radius: 8px;
+  /* border-radius: 8px;
   width: 26%;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 500; */
   /* letter-spacing: -0.5px;
   text-transform: uppercase; */
   /* color: #365899;
@@ -202,7 +202,7 @@
     right: 0;
   }
 }
-.login .x-login__main .user-login .login-buttons .gmail-login {
+.login .x-login__main .user-login .login-buttons .abcRioButton {
   border-radius: 8px;
   width: 25%;
   font-size: 14px;
@@ -214,17 +214,17 @@
   border: 1px solid #d7282a; */
 }
 @media (max-width: 1180px) {
-  .login .x-login__main .user-login .login-buttons .gmail-login {
+  .login .x-login__main .user-login .login-buttons .abcRioButton {
     width: 28%;
   }
 }
 @media (max-width: 1023px) {
-  .login .x-login__main .user-login .login-buttons .gmail-login {
+  .login .x-login__main .user-login .login-buttons .abcRioButton {
     width: 48%;
     height: 40px;
   }
 }
-.login .x-login__main .user-login .login-buttons .gmail-login:before {
+/* .login .x-login__main .user-login .login-buttons .abcRioButton:before {
   content: "\f1a0 ";
   font-family: "fontawesome";
   font-size: 14px;
@@ -236,14 +236,14 @@
   top: 29%;
   position: absolute;
   left: 25px; */
-}
+/* }  */
 @media (max-width: 1180px) {
-  .login .x-login__main .user-login .login-buttons .gmail-login:before {
+  .login .x-login__main .user-login .login-buttons .abcRioButton:before {
     right: 0;
   }
 }
-.login .x-login__main .user-login .login-buttons .gmail-login span {
-  margin-left: 8px;
+.login .x-login__main .user-login .login-buttons .abcRioButton span {
+  /* margin-left: 8px; */
 }
 .login .x-login__main .user-login .login-buttons #loginWithAccessKeyBtn {
   width: 45%;
