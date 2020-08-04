@@ -525,7 +525,7 @@
                             // if (t.item.imageUrl = t.item.images[0].imageUrl, e.stockLoaded = !0, i) {
                             if (e.stockLoaded = !0, i) {
                                 var r = i.sellers[0];
-                                r && (console.log("comercial offer" + r.commertialOffer.AvailableQuantity), (r.commertialOffer.AvailableQuantity <= 0 || !isAvailable) ? e.showStock = !0 : e.item.sellingPrice = r.commertialOffer.Price);
+                                r && ((r.commertialOffer.AvailableQuantity <= 0 || !isAvailable) ? e.showStock = !0 : e.item.sellingPrice = r.commertialOffer.Price);
                             }
                             });                          
                             /*mz fix*/
@@ -640,7 +640,7 @@
                             text: 'Aceite o termo "Li e Aceito as Condições"',
                             icon: "error",
                             confirmButtonText: "OK"
-                        }) : window.location.href = "/checkout?listSlas=true"
+                        }) : setTimeout(function(){window.location.href = "/checkout?listSlas=true"}, 100);
                     },
                     addToCart: function(t) {
                         var e = t.length,
@@ -1430,3 +1430,47 @@
     }
 });
 //# sourceMappingURL=app.c82530c3.js.map
+
+$(function(){
+    vtexjs.checkout.getOrderForm().done(function(of){
+        var html = $('<a href="#" style="color:#43BFD3;text-decoration:underline;padding-right:25px;font-family: Lato;font-size: 16px;">Voltar</a>');
+        html.on('click',function(e){
+            var removeItems = [];
+            e.preventDefault();
+            var number = $('.available').length;
+            var itemsLength = of.items.length-1;
+            if(!itemsLength || !number){
+                console.log('return')
+                window.history.back();
+            }
+            for(var i= 0;i<number;i++){
+                var obj = {
+                    index:itemsLength-i,
+                    quantity:0
+                }
+                removeItems.push(obj);
+            }
+            vtexjs.checkout.removeItems(removeItems).done(function(){
+
+            }).always(function(){
+                window.history.back();
+            });
+        })
+        $('#add-all-products').prepend(html);
+    })
+
+})
+
+// <style>
+//     @media(max-width:768px){
+//         #add-all-products{
+//             display: flex !important;
+//             flex-direction: column;
+//         }
+//         #add-all-products a{
+//             text-align:center;
+//             order:2;
+//             padding-top:15px;                
+//         }        
+//     }
+// </style>
