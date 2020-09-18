@@ -1,2 +1,2 @@
-/* DESKTOP-NA07EK9 - 11/08/2020 17:31:38 GMT */
+/* davids - 18/09/2020 09:43:19 GMT-0300 */
 function checkoutSteps(){$(window).on("hashchange",function(e){if(window.location.hash=="#/cart"){$(".mz-header__checkout--steps li").removeClass("active");$("#sacola").addClass("active")}else if(window.location.hash=="#/email"||window.location.hash=="#/profile"){$(".mz-header__checkout--steps li").removeClass("active");$("#identificacao").addClass("active")}else if(window.location.hash=="#/payment"){$(".mz-header__checkout--steps li").removeClass("active");$("#pagamento").addClass("active")}else if(window.location.hash=="/orderPlaced"){$(".mz-header__checkout--steps li").removeClass("active");$("#confirmacao").addClass("active")}})}checkoutSteps();
