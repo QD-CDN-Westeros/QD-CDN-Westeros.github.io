@@ -1,0 +1,2 @@
+/* MEWTWO - 21/09/2020 09:50:03 GMT */
+"use strict";(function(){try{var Depoimentos={init:function init(){Depoimentos.bringDepositions()},bringDepositions:function bringDepositions(){console.log("Entrei!!!!!!!!")}};Depoimentos.init()}catch(e){console.log("Erro na instancia [Depoimentos]: ",e)}})();
