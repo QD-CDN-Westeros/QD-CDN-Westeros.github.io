@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'AgencyFB';
+    src: url('/arquivos/AgencyFB-Reg.woff2.css') format('woff2'),
+        url('/arquivos/AgencyFB-Reg.woff.css') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gotham-regular';
+    src: url('/arqiuvos/Gotham-Black.woff2') format('woff2'),
+        url('/arquivos/Gotham-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+.mx-content{
+     width: 1100px;
+     margin: 14px auto;
+     font-family: 'gotham-regular', Arial, Helvetica, sans-serif;
+}
+.mx-content .banner-lupolinos-desktop img{
+	width: 100%;
+	height: auto;
+}
+.mx-content .banner-lupolinos-mobile img{
+	width: 100%;
+	height: auto;
+}
+.titulo-lupolinos{
+    text-align: center;
+    font-style: italic;
+    font-size: 50px;
+    margin: 36px 0;
+    color: #003e7b;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.lupolinos-texto p{
+    padding: 15px 50px;
+    font-size: 17px;
+    text-align: center;
+	
+	    
+}
+.lupolinos-texto ul li{
+	font-size: 12px;
+	text-align: justify;
+	margin-left: 25px
+	
+}
+.lupolinos-texto h3{    
+    text-align: justify;
+    font-size: 20px;
+    font-weight:bold;
+    color: #003e7b;
+}
+
+.video-lupolinos iframe {
+	width: 70%;
+	
+}
+
+.video-lupolinos h3{
+	text-align: center;
+    font-size: 20px;
+    font-weight:bold;
+    color: #003e7b;
+}
+.mx-content .mini-banner-lupolinos img {
+	width: 50%;
+	height: auto;
+}
+
+
+
+@media only screen and (min-width: 100px) and (max-width: 485px) {
+.mx-content{
+	width: 100%;
+}
+.titulo-lupolinos{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    margin: 36px 0;
+    color: #003e7b;
+    text-decoration: 
+    display: block;
+    float: left;
+    width: 100%;
+}
+.lupolinos-texto p{
+    padding: 15px 50px;
+    font-size: 15px;
+    text-align: justify;
+	color: black;
+	margin: 0px
+}
+.lupolinos-texto ul li{
+	font-size: 12px;
+	text-align: justify;
+	margin-left: 25px
+}
+.lupolinos-texto h3{    
+    padding: 15px 50px;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bold;
+    color: #003e7b;
+}
+.banner-lupolinos-desktop{
+	display: none;
+}
+.banner-lupolinos-mobile{
+	display: block;
+}	
+}
+@media only screen and (min-width: 485px) and (max-width: 2000px) {
+.mx-content{
+	width: 100%;
+}
+.lupolinos-texto h3{    
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #003e7b;
+}
+
+lupolinos-texto p{
+    padding: 15px 50px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.banner-lupolinos-desktop{
+	display: block;
+}
+.banner-lupolinos-mobile{
+	display: none;
+}
+}  

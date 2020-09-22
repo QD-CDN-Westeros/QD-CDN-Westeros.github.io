@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'AgencyFB';
+    src: url('/arquivos/AgencyFB-Reg.woff2.css') format('woff2'),
+        url('/arquivos/AgencyFB-Reg.woff.css') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gotham-regular';
+    src: url('/arqiuvos/Gotham-Black.woff2') format('woff2'),
+        url('/arquivos/Gotham-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.mx-content{
+     width: 1100px;
+     margin: 14px auto;
+     font-family: 'gotham-regular', Arial, Helvetica, sans-serif;
+}
+
+.titulo-codigo{
+    text-align: center;
+    font-style: normal;
+    font-size: 30px;
+    margin: 36px 0;
+    color: #65727d;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.texto-codigo p{
+    padding: 30px 20px;
+    font-size: 20px;
+    text-align: justify;
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.texto-codigo b{
+    font-weight:bold;
+}
+.texto-codigo ul li{
+    font-size: 12px;
+    text-align: justify;
+    margin-left: 25px;
+    
+}
+.texto-codigo h3{    
+    text-align: center;
+    font-size: 23px;
+    font-weight:bold;
+    color: #003e7b;
+    
+
+@media only screen and (min-width: 100px) and (max-width: 485px) {
+
+.mx-content{
+    width: 100%;
+}
+.titulo-codigo{
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    margin: 36px 0;
+    color: #003e7b;
+    text-decoration: 
+    display: block;
+    float: left;
+    width: 100%;
+}
+.texto-codigo p{
+    padding: 15px 50px;
+    font-size: 15px;
+    text-align: justify;
+    color: black;
+    margin: 0px
+}
+.texto-codigo ul li{
+    font-size: 12px;
+    text-align: justify;
+    margin-left: 25px
+}
+.texto-codigo h3{    
+    padding: 15px 50px;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bold;
+    color: #003e7b;
+}
+@media only screen and (min-width: 485px) and (max-width: 2000px) {
+.mx-content{
+    width: 100%;
+}
+.texto-codigo h3{    
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #003e7b;
+}
+
+.texto-codigo p{
+    padding: 15px 50px;
+    font-size: 12px;
+    text-align: center;
+}
+
+  

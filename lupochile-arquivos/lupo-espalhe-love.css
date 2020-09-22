@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'AgencyFB';
+    src: url('/arquivos/AgencyFB-Reg.woff2.css') format('woff2'),
+        url('/arquivos/AgencyFB-Reg.woff.css') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gotham-regular';
+    src: url('/arqiuvos/Gotham-Black.woff2') format('woff2'),
+        url('/arquivos/Gotham-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+.mx-content{
+     width: 1100px;
+     margin: 14px auto;
+     font-family: 'gotham-regular', Arial, Helvetica, sans-serif;
+}
+.lp-title-espalhe-love{
+    text-align: center;
+    font-size: 54px;
+    margin: 36px 0;
+    text-decoration: underline;
+    color: #003e7b;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.lp-banner-espalhe-love{
+    margin: 20px auto;
+    display: block;
+    text-align: center
+      
+}
+.lp-banner-espalhe-love img{
+    width: 100%;
+    height: auto;
+}
+
+.lp-espalhe-love-text{
+    float: left;
+    margin-bottom: 40px;
+    position: relative
+}
+
+}
+.espalhe-love .mx-content:before{
+    content: "";
+    position: absolute;
+    width: 495px;
+    height: 244px;    
+    top: 45%;
+    left: 0px;
+    /*background: url(/arquivos/heart-before.png) no-repeat;*/
+    background-size: 58%;
+    transform: translateX(50px);
+}
+	.espalhe-love .mx-content:after{
+    content: "";
+    position: absolute;
+    width: 495px;
+    height: 244px;
+    /* bottom: 0px; */
+    top: 45%;
+    right: -100px;
+    /*background: url(/arquivos/heart-after.png) no-repeat;*/
+    background-size: 58%;
+    transform: translateX(50px);
+}
+
+	
+	
+.lp-espalhe-love-text h2{    
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-decoration: underline;
+    color:#003e7b;
+}
+.lp-espalhe-love-text p{
+    padding: 10px 61px;
+    font-size: 19px;
+    text-align: center;
+    font-weight: lighter;
+	text-align: justify;
+}
+@media only screen and (min-width: 100px) and (max-width: 1024px) {
+    .mx-content{
+        width: 100%;
+    }
+    .lp-espalhe-love-text p {
+        padding: 10px 15px;
+        text-align: justify;
+        font-size: 19px;        
+    }
+    .lp-banner-espalhe-love iframe{
+        width: 100%;
+        height: auto
+    }
+    
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .espalhe-love .mx-content:after,
+    .espalhe-love .mx-content:before{
+        content: '';
+        background: none;
+        position: relative
+    }
+}
+@media only screen and (min-width: 100px) and (max-width: 480px) {
+    .espalhe-love .mx-content:after,
+    .espalhe-love .mx-content:before{
+        content: '';
+        background: none;
+        position: relative
+    }
+    .lp-title-espalhe-love{
+        font-size: 40px;
+    }
+}
