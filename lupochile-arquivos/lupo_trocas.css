@@ -1,0 +1,54 @@
+/*lupo trocas*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+#trocas-page .content-trocas-devolucoes h1{
+   text-align: left;
+   font-size: 24px;
+   text-transform: uppercase;
+   padding: 10px 0;
+   border-bottom:1px solid #54a5dc;
+   float: left;
+   width: 100%;
+   display: block;
+   margin: 10px 0;
+   font-weight: bold;
+}
+
+#trocas-page .content-trocas-devolucoes p{
+   padding: 10px 0;
+   margin: 10px 0;
+   font-size: 14px;
+   line-height: 19px;
+   text-align: justify;
+}
+#trocas-page .content-trocas-devolucoes ul li{
+   font-size: 14px;
+   padding-left: 10px;
+   line-height: 19px;
+   list-style-type: circle;
+   margin-left: 25px;
+   text-align: justify;
+}
+
+#trocas-page .content-trocas-devolucoes  h2{
+   text-align: left;
+   font-size: 17px;
+   padding: 10px 0;	
+   border-bottom:1px solid #54a5dc;
+   margin: 10px 0;
+   font-weight: bold;
+   display: block;
+   width: 71%;
+
+}
+#trocas-page .content-trocas-devolucoes  h3{
+   text-align: left;
+   font-size: 19px;
+   padding: 10px 0;
+}
+#trocas-page .content-trocas-devolucoes i{
+   color: #ff0000;
+   font-weight: bold;
+}

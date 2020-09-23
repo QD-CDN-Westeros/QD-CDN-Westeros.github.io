@@ -1,0 +1,21 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.imagem-faleconosco img{
+   width: 100%;
+   height: auto;
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+
+
+@media only screen and (min-width: 100px) and (max-width: 300px) {
+
+   .imagem-faleconosco img{
+       width: 100%;
+       height: auto;
+   }
+}

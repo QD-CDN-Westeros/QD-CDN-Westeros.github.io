@@ -1,0 +1,461 @@
+@import url('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+
+#form-submit:hover,#profile-submit:hover,.modal-footer .btn-link:hover,.nav-pills li a,.nav-pills li a:hover,a,a:focus,a:hover {
+    text-decoration: none
+}
+
+*,a {
+    padding: 0
+}
+
+.pedidos ul li,a {
+    line-height: initial
+}
+
+.pedidos input {
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+*,.pedidos form,.pedidos ul,.pedidos ul li,a {
+    margin: 0
+}
+
+#myModalLabel,.hide {
+    display: none
+}
+
+* {
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    color: #2D2926;
+    font-weight: 700;
+    transition: color .3s ease-out;
+}
+
+.pedidos .help-menu ul li {
+    padding-right: 5px;
+    padding-left: 5px
+}
+
+.pedidos form,.pedidos input,.pedidos ul li {
+    padding: 0
+}
+
+.pedidos input {
+    height: initial;
+    margin-bottom: 0;
+    line-height: 0;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    font-weight: 300
+}
+
+.pedidos input:focus {
+    box-shadow: none!important;
+    border: 1px solid #ccc
+}
+
+.pedidos p,.pedidos ul {
+    margin: 0;
+    padding: 0;
+    line-height: initial
+}
+
+.pedidos .row {
+    margin-left: 0
+}
+
+.pedidos em {
+    line-height: 0
+}
+
+a:focus,a:hover {
+    color: #8dbbc8
+}
+
+button,input,textarea {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: 0
+}
+
+.mx-orders-wrapper {
+    float: left;
+    width: 100%
+}
+
+.mx-orders-wrapper * {
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+.mx-orders-wrapper .mx-content {
+    max-width: 1024px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 100px
+}
+
+.mx-orders-wrapper .mx-content .account__infos {
+    float: left;
+    width: 54.35098%;
+    margin: 0;
+    padding: 30px 0
+}
+
+#form-submit,#profile-submit,.modal-footer .btn-link,.mx-orders-wrapper .mx-content .account__infos #edit-data-link,.mx-orders-wrapper .mx-content .account__infos .address-update {
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Assistant;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .3s ease-out
+}
+
+.mx-orders-wrapper .mx-content .account__infos #edit-data-link,.mx-orders-wrapper .mx-content .account__infos .address-update {
+    border: none;
+    border-radius: 0;
+    display: block;
+    background: #ddd;
+    background-size: 100% 100%;
+    max-width: 250px;
+    width: 100%;
+    margin: 15px 0;
+    color: #303030;
+    font-family: 'Source Sans Pro',sans-serif
+}
+
+.mx-orders-wrapper .mx-content .account__infos #edit-data-link:hover,.mx-orders-wrapper .mx-content .account__infos .address-update:hover {
+    color: #FFF;
+    text-decoration: none;
+    background: #303030
+}
+
+#form-submit,#profile-submit,.modal-footer .btn-link {
+    border: none;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: top;
+    background: #8dbbc8;
+    font-family: 'Source Sans Pro',sans-serif;
+    background-size: 100% 100%;
+    width: 48%;
+    margin: 15px 20px 15px 0;
+    padding: 0;
+    height: 40px
+}
+
+.modal-footer .btn-link {
+    margin-right: 0
+}
+
+.mx-orders-wrapper .mx-content .account__infos .mx-user_profile {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px
+}
+
+.mx-orders-wrapper .mx-content .account__infos .mx-account_address .row,.mx-orders-wrapper .mx-content .account__infos .mx-user_profile .row {
+    margin: 0
+}
+
+.mx-orders-wrapper .mx-content .account__infos .mx-account_address,.mx-orders-wrapper .mx-content .account__infos .mx-user_profile {
+    float: left;
+    width: 100%
+}
+
+.mx-orders-wrapper .mx-content .account__infos .mx-user_profile h4 {
+    font-size: 26px;
+    display: block;
+    padding-bottom: 10px
+}
+
+.mx-orders-wrapper .mx-content .account__infos .mx-user_profile h5 {
+    font-size: 16px;
+    text-transform: uppercase
+}
+
+.mx-orders-wrapper .mx-content .account__links {
+    float: right;
+    width: 40.29137%;
+    margin: 0;
+    padding: 30px 0
+}
+
+.mx-orders-wrapper .mx-content .account__links .account-links {
+    padding: 1em;
+    border-bottom: 1px solid #ddd
+}
+
+.mx-orders-wrapper .mx-content .account__links .account-links a {
+    display: block;
+    line-height: 30px
+}
+
+.mx-orders-wrapper .mx-content .account__links>a {
+    padding: 1em;
+    display: block
+}
+
+.section-main-content footer {
+    float: left;
+    width: 100%
+}
+
+.modal-header {
+    border: 0
+}
+#exclude .modal-header .close {
+    right: 0;
+}
+.modal-header .close {
+    background: #303030!important;
+    opacity: 1;
+    transition: background .3s ease-out;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    padding: 0 5px 2px;
+    font-size: 20px;
+    position: relative;
+    right: 0;
+}
+
+.form-personal-data-gender label {
+    display: inline-block;
+    position: initial;
+    max-width: initial;
+    margin: 10px 0
+}
+
+.form-personal-data-gender label.gender-female-label {
+    margin-left: 15px
+}
+
+.form-personal-data-gender label input[type=radio] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000;
+    padding: 0;
+    min-height: initial;
+    border-radius: 0;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-left: 0;
+    position: relative;
+    top: -4px
+}
+
+.form-personal-data-gender label input[type=radio]:checked {
+    background: #303030
+}
+
+#address-edit,#editar-perfil {
+    width: 600px;
+    position: fixed;
+    height: 520px;
+    max-height: 520px;
+    overflow: scroll;
+    margin: -250px 0 0 -300px;
+    top: 50%!important;
+    left: 50%;
+    padding: 15px;
+    -webkit-box-shadow: 1px 1px 17px -2px rgba(0,0,0,.75);
+    -moz-box-shadow: 1px 1px 17px -2px rgba(0,0,0,.75);
+    box-shadow: 1px 1px 17px -2px rgba(0,0,0,.75);
+    border-radius: 0;
+    background: #FFF;
+    z-index: 999;
+}
+
+input[type=text],select,textarea {
+    background: #FFF;
+    color: #303030;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    padding: .85em;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    resize: none;
+    border-radius: 0
+}
+
+.modal-footer {
+    background: initial;
+    padding: 0
+}
+
+.modal-body .address-form .control-label,.modal-body .row .control-label {
+    display: block;
+    font-size: 14px;
+    padding: 20px 0 5px
+}
+
+#business-toggle,.profile-detail-form-personal-data .span5 {
+    display: block;
+    margin: 10px 0
+}
+
+#state, #addressType {
+    height: 35px;
+    outline: 0;
+    font-size: 14px;
+    padding: 0 15px;
+    background: url('/arquivos/icon_arrowMenuMobile.png') center right 10px no-repeat;
+    background-size: 20px;
+}
+
+.order-status-info .order-status {
+    padding: 10px;
+    display: block
+}
+.orders .nav-pills li.active a{
+    color: #fff !important;
+}
+.btn-success,.order-status-info .order-status,.orders .nav-pills li.active a,.repeat-order .btn,.showTrackingInfo .btn {
+    transition: background .3s ease-out;
+    outline: 0;
+    background: #ddd;
+    border: 0;
+    border-radius: 0;
+    margin-top: 10px;
+    color: #303030;
+    text-shadow: none;
+    letter-spacing: 1px
+}
+
+.repeat-order .btn {
+    background: #8ebcc9;
+    color: #FFF;
+    text-transform: uppercase
+}
+
+.btn-success:hover,.order-status-info .order-status:hover,.orders .nav-pills li.active a:hover,.repeat-order .btn:hover,.showTrackingInfo .btn:hover {
+    background: #303030;
+    color: #FFF
+}
+
+.orders .form-search .search-query {
+    text-transform: initial;
+    outline: 0;
+    border-radius: 0
+}
+
+.orders .form-search .search-query:active,.orders .form-search .search-query:focus,.orders .form-search .search-query:hover {
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid #ddd
+}
+
+.order-title span,.seller-info span {
+    color: #303030
+}
+
+.profile-detail-display-info>span {
+    padding: 5px 0;
+    display: block
+}
+
+.nav-pills li:last-child,.profile-detail-display-info br {
+    display: none
+}
+
+#extra-footer-top .container {
+    float: left;
+    width: 100%
+}
+
+.nav-pills li a,.nav-pills li a:hover {
+    background: #303030!important;
+    color: #FFF;
+    border-radius: 0;
+    font-size: 12px;
+    text-transform: uppercase
+}
+
+.vtex-bootstrap .form-search .search-query,.vtex-bootstrap .form-search .search-query:active,.vtex-bootstrap .form-search .search-query:focus,.vtex-bootstrap .form-search .search-query:hover,.vtex-bootstrap .ordergroup {
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    outline: 0;
+    padding-left: 10px
+}
+
+.table>tbody>tr.info>td,.table>tbody>tr.info>th,.table>tbody>tr>td.info,.table>tbody>tr>th.info,.table>tfoot>tr.info>td,.table>tfoot>tr.info>th,.table>tfoot>tr>td.info,.table>tfoot>tr>th.info,.table>thead>tr.info>td,.table>thead>tr.info>th,.table>thead>tr>td.info,.table>thead>tr>th.info {
+    background: initial
+}
+.save-cancel-buttons {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+#address-delete {
+    float: left;
+    width: 45%;
+    margin: 15px 0;
+    background: #303030;
+    border: 0;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#address-remove {
+    left: initial;
+    width: 90%;
+    margin: 0 5%;
+}
+
+@media only screen and (min-width: 100px) and (max-width:3000px) {
+    #address-edit,#editar-perfil {
+        width:90%;
+        height: 90%;
+        margin: 5%;
+        left: 0;
+        top: 0!important
+    }
+
+    #form-submit,#profile-submit,.modal-footer .btn-link {
+        margin: 15px 13px 15px 0
+    }
+
+    .modal-footer .btn-link {
+        margin-right: 0
+    }
+
+    .mx-orders-wrapper .mx-content {
+        padding: 20px
+    }
+
+    .mx-orders-wrapper .mx-content .account__links {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        padding: 10px 0
+    }
+
+    .mx-orders-wrapper .mx-content .account__infos {
+        width: 100%
+    }
+
+    .mx-orders-wrapper .mx-content .account__infos #edit-data-link,.mx-orders-wrapper .mx-content .account__infos .address-update {
+        max-width: 100%
+    }
+
+    .myorders-list .ordergroup {
+        border: 0
+    }
+}
