@@ -1,0 +1,2 @@
+/* PC-QUARTO - 28/09/2020 18:53:01 GMT */
+"use strict";(function(){try{var QueroDesconto={init:function init(){console.log("[QUERODESCONTO] init")},ajaxStop:function ajaxStop(){console.log("[QUERODESCONTO] ajaxStop")}};$(document).ready(QueroDesconto.init);$(document).ajaxStop(QueroDesconto.ajaxStop)}catch(e){console.log("Erro na instancia [QueroDesconto]: ",e)}})();
