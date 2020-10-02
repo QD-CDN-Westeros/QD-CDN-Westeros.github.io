@@ -366,10 +366,9 @@ header.fixed .mx-cart-wrapper-fixed span small {
     margin-right: 6px
 }*/
 
-.mx-pre-header .mx-center .mx-infos-account ul li:last-child {
-    border-right: 1px solid #000;
-    padding-right: 10px;
-    margin-right: 10px;
+.mx-pre-header .mx-center .mx-infos-account ul li:nth-child(2) {
+    border-left: 1px solid #000;
+    padding-left: 10px;
 }
 
 .mx-pre-header .mx-center .mx-infos-account ul li a {
@@ -2212,7 +2211,7 @@ footer .redes-sociais .lupo-linkedin{
     display: block;
     width: 26px;
     height: 16px;
-    background: url("/arquivos/icon_homeBreadcrumb.png") center left no-repeat;
+    background: url("/arquivos/icon_homeBreadcrumb.png?v=4213") center left no-repeat;
     background-size: 70%;
     position: relative
 }

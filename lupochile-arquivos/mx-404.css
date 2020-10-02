@@ -1,0 +1,16 @@
+.lupo-404 .mx-content {
+    float: left;
+    width: 100%;
+    margin: 25px 0 50px;
+    text-align: center;
+}
+
+.lupo-404 .mx-content h3 {
+    font-size: 145px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.lupo-404 .mx-content small {
+    font-size: 25px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
