@@ -1,2 +1,2 @@
-/* Lugia - 04/08/2020 17:34:13 GMT */
+/* Lugia - 13/10/2020 17:11:19 GMT */
 function fixInput(){$(window).load(function(){$("#ship-receiverName").on("keydown",function(e){if(e.keyCode==8&&$(this).val().length==1){$(this).val("")}})})}fixInput();
