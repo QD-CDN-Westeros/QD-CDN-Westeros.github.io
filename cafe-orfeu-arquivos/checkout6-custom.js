@@ -1,2 +1,2 @@
-/* Lugia - 14/10/2020 19:19:47 GMT */
+/* Lugia - 15/10/2020 17:27:45 GMT */
 function fixInput(){$(window).load(function(){$("#ship-receiverName").on("keydown",function(e){if(e.keyCode==8&&$(this).val().length==1){$(this).val("")}})})}fixInput();var Checkout={init:function(){},ajaxStop:function(){Checkout.changeTexteSelect()},windowOnload:function(){},changeTexteSelect:function(){if($("#item-attachment-0-recorrencia-periodo").length>0){$("#item-attachment-0-recorrencia-periodo option").each(function(){if($(this).html()==="Quinzenal"){$(this).html("Assinatura de 15 em 15 dias")}else if($(this).html()==="Mensal"){$(this).html("Assinatura de 30 em 30 dias")}})}else{setTimeout(function(){changeTexteSelect()},100)}$(document.body).ready(function(){changeTexteSelect()})}};
