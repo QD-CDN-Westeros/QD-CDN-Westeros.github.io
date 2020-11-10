@@ -1,0 +1,2 @@
+/* Anonymouswill - 10/11/2020 17:51:11 GMT */
+function minimumValueOrder(){var subtotal=$(".totalizers-list .monetary").html().replace(/[^0-9,]*/g,"").replace(",",".");var minimumValue=window.qd_ShippingTargetPrice;if(subtotal>=minimumValue){if(!$(".congrats").length){$('<span class="congrats">Parabéns você atingiu o valor mínimo de pedido!</span>').appendTo(".full-cart .totalizers");$("body").removeClass("minimumValueNotReached")}}else{$("body").find(".congrats").remove();$("body").addClass("minimumValueNotReached")}}$(document).ajaxStop(function(){minimumValueOrder()});
