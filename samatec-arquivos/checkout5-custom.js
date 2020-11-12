@@ -1,2 +1,2 @@
-/* DESKTOP-NA07EK9 - 07/08/2020 08:31:46 GMT */
+/* davids.home - 28/09/2020 19:22:40 GMT+0200 */
 $("body").append('<form><input type="hidden" id="deviceId" name="deviceId" /></form>');$.getScript("https://resources.mlstatic.com/device/meli-metrix.min.js",function(){});function startTimer(){setTimeout(stopTimer,2e3);var lastProd=localStorage.getItem("MZLastProduct");if(lastProd){$("#cart-choose-more-products").attr("href",lastProd)}}function stopTimer(){window.vtex.deviceFingerprint=document.getElementById("deviceId").value;console.log("MP-deviceId : "+document.getElementById("deviceId").value)}window.onload=startTimer;
