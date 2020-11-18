@@ -1,2 +1,2 @@
-/* DESKTOP-4M7MOKQ - 27/08/2020 14:00:38 GMT */
-function slideTipBar(){if($(window).width()<768){$(".tipbar__slider").slick({infinite:true,slidesToShow:1,slidesToScroll:1,autoPlay:true,autoplaySpeed:1e3,dots:false,arrows:false})}}$(document).ready(function(){slideTipBar()});
+/* DESKTOP-GUOJE28 - 04/08/2020 17:44:42 GMT */
+function slideTipBar(){if($(window).width()<768){$(".tipbar__slider").slick({infinite:true,slidesToShow:1,slidesToScroll:1,autoPlay:true,autoplaySpeed:1e3,dots:false,arrows:false})}}$(document).scroll(function(){checkOffset()});$(document).ready(function(){slideTipBar()});
