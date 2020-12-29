@@ -1,2 +1,2 @@
-/* davids - 05/10/2020 12:28:06 GMT-0300 */
+/* MacBook-Pro-de-erick.local - 09/12/2020 13:54:10 GMT */
 function fixInput(){$(window).load(function(){$("#ship-receiverName").on("keydown",function(e){if(e.keyCode==8&&$(this).val().length==1){$(this).val("")}})})}fixInput();
