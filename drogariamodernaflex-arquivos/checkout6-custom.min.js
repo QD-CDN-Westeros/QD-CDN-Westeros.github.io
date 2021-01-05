@@ -1,2 +1,2 @@
-/* Anonymouswill - 21/12/2020 13:38:36 GMT */
+/* Anonymouswill - 05/01/2021 18:45:40 GMT */
 function fixInput(){$(window).load(function(){$("#ship-receiverName").on("keydown",function(e){if(e.keyCode==8&&$(this).val().length==1){$(this).val("")}})})}fixInput();
