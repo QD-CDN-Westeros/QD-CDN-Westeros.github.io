@@ -1,2 +1,2 @@
-/* Lugia - 16/12/2020 18:54:10 GMT */
+/* Anonymouswill - 26/01/2021 15:23:03 GMT */
 $(document).ajaxStop(function(){if($("body").is(".body-cart")){function findArray(array){return array.name==this}var arrayNome=[];vtexjs.checkout.orderForm.items[0].attachmentOfferings.forEach(function(e,i){var num=e.name.split(".")[2].match(/\d+/);var teste=e.name.split(".")[2].replace(num[0]," "+num[0]+" ");if(vtexjs.checkout.orderForm.items[0].attachments.indexOf(vtexjs.checkout.orderForm.items[0].attachments.find(findArray,e.name))==-1){arrayNome[i]=e.name.split(".")[2].replace(num[0]," "+num[0]+" ")}});var i=-1;$("#item-attachment-offerings-0 option").each(function(){$(this).html(arrayNome[i]);i++})}});
