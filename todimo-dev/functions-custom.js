@@ -1613,12 +1613,6 @@ $('#close-minicart').click(function () {
     $('html').removeClass("noScroll");
 });
 
-// Atualiza link de direcionamento do minicart para o novo cart
-$(document).on('click', '.mini-cart-botao .btn-finalizar-compra', function(e) {
-    e.preventDefault()
-    location.href = '/cart'
-})
-
 
 /* [VITRINE/PRODUTO] */
 
