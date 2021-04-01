@@ -1502,24 +1502,112 @@ function infoCarrinho() {
         $('.mini-cart .minicart-middle .vtexsc-productList tbody>tr.title_pickup-in-point').show();
     }
 }
+
 function infoCarrinhoQtd() {
     $('.vtexsc-productList tr').each(function (index, element) {
         var cartItem = $(this);
         var cartItemA = $(this).find('td.cartSkuName h4 a');
         var items = vtexjs.checkout.orderForm.items;
-        items.forEach(function (item) {
+        items.forEach(function (item, index) {
+            // Acrescenta botões de quantidade
+            if (cartItemA.attr('href') == item.detailUrl) {
+                if (cartItem.find('.cart__table--qtd').length) {
+                    addQtd(cartItem, index)
+                    removeQtd(cartItem, index)
+                    changeQtd(cartItem, index)
+                    return
+                } else {
+                    cartItem.find('.cartSkuQuantity').append(
+                        `
+                        <div class="cart__table--qtd">
+                            <span class="btn-qtd minus">-</span>
+                            <input class="loading" type="text" name="qtd" value="${item.quantity}" />
+                            <span class="btn-qtd plus">+</span>
+                        </div>
+                        <div class="cart__table--medida">
+                            <p></p>
+                        </div>
+                        `
+                    )
+                }
+            }
+
+            // Acrescentando medida nos produtos
             if (cartItemA.attr('href') == item.detailUrl && item.unitMultiplier != 1) {
                 $(cartItem).attr('ItemId', item.id)
-                $(cartItem).find('.vtexsc-skuQtt').append(' (' + parseFloat((item.unitMultiplier * item.quantity).toFixed(2)) + 'm²)');
+                // $(cartItem).find('.vtexsc-skuQtt').append(' (' + parseFloat((item.unitMultiplier * item.quantity).toFixed(2)) + 'm²)');
+                $(cartItem).find('.cart__table--medida p').append(parseFloat((item.unitMultiplier * item.quantity).toFixed(2)) + ' m²')
             }
         })
     });
 }
+
 $(document).ajaxStop(function () {
     if (vtexjs && $('.vtexsc-productList tr').length > 0) {
         infoCarrinhoQtd();
     }
 });
+
+// Botões de ação no minicart
+function addQtd(item, index) {
+    var buttonPlus = item.find('.cart__table--qtd .btn-qtd.plus')
+    buttonPlus.on('click', function() {
+        var input = item.find('input[name="qtd"]')
+        var qtd = parseInt(input.val())
+        qtd++
+
+        // Exibe o input atualizado
+        input.val(qtd)
+        updateQtd(item, index, qtd, input)
+    })
+}
+
+function removeQtd(item, index) {
+    var buttonMinus = item.find('.cart__table--qtd .btn-qtd.minus')
+    buttonMinus.on('click', function() {
+        var input = item.find('input[name="qtd"]')
+        var qtd = parseInt(input.val())
+        qtd--
+
+        // Exibe o input atualizado
+        input.val(qtd)
+        updateQtd(item, index, qtd, input)
+    })
+}
+
+function changeQtd(item, index) {
+    var input = item.find('.cart__table--qtd input[name="qtd"]')
+    input.removeClass('loading')
+    input.on('change', function() {
+      var quantity = parseInt($(this).val())
+      updateQtd(item, index, quantity, input)
+    })
+}
+
+function updateQtd(item, index, qtd, input) {
+    clearTimeout(window.productUpdate[index])
+    window.productUpdate[index] = setTimeout(function() {
+        input.addClass('loading')
+
+        // Atualizando quantidade no orderform
+        vtexjs.checkout.getOrderForm()
+            .then(function(orderForm) {
+                var updateItem = [{
+                    'index': index,
+                    'quantity': qtd
+                }]
+                return vtexjs.checkout.updateItems(updateItem, null, false);
+            })
+            .done(function(orderForm) {
+                input.val(qtd)
+            })
+    }, 1000)
+}
+
+$(document).ready(function() {
+    window.productUpdate = {}
+})
+// Botões de ação no minicart
 
 if (window.location.search.indexOf('bf8eaa79-2dd0') > -1) {
     $(document).ajaxStop(function () {
@@ -1759,6 +1847,8 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
     //MiniCart
     atualizaMiniCart()
 
+    // Atualiza quantidade no minicart
+    infoCarrinhoQtd();
 });
 
 /*[ONLOAD] Watch de Eventos Vtex */
@@ -1843,7 +1933,6 @@ $(document).on("click", "#btn-baixar-oferta", function (e) {
     let name = "panfleto-" + $(this).attr("data-name");
     downloadPDF(href, name)
 })
-
 //[PRODUTO] Selo de Marca nas vitrines
 
 function returnBrandSealRepeat(){
