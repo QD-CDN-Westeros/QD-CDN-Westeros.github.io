@@ -1,0 +1,2 @@
+/* davids - 03/02/2021 14:08:24 GMT-0200 */
+var Checkout={buyerIdentity:false,init:function(){Checkout.defaultFunctions()},ajaxStop:function(){Checkout.closePix()},windowOnload:function(){},defaultFunctions:function(){},closePix:function(){if($(".VTEX-PIX__modal-container").length==0)return;$(".VTEX-PIX__modal-container").prepend('<button id="close-pix" ></button>');$("#close-pix").on("click",function(){window.location.reload()})}};Checkout.init();$(document).ajaxStop(function(){Checkout.ajaxStop()});window.addEventListener("load",function(event){Checkout.windowOnload()});
