@@ -1,0 +1,384 @@
+@import '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+
+.header {
+    padding: 20px 0;
+    background-color: #FFF;
+    border-bottom: 30px solid #232323;
+}
+
+.header .logo a {
+
+    display: block;
+}
+.header .logo a:hover {
+
+    opacity: .6;
+}
+
+a {
+    color: #ccc;
+}
+
+.icon-remove:before {
+    content: '\f1f8';
+    font-family: 'FontAwesome';
+    color: #ccc;
+    font-size: 20px;
+}
+
+p.legal-info {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+.footer {
+    margin-top: 20px;
+    padding: 15px 0 25px;
+    background-color:#f0f0f0;
+}
+
+.container-cart {
+    position: relative;
+    margin-top: 70px;
+}
+
+.cart-template-holder .cart{
+    border: 0;
+    padding: 0;
+}
+
+.cart-template-holder thead {
+    background-color: #f5f5f5; 
+}
+.cart-template-holder thead th {
+    text-transform: uppercase;
+}
+
+.container-cart:before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 25%;
+    height: 1px;
+    content: '';
+    border-top: 1px dotted #3c3c3c;
+}
+
+.container-cart:after {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 25%;
+    height: 1px;
+    content: '';
+    border-top: 1px dotted #3c3c3c;
+}
+
+.container-cart h1 {
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 20px;
+    position: relative;
+    display: inline-block;
+    width: 246px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #545454;
+}
+
+.full-cart .summary-totalizers .info {
+    text-align: right;
+    text-transform: none!important;
+    font-weight: 400;
+}
+
+button#payment-data-submit, a#cart-to-orderform, .btn-success {
+    background-image: none;
+    border-radius: 0;
+}
+
+
+.item-quantity-change {
+    color: #ccc;
+}
+
+.container.container-main.container-order-form {
+    margin-top: 70px;
+}
+
+@media (min-width: 1200px) {
+    body {
+        padding-top: 0px;
+    }
+}
+@media (min-width: 992px) {
+    .container-cart:before, .container-cart:after {
+        width: 38%;
+    }
+}
+.header-container .mx-center .mx-left{
+	margin-top:0;
+    padding: 15px 0 15px 0;
+}
+.header-container{
+	padding-top:15px!important;
+}
+.header-container .mx-center .mx-timeline {
+    float: left;
+    width: 60%;
+    margin-top: 10px;
+}
+.ms-site-seguro {
+    float: left;
+    width: 20%;
+  	font-size: 17px;
+    font-weight: bold;
+    text-align:right;
+}
+
+.ms-site-seguro .icon-cadeado {
+    background: url(/arquivos/site-seguro-checkout.png) no-repeat;
+    width: 19px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: bottom; 
+    margin-right: 12px;
+    margin-top: 20px;
+}
+.header-container {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    padding-top: 25px;
+    background: #f6f6f6;
+    margin-top:0;
+}
+.header-container .mx-center {
+    max-width: 1070px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mx-logo-footer {
+    display: block;
+    position: relative;
+}
+.mx-logo-footer figure {
+    width: 145px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+}
+.mx-logo-footer figure img {
+    width: 100%;
+    height: auto;
+}
+
+.mx-logo-footer:before {
+    content:'';
+    position: absolute;
+    z-index: 0;
+    top: 22px;
+    width: calc(50% - 98px);
+    height: 3px;
+    content: '';
+    background: #8dbcc9;
+    left: 0;
+}
+.mx-logo-footer:after {
+    content:'';
+    position: absolute;
+    z-index: 0;
+    top: 22px;
+    width: calc(50% - 98px);
+    height: 3px;
+    content: '';
+    background: #8dbcc9;
+    right: 0;
+}
+.lupo-mx-middle{
+	width:100%;
+  	float:left;
+}
+.lupo-mx-middle p{
+	text-align:center;
+  	color:rgb(41, 39, 39);
+    font-size:11px;
+}
+.d-separate{}
+.d-separate span{
+	width:100%;
+  	height:1px;
+  	background:#4b4b4b;
+  	float:left;
+    margin: 10px 0;
+}
+.footer-wrapper .list-security {
+    width:100%;
+    float:left;  
+  	text-align:center;
+    margin: initial;
+}
+ ul.list-security li{width:10%; display:inline-block}   
+.footer-wrapper .list-security .vtex a{
+    background: url('/arquivos/new-lupo-sprite.png') no-repeat -24px -129px;
+    width: 75px;
+    height: 29px;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin-right: 10px
+}
+
+.footer-wrapper .list-security .compre-confie a{
+    background: url('/arquivos/new-lupo-sprite.png') no-repeat -111px -126px;
+    width: 83px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin-right: 10px
+}
+.footer-wrapper .list-security .pcidds a{
+    background: url('/arquivos/new-lupo-sprite.png') no-repeat -209px -127px;
+    width: 81px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    margin-right: 10px
+}
+
+
+
+
+.header-container .mx-center .mx-timeline ul li.body-cart.active span {
+    background: url('https://lupo.vteximg.com.br/arquivos/step-cart-1_Ativo.png?v=6') center no-repeat!important;
+    background-size: 100%;
+}
+
+.header-container .mx-center .mx-timeline ul li.body-cart span{
+	background: url('https://lupo.vteximg.com.br/arquivos/step-cart-1_inativo.png?v=6') center no-repeat!important;
+}
+
+.header-container .mx-center .mx-timeline ul li{
+    margin-right: 26px;
+}
+
+.header-container .mx-center .mx-timeline ul li span{
+    width:212px;
+    height:50px;
+    border:0;
+    border-radius:0
+}
+.header-container .mx-center .mx-timeline ul li.cadastro span{
+     background: url('https://lupo.vteximg.com.br/arquivos/step-cart-2_inativo.png?v=7') center no-repeat; 
+}
+
+.header-container .mx-center .mx-timeline ul li.cadastro.active span{
+	background: url('https://lupo.vteximg.com.br/arquivos/step-cart-2_ativo.png?v=7') center no-repeat; 
+}
+
+.header-container .mx-center .mx-timeline ul li:after{
+    content: '';
+    position: absolute;
+    top: 74%;
+    right: 17%;
+    height: 3px;
+    width: 131px;
+    background: #b4b4b4;
+    margin-right: -169px;
+    margin-top: -13px;
+    z-index:-1;
+}
+.header-container .mx-center .mx-timeline ul li.body-order-form span{
+     background: url('https://lupo.vteximg.com.br/arquivos/3_inativo.png?v=8') center no-repeat;    
+}
+
+.header-container .mx-center .mx-timeline ul li.body-order-form.active span{
+	 background: url('https://lupo.vteximg.com.br/arquivos/step-cart-3_ativo.png?v=8') center no-repeat;    
+}
+
+.header-container .mx-center .mx-timeline ul li.confirmacao span{
+  	background: url('https://lupo.vteximg.com.br/arquivos/step-cart-4_confirm.png?v=9') center no-repeat; 
+}
+.header-container .mx-center .mx-timeline ul li *{
+    opacity: 1;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1080px) {
+  .header-container .mx-center .mx-left,
+  .header-container .mx-center .mx-timeline,
+  .header-container .mx-center .ms-site-seguro{width:100%;}
+  
+  .header-container .mx-center .ms-site-seguro{
+ 	text-align:center;
+    margin: 15px 0;
+  }
+  .header-container .mx-center .mx-timeline ul{
+  	margin:0;
+  }  
+  .header-container .mx-center .mx-left > a{
+  	width: 100%;
+    height: 50px;
+    background-size: auto;
+  }
+  
+  .header-container .mx-center .mx-timeline ul li{margin-right:0}
+  .header-container .mx-center .mx-timeline ul li:after{
+  	content:'';
+    background:none 
+  }
+  .body-cart{padding-bottom:0}
+  .header-container .mx-center .mx-timeline ul li span{
+  	width:150px;
+  }
+  ul.list-security li{
+  	width: 30%;
+  }  
+}
+
+.container-cart .checkout-container {
+    min-height: auto;
+}
+
+.container-cart {
+    min-height: auto;
+}
+
+.empty-cart-content {
+	padding: initial;
+}
+
+.cart-template-holder {
+	padding: initial !important;
+}
+
+
+/*INATIVAR CADASTRO PJ*/
+
+.orderform-template .client-profile-data .client-profile-data .box-client-info .box-client-info-pj {
+    display: none!important;
+}
+
+
+/* MT SOLUÇÕES */
+
+#ship-city,
+#ship-state,
+.ship-city>label,
+.ship-state>label{
+	pointer-events: none;
+}
+
+.ship-city,
+.ship-state{
+  	cursor: not-allowed;
+    filter: brightness(0.8);
+}

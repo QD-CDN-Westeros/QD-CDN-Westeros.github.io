@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'AgencyFB';
+    src: url('/arquivos/AgencyFB-Reg.woff2.css') format('woff2'),
+        url('/arquivos/AgencyFB-Reg.woff.css') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gotham-regular';
+    src: url('/arqiuvos/Gotham-Black.woff2') format('woff2'),
+        url('/arquivos/Gotham-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+.mx-content{
+     width: 1100px;
+     margin: 14px auto;
+     font-family: 'gotham-regular', Arial, Helvetica, sans-serif;
+}
+.mx-content .banner-regulamento-desktop img{
+	width: 100%;
+	height: auto;
+}
+.mx-content .banner-regulamento-mobile img{
+	width: 100%;
+	height: auto;
+}
+.title-regulamento{
+    text-align: center;
+    font-size: 20px;
+    margin: 36px 0;
+    text-decoration: underline;
+    color: #003e7b;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.regulamento-text p{
+    padding: 18px 50px;
+    font-size: 17px;
+    text-align: justify;
+}
+.regulamento-text ul li{
+	font-size: 12px;
+	text-align: justify;
+	margin-left: 25px;
+	
+}
+.regulamento-text h3{    
+    text-align: justify;
+	text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: underline;
+	color: #003e7b;
+}
+@media only screen and (min-width: 100px) and (max-width: 485px) {
+.mx-content{
+	width: 100%;
+}
+.title-regulamento{
+    text-align: center;
+    font-size: 18px;
+    margin: 36px 0;
+    text-decoration: underline;
+    color: #003e7b;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.regulamento-text p{
+    padding: 15px 50px;
+    font-size: 12px;
+    text-align: justify;
+	color: black;
+	margin: 0px
+}
+.regulamento-text ul li{
+	font-size: 12px;
+	text-align: justify;
+	margin-left: 25px
+}
+.regulamento-text h3{    
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #003e7b;
+}
+.banner-regulamento-desktop{
+	display: none;
+}
+.banner-regulamento-mobile{
+	display: block;
+}	
+}
+@media only screen and (min-width: 485px) and (max-width: 2000px) {
+.mx-content{
+	width: 100%;
+}
+.regulamento-text h3{    
+    padding: 15px 50px;
+    text-align: justify;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #003e7b;
+}
+.banner-regulamento-desktop{
+	display: block;
+}
+.banner-regulamento-mobile{
+	display: none;
+}
+}  

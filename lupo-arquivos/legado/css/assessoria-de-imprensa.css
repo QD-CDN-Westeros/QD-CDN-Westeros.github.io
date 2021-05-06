@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'AgencyFB';
+    src: url('/arquivos/AgencyFB-Reg.woff2.css') format('woff2'),
+        url('/arquivos/AgencyFB-Reg.woff.css') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gotham-regular';
+    src: url('/arqiuvos/Gotham-Black.woff2') format('woff2'),
+        url('/arquivos/Gotham-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.mx-content{
+     width: 1100px;
+     margin: 14px auto;
+     font-family: 'gotham-regular', Arial, Helvetica, sans-serif;
+}
+
+
+.assessoria {
+	margin: 250px;
+}
+.assessoria h1 {
+	font-size: 40px;
+	padding: 10px;
+	color: #76b6e3;
+}
+
+.assessoria h2 {
+	font-size: 25px;
+	padding: 10px;
+}
+
+
+.assessoria a {
+	font-size: 20px;
+	padding: 10px;
+}
+
+.assessoria p {
+	font-size: 20px;
+	padding: 10px;
+}
+
+
+
+@media only screen and (min-width: 100px) and (max-width: 485px) {
+
+    .mx-content{
+        width: 100%;
+    }
+
+    .assessoria {
+        margin: 25px;
+    }
+
+    .assessoria h1{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 485px) and (max-width: 2000px) {
+
+    .mx-content{
+        width: 100%;
+    }
+
+} 
