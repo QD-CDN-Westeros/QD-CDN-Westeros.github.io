@@ -196,16 +196,7 @@ addToCart_vitrine = function() {
         return false;
     });
 
-    $(document).on('click', '.prateleira:not(.vt-dev) .produtos .pat-thumb-colors li', function(e){
-    	var _ts = $(this),
-    	dataImage = _ts.data('image');
-    	_ts.siblings().removeClass('mx-active');
-        _ts.toggleClass('mx-active');
-        _ts.closest('.box-item').parent().find('.mx-product-image img').attr('src', dataImage);
-        _ts.closest('.x-variations .pat-thumb-colors').find('.error').hide();
-    });
-
-    $(document).on('click', '.prateleira.vt-dev .produtos .pat-thumb-colors li', function(e){
+    $(document).on('click', '.pat-thumb-colors li', function(e){
     	var _ts = $(this),
     	dataImage = _ts.data('image');
     	_ts.siblings().removeClass('mx-active');
@@ -220,7 +211,7 @@ addToCart_vitrine = function() {
 
         console.log(novoAddToCartLink);
 
-        $('.prateleira.vt-dev .produtos ._addToCart > a').attr('href', novoAddToCartLink);
+        $('.prateleira .produtos ._addToCart > a').attr('href', novoAddToCartLink);
 
         return false;
     });
@@ -230,6 +221,20 @@ addToCart_vitrine = function() {
     	dataImage = _ts.data('image');
         _ts.closest('.box-item').parent().find('.mx-product-image img').attr('src', dataImage);
         return false;
+    });
+
+    $(document).on('click', '._addToCart', function(){
+    	// var $skuAddToCart = $.trim($('.pat-thumb-colors .mx-active').attr('rel')),
+    	$closestItem 	  = $(this).closest('.box-item');
+    	if (!$closestItem.find('.pat-thumb-tam ul li.mx-active').length) {
+    		$closestItem.find('.pat-thumb-tam .error').html('Selecione um tamanho');
+    		return false;
+    	} else if (!$closestItem.find('.pat-thumb-colors ul li.mx-active').length) {
+    		$closestItem.find('.pat-thumb-colors .error').html('Selecione uma cor');
+    		return false;
+    	}
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+    	return false;
     });
 };
 

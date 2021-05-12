@@ -395,12 +395,7 @@ a {
     float: left;
     width: 100%;
     text-align: center;
-    font-family: Roboto, sans-serif;
-}
-.title-home-products h3{
-    color: #1f1d1d;
-    font-size: 23px;
-    padding: 10px 0;
+    font-family: 'Roboto', sans-serif;
 }
 .title-home-products p{
     /*font-size: 14px;*/

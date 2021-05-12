@@ -40,7 +40,7 @@ a {
     float: right;
     width: 47%;
 }
-.mx-content .mx-product-image-info .mx-product_infos h1 {
+.mx-content .mx-product-image-info .mx-product_infos .productName h1 {
     display: block;
     padding-bottom: 10px;
     font-size: 23px;
@@ -48,7 +48,7 @@ a {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
-.mx-quickview_body .mx-content .mx-product-image-info .mx-product_infos h1 {
+.mx-quickview_body .mx-content .mx-product-image-info .mx-product_infos .productName h1 {
     font-size: 20px;
 }
 .mx-content .mx-product-image-info .mx-product_infos .mx-codigo-produto {

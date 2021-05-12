@@ -1,4 +1,5 @@
 @import '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 .header {
     padding: 20px 0;
@@ -255,8 +256,48 @@ button#payment-data-submit, a#cart-to-orderform, .btn-success {
     margin-right: 10px
 }
 
+#freteGratis {
+    width: 100%;
+    display: block;
+    padding: 11px 16px;
+    text-align: center;
+    margin: 8px 0;
+    background: #F2F2F2;
+}
 
+#freteGratis .falta-frete {
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    color: #111111;
+}
 
+#freteGratis .falta-frete strong {
+    margin: 0 4px;
+}
+
+#freteGratis .falta-frete img {
+    margin: 0 4px 0 0;
+    display: inline-block;
+}
+
+#freteGratis .progress {
+    width: 100%;
+    height: 21px;
+    display: block;
+    border-radius: 10px;
+    background: #FFF;
+    margin-bottom: 0;
+}
+
+#freteGratis .progress .progress-bar {
+    background: #76B6E1;
+    height: 21px;
+    border-radius: 10px;
+    max-width: 100%;
+}
 
 .header-container .mx-center .mx-timeline ul li.body-cart.active span {
     background: url('https://lupo.vteximg.com.br/arquivos/step-cart-1_Ativo.png?v=6') center no-repeat!important;
