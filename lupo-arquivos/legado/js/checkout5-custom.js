@@ -21,16 +21,15 @@ stepCheckout = function(){
 window.addEventListener("hashchange", stepCheckout);
 $(document).ready(function(){
 	stepCheckout();
-    if (window.location.href.indexOf('ambient=dev') > -1) {
-        freteGratis();
-    }
+    freteGratis();
 });
 
 $(document).ajaxStop(function() {
-    var inputCupom = document.getElementById ("cart-coupon");
+    var inputCupom = document.getElementById("cart-coupon");
         inputCupom.placeholder = "Cupom de desconto";
-    
-    $( ".coupon-fields" ).append( "<p class='text-cupon'>Se você possui um Vale-troca ou Cartão Presente eles devem ser informados na etapa de pagamento do seu pedido.</p>" );
+    if ($( ".coupon-fields p.text-cupon" ).length === 0) {
+        $( ".coupon-fields" ).append( "<p class='text-cupon'>Se você possui um Vale-troca ou Cartão Presente eles devem ser informados na etapa de pagamento do seu pedido.</p>" );
+    }
 });
 
 
@@ -83,7 +82,20 @@ const freteGratis = () => {
             $( ".falta-frete" ).remove();
             $( ".barra-frete" ).remove();
 
-            var valorProduto = vtexjs.checkout.orderForm.value;
+            var itens = vtexjs.checkout.orderForm.items;
+
+            var precos = itens.map(function(item) {
+               return item.priceDefinition.total;
+            })
+
+            function somar(anterior, atual) {
+                return anterior + atual;
+            }
+
+            var total = precos.reduce(somar);
+            console.log(total);
+
+            var valorProduto = total;
             var f = (10000 - valorProduto);
 
             console.log(valorProduto);

@@ -627,6 +627,13 @@ a {
     margin-top: 46px;
     
 }
+@media (min-width:768px) {
+    body.home-teste .banner-middle-sw {
+        width: 50%;
+        float: left;
+        margin-top: 70px;
+    }
+}
 .banner-middle-sw img{
     width: 100%;
     height: auto;
@@ -641,6 +648,13 @@ a {
     width: 100%;
     float:left;
 
+}
+@media (min-width:768px) {
+    body.home-teste .content-midlle{
+        width: 100%;
+        float:left;
+        position: relative;
+    }
 }
 .content-midlle h4{
     text-align: center;
@@ -672,6 +686,17 @@ a {
     overflow: hidden;
     height: auto;
     z-index: 1;
+}
+@media (min-width:768px) {
+    body.home-teste .content-midlle .mx-product-list-middle{
+        width: 50%;
+        float: left;
+        position: unset;
+        max-height: 650px;
+        overflow: hidden;
+        height: auto;
+        z-index: 1;
+    }
 }
 .content-midlle-mobile{
     display: none;
@@ -1260,6 +1285,9 @@ a {
 
       
 @media only screen and (min-width: 100px) and (max-width: 760px) {
+    body.home-teste .mx-content .slick-slide {
+        display: block
+    }
     .banner-popup{
         display: none;
     }
@@ -1332,6 +1360,11 @@ a {
     }
     .mx-swimwear-mobile{
         float: left;   
+    }
+    body.home-teste .mx-swimwear-mobile{
+        display: block;
+        width: 100%;
+        float: left;
     }
     .mx-content .mx-product-list.vitrine-promo,
     .mx-content .mx-product-list.vitrine-recomendacoes,
@@ -1413,7 +1446,6 @@ a {
     .mx-content .mx-product-list.vitrine-recomendacoes .prateleira ul li .price,
     .mx-content .mx-product-list-middle.mx-product-list-middle-mobile{
        width: 100%;
-       height: 52px;
        display: block;
     }
     .mx-content .mx-product-list .prateleira ul li .price{

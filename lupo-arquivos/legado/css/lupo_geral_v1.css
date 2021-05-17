@@ -1994,6 +1994,12 @@ footer .redes-sociais .lupo-linkedin{
 .mx-content .mx-product-list_slider .mx-carousel .prateleira {
     position: relative
 }
+@media (min-width:768px) {
+    body.home-teste .mx-content .mx-product-list_slider .mx-carousel .prateleira {
+        position: relative;
+        margin-top: 70px;
+    }
+}
 
 .mx-carousel .prateleira .slick-arrow {
     position: absolute;

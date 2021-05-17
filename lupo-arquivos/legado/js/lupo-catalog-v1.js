@@ -14,20 +14,11 @@ resultSearch = function() {
 };
 
 actionFilterMobile = function() {
-    // $('.mx-aside .mx-filter-mobile').click(function() {
-    //     $('.mx-aside .mx-search-result').fadeIn();
-    // });
-    // $('.mx-aside .mx-search-result .close').click(function() {
-    //     $('.mx-aside .mx-search-result').fadeOut();
-    // });
     $('body').on('click', '.mx-aside .mx-filter-mobile', function() {
-        console.log("ativo");
         $('.mx-aside .mx-filter-mobile').toggleClass('ativo');
-       // $('.mx-aside .mx-search-result').slideToggle();
         $(".mx-aside .mx-search-result").slideToggle('fast', function(){ 
-            $('.mx-aside .mx-search-result').css('overflow','visible') 
+            $('.mx-aside .mx-search-result').css('overflow','visible');
         });
-        
     });
 };
 
@@ -73,6 +64,11 @@ filter_config = function(){
             $(this).addClass('<div class="drop"></div>'); 
         };
     });
+    if ($(window).width() > 1080) {
+        $('.navigation-tabs .search-multiple-navigator h5').addClass('ativo');
+        $('.navigation-tabs .search-multiple-navigator h5').next('ul').show();
+        $('.navigation-tabs .search-multiple-navigator h5').next('div').show();
+    }
     $('body').on('click', '.search-single-navigator h5', function() {
         $(this).toggleClass('ativo');
         $(this).next('ul').slideToggle('fast');
