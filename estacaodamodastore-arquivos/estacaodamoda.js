@@ -1371,10 +1371,7 @@ webpackJsonp(
                                     } else vtexid.start({ returnUrl: void 0 != i.query ? i.path + "?" + i.query : i.path, userEmail: "", locale: "pt-BR", forceReload: !1 });
                                 });
                             };
-                        $("body").hasClass("home") ||
-                            $(document).ajaxStop(function () {
-                                t();
-                            }),
+               
                             $(document).ready(function () {
                                 t(), i();
                             });
