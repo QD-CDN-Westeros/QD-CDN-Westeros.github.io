@@ -1,0 +1,2 @@
+/* LAPTOP-T0P1H0OI - 01/06/2021 15:39:46 GMT */
+"use strict";var checkoutCustom={init:function init(){checkoutCustom.changeLabelName()},stopAjax:function stopAjax(){checkoutCustom.changeLabelName()},changeLabelName:function changeLabelName(){$(".box-client-info-pf .client-first-name label").html("Nome");$(".box-client-info-pf .client-last-name label").html("Sobrenome")}};$(function(){checkoutCustom.init()});$(document).ajaxStop(function(){checkoutCustom.stopAjax()});
