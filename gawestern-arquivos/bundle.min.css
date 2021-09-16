@@ -1114,7 +1114,7 @@ footer .bold {
   }
 
   .dep-links h4:after {
-    content: "ïƒ—";
+    content: "";
     position: absolute;
     font-family: FontAwesome;
     right: 20px;
@@ -1130,11 +1130,11 @@ footer .bold {
   }
 
   .container-links:nth-last-child(1) .dep-links h4:after {
-    content: "ïƒ—";
+    content: "";
   }
 
   .dep-links.active h4:after {
-    content: "ïƒ—";
+    content: "";
     position: absolute;
     font-family: FontAwesome;
     right: 20px;
@@ -1628,7 +1628,7 @@ div.user-login:nth-child(2),
     width: 100%;
   }
   .elementoFilho .elementoNeto::before {
-    content: "ï”";
+    content: "";
     position: absolute;
     right: 15px;
     margin-right: 10px;
@@ -1653,7 +1653,7 @@ div.user-login:nth-child(2),
     opacity: 1;
   }
   .elementoFilho.active ul.elementoNeto::before {
-    content: "ï¸";
+    content: "";
   }
   .elementoFilho.active ul.elementoNeto li {
     opacity: 1;
@@ -1820,7 +1820,7 @@ li.elementoFilho:hover a {
 }
 
 .mais-categorias::before {
-  content: "ïƒ‰";
+  content: "";
   font-family: "FontAwesome";
   font-size: 23px;
   position: absolute;
@@ -1980,7 +1980,7 @@ li.elementoFilho:hover a {
 }
 
 .mais-categorias-container .menu-item-texto::after {
-  content: "ï”";
+  content: "";
   position: absolute;
   left: 16%;
   font-family: FontAwesome;
@@ -2120,11 +2120,10 @@ div.user-login:nth-child(2),
     height: 22px;
     cursor: pointer;
     display: none;
-    filter: invert(1) !important;
-    display: inline-block;
   }
+}
+@media (max-width: 991px) {
   .search-mobile {
-    display: inline-block;
     background: url("/arquivos/lupa-mobile.png");
     width: 22px;
     height: 22px;
@@ -2851,18 +2850,15 @@ div.user-login:nth-child(2),
   width: calc(100% - 10px);
   box-sizing: border-box;
   display: block;
-  /* padding: 0 15px; */
-  /*  padding-bottom: 10px; */
   position: relative;
   margin-bottom: 41px;
   border: 4px solid var(--theme-color-1);
-  /*  border-bottom: unset; */
   transition: 0.5s;
+  text-align: center;
 }
 
 .box-item:hover {
   border: 4px solid var(--theme-color-7);
-  /*  border-bottom: unset */
 }
 
 .price {
@@ -2974,7 +2970,6 @@ div.user-login:nth-child(2),
 
 .box-item .product-name {
   display: block;
-  text-align: left;
   overflow: hidden;
   line-height: 15px;
   padding: 0 15px;
@@ -3012,7 +3007,6 @@ div.user-login:nth-child(2),
   font-size: 14px;
   color: var(--theme-color-2);
   display: block;
-  text-align: left;
   margin: 0 0 20px;
 }
 
@@ -3641,14 +3635,14 @@ hr.buy-together {
 }
 
 .button-box button.counter-area--button-add:before {
-  content: "ï„†";
+  content: "";
   font-size: 20px;
   font-family: fontAwesome;
   color: var(--theme-color-3);
 }
 
 .button-box button.counter-area--button-subtract:before {
-  content: "ï„‡";
+  content: "";
   font-size: 20px;
   font-family: fontAwesome;
   line-height: 20px;
