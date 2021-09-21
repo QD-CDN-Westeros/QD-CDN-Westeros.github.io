@@ -1267,6 +1267,7 @@ footer .bold {
   .user__logado {
     max-width: 60px;
     width: 100%;
+    display: none;
   }
 
   .user__fale__conosco {
