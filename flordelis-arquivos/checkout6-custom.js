@@ -1,2 +1,2 @@
-/* LAPTOP-T0P1H0OI - 02/06/2021 17:01:53 GMT */
+/* DESKTOP-55SQGKP - 21/10/2021 14:20:40 GMT */
 "use strict";var checkoutCustom={init:function init(){checkoutCustom.changeLabelName()},stopAjax:function stopAjax(){checkoutCustom.changeLabelName()},changeLabelName:function changeLabelName(){$(".box-client-info-pf .client-first-name label").html("Nome");$(".box-client-info-pf .client-last-name label").html("Sobrenome")}};$(function(){checkoutCustom.init()});$(document).ajaxStop(function(){checkoutCustom.stopAjax()});
