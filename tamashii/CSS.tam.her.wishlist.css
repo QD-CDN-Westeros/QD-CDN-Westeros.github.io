@@ -1,3 +1,405 @@
-/* DESKTOP-2VAUUHI - 11/11/2021 22:42:27 GMT */
-﻿/*! Não edite esse arquivo, ele foi gerado de maneira automatizada */
-.flex-jc-start{justify-content:flex-start}@font-face{font-family:'gang_of_three';src:url("//cdn.quatrodigital.com/tamashii/go3v2-webfont.woff2.css") format("woff2"),url("//cdn.quatrodigital.com/tamashii/go3v2-webfont.woff.css") format("woff");font-weight:normal;font-style:normal}body{font-family:"Titillium Web",sans-serif;font-size:14px;line-height:150%;color:#1b1b1b;font-weight:400;margin:0;padding:0;overflow-x:hidden}ol,ul{list-style:none;margin:0;padding:0}*{margin:0;padding:0;box-sizing:border-box}*::before,*::after{box-sizing:border-box}@media screen and (max-width: 1024px){.container{padding-right:15px;padding-left:15px}}@media screen and (min-width: 1025px){.container{padding-right:20px;padding-left:20px}}@media screen and (min-width: 1280px){.container{max-width:1280px;margin:0 auto}}@media screen and (min-width: 1300px){.container{padding:0}}*{box-sizing:border-box}ul,li{list-style:none;padding:0;margin:0}body{background:url("https://lojatamashii.vteximg.com.br/arquivos/bg-desktop.png");background-position:0 1031px;background-size:contain;background-color:#1b1b1b}body.mz-sn-on,body.qd-cart-show,body.qd-searchbar-show,body.mz-measure-guide-on,body.modal-open,body.orders-on,body.qd-sn-on,body.mz-sn-on,body.thumb-video-on,body.modal-video-on{overflow:hidden}body.mz-sn-on .mz-backdrop,body.qd-cart-show .mz-backdrop,body.qd-searchbar-show .mz-backdrop,body.mz-measure-guide-on .mz-backdrop,body.modal-open .mz-backdrop,body.orders-on .mz-backdrop,body.qd-sn-on .mz-backdrop,body.mz-sn-on .mz-backdrop,body.thumb-video-on .mz-backdrop,body.modal-video-on .mz-backdrop{visibility:visible;opacity:1}body .row{margin:0}body.overflow-hidden,body.sc-qd-cart-opened{overflow-y:hidden !important;overflow-x:hidden !important}body .container-order-form{background-color:#fff !important}.modal-backdrop{background-color:black !important;top:0;transition:all 0.3s}html{scroll-behavior:smooth}@media (max-width: 769px){.desktop{display:none}}@media (min-width: 769px){.mobile{display:none}}.bg-white{background-color:#F9F9F9 !important}.mz-wishlist .mz-wishlist__title{text-align:left;position:relative;z-index:1;margin:60px 0}.mz-wishlist .mz-wishlist__title h2{padding-left:60px;padding-bottom:10px;color:#fff;font-family:"gang_of_three",sans-serif !important}.mz-wishlist .mz-wishlist__shelf{min-height:500px;background:url("https://ironstudios.vteximg.com.br/loading.gif") no-repeat center center}.mz-wishlist .mz-wishlist__shelf:empty::before{content:'Lista Vazia. Navegue pela loja e adicione produtos :)';color:#ED1B23;font-family:"Titillium Web",sans-serif;margin-top:15px;display:block;text-align:center}.mz-wishlist .mz-wishlist__shelf.ready{background:none}.mz-wishlist .mz-wishlist__shelf.qd-empty{text-align:center;padding-top:2%;font-family:"Titillium Web",sans-serif}.mz-wishlist .mz-wishlist__shelf.qd-empty h3{font-size:18px;font-weight:800;height:30px}.mz-wishlist .mz-wishlist__shelf.qd-empty h3::first-letter{text-transform:uppercase}.mz-wishlist .mz-wishlist__shelf.qd-empty p{font-size:18px;color:#f1545a}.mz-wishlist .mz-wishlist__shelf .prateleira>ul{margin-bottom:30px;padding:0}@media (max-width: 769px){.mz-wishlist .mz-wishlist__shelf .prateleira>ul{width:50%}}body.orders .mz-wishlist{margin-top:40px}body.wishlist .mz-wishlist .prateleira{justify-content:start}body.wishlist .mz-wishlist .prateleira ul{list-style:none}.mz-search .mz-search__title{display:none}@media (min-width: 992px){.mz-search .mz-search__title{font-size:18px;font-weight:700;color:#1b1b1b;text-transform:capitalize;display:block}}.mz-search .mz-search__actions{display:flex;align-items:center;justify-content:space-between}.mz-search .mz-search__actions>div,.mz-search .mz-search__actions>button{flex:1}.mz-search .mz-search__actions .mz-search__navigation-trigger{-webkit-clip-path:polygon(5% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 25%);clip-path:polygon(5% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 25%);background-color:#ED1B23;color:#fff;padding:5px 10px;font-family:"Titillium Web",sans-serif;font-size:14px;z-index:10;height:40px;border:none;white-space:nowrap;display:flex;align-items:center;justify-content:center}.mz-search .mz-search__actions .mz-search__navigation-trigger:before{font-family:"icomoon" !important;speak:none;font-style:normal;font-weight:900;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"";margin-right:5px;color:#fff;font-weight:300;font-size:30px}body.body-cart .mz-search .mz-search__actions .mz-search__navigation-trigger:before,body.body-order-form .mz-search .mz-search__actions .mz-search__navigation-trigger:before{font-family:"FontAwesome" !important}.mz-search .mz-search__actions .mz-search__navigation-trigger:hover,.mz-search .mz-search__actions .mz-search__navigation-trigger:focus,.mz-search .mz-search__actions .mz-search__navigation-trigger:active{text-decoration:none}.mz-search .mz-search__actions .mz-search__navigation-trigger i{color:#1b1b1b}@media (min-width: 992px){.mz-search .mz-search__actions .mz-search__navigation-trigger{display:none}}.mz-search__layout-change{display:flex;justify-content:center;margin-bottom:20px}@media (min-width: 992px){.mz-search__layout-change{display:none !important}}.mz-search__layout-change>div{width:24px;height:24px;overflow:hidden;display:inline-block;margin:0 4px;cursor:pointer}.mz-search__layout-change .layout-full{border:1px solid #717171}.mz-search__layout-change .layout-full.active{border-color:#fd0}.mz-search__layout-change .layout-list,.mz-search__layout-change .layout-grid{display:flex;flex-direction:column}.mz-search__layout-change .layout-list::after,.mz-search__layout-change .layout-list::before,.mz-search__layout-change .layout-grid::after,.mz-search__layout-change .layout-grid::before{content:'';width:24px;height:10px;border:1px solid #717171}.mz-search__layout-change .layout-list::before,.mz-search__layout-change .layout-grid::before{margin-bottom:4px}.mz-search__layout-change .layout-list.active::after,.mz-search__layout-change .layout-list.active::before,.mz-search__layout-change .layout-grid.active::after,.mz-search__layout-change .layout-grid.active::before{border-color:#ED1B23;background:#ED1B23}.mz-search__layout-change .layout-grid{transform-origin:center;transform:rotate(90deg);margin-bottom:0}.mz-search__result{z-index:5;opacity:0;transition:all 2s;position:relative}.mz-search__result .btn-LoadMore{background:url(https://lojatamashii.vteximg.com.br/arquivos/CarregarMais-border.png) no-repeat;background-size:contain;color:#fff;font-size:20px;font-weight:600;width:100%;height:42px;max-width:212px;margin:30px auto;cursor:pointer;display:flex;align-items:center;justify-content:center}.mz-search__result .btn-LoadMore::before{content:'+';padding:5px;color:#fff}.mz-search__result .btn-LoadMore:hover{opacity:0.8}.mz-search__result #scrollLoading{display:none}body.jsFullLoaded .mz-search__result{opacity:1}.mz-search__result .vitrine+p.searchResultsTime{display:none !important}.mz-search__result ul{list-style:none;padding:0;margin:0}.mz-search__result .resultado-busca-termo{display:block}.mz-search__result .resultado-busca-termo .value{font-size:27px}.mz-search__result .resultado-busca-termo .value:empty{display:none}.mz-search__result .resultado-busca-termo:last-child{display:none}.mz-search__result .resultado-busca-numero:nth-child(3){display:none}.mz-search__result .resultado-busca-numero .value{color:#fff;font-size:14px}.mz-search__result .titulo-sessao,.mz-search__result .sub,.mz-search__result .pages{display:none}@media (max-width: 991px){.mz-search__result .search-qd-v1-order{transition:all .2s ease-out;position:fixed;top:0;bottom:0;right:-90%;z-index:2147483647;max-width:400px;padding:50px 20px 15px;width:90%;background-color:#fff;overflow:auto;-webkit-overflow-scrolling:touch}body.qd-ob-on .mz-search__result .search-qd-v1-order{display:block;right:0}.mz-search__result .search-qd-v1-order:before{display:block;font-weight:300;font-size:20px;content:'Ordenar por';text-transform:uppercase;position:absolute;top:0;left:0;right:0;padding:10px 30px 10px 15px;color:#fff;text-align:left;background-color:#ED1B23}}.mz-search__result .search-qd-v1-order a{color:#5d5d5d;font-size:16px;font-weight:700;display:block;padding:10px 0}.mz-search__result .search-qd-v1-order a:hover,.mz-search__result .search-qd-v1-order a:focus,.mz-search__result .search-qd-v1-order a:active{text-decoration:none}.mz-search__result .search-qd-v1-order-close{color:#fff;font-weight:300;font-size:25px;position:absolute;right:0;top:0;z-index:1;padding:5px 10px;border-radius:10px;width:50px;text-align:right;cursor:pointer}.mz-search__result .searchResultsTime{text-align:center;color:#fff;padding:10px 0px;font-family:"Titillium Web",sans-serif;font-size:18px;position:relative;margin-bottom:0;display:flex !important;align-items:initial;justify-content:center}@media (min-width: 992px){.mz-search__result .searchResultsTime{align-items:center;justify-content:space-between;padding:28px 16px}}.mz-search__result .searchResultsTime i{color:#1b1b1b}.mz-search__result .searchResultsTime .value{text-transform:capitalize;font-family:"Titillium Web",sans-serif;font-size:18px;font-weight:700}.mz-search__result .searchResultsTime .resultado-busca-tempo,.mz-search__result .searchResultsTime .resultado-busca-tempo+.resultado-busca-numero{display:none !important}.mz-search__result .searchResultsTime .resultado-busca-termo>*{display:none}.mz-search__result .searchResultsTime .resultado-busca-numero *{font-size:14px}.prateleira{display:flex;justify-content:flex-start;flex-wrap:wrap;width:100%}.prateleira ul{position:relative;padding-right:5px;padding-left:5px;list-style:none;width:33%;margin-bottom:30px}.prateleira ul .box-banner img{height:100%;width:100%}
+/* LAPTOP-KBFKB1T5 - 17/11/2021 14:15:46 GMT */
+@charset "UTF-8";
+/*! Não edite esse arquivo, ele foi gerado de maneira automatizada */
+
+@font-face {
+  font-family: 'gang_of_three';
+  src: url("//cdn.quatrodigital.com/tamashii/go3v2-webfont.woff2.css") format("woff2"), url("//cdn.quatrodigital.com/tamashii/go3v2-webfont.woff.css") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  color: #1b1b1b;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px; } }
+
+@media screen and (min-width: 1025px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px; } }
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto; } }
+
+@media screen and (min-width: 1300px) {
+  .container {
+    padding: 0; } }
+
+/* - Minicart - */
+* {
+  box-sizing: border-box; }
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: url("https://lojatamashii.vteximg.com.br/arquivos/bg-desktop.png");
+  background-position: 0 1031px;
+  background-size: contain;
+  background-color: #1b1b1b; }
+  body.mz-sn-on, body.qd-cart-show, body.qd-searchbar-show, body.mz-measure-guide-on, body.modal-open, body.orders-on, body.qd-sn-on, body.mz-sn-on, body.thumb-video-on, body.modal-video-on {
+    overflow: hidden; }
+    body.mz-sn-on .mz-backdrop, body.qd-cart-show .mz-backdrop, body.qd-searchbar-show .mz-backdrop, body.mz-measure-guide-on .mz-backdrop, body.modal-open .mz-backdrop, body.orders-on .mz-backdrop, body.qd-sn-on .mz-backdrop, body.mz-sn-on .mz-backdrop, body.thumb-video-on .mz-backdrop, body.modal-video-on .mz-backdrop {
+      visibility: visible;
+      opacity: 1; }
+  body .row {
+    margin: 0; }
+  body.overflow-hidden, body.sc-qd-cart-opened {
+    overflow-y: hidden !important;
+    overflow-x: hidden !important; }
+  body .container-order-form {
+    background-color: #fff !important; }
+
+.modal-backdrop {
+  background-color: black !important;
+  top: 0;
+  transition: all 0.3s; }
+
+html {
+  scroll-behavior: smooth; }
+
+@media (max-width: 769px) {
+  .desktop {
+    display: none; } }
+
+@media (min-width: 769px) {
+  .mobile {
+    display: none; } }
+
+.bg-white {
+  background-color: #F9F9F9 !important; }
+
+.mz-wishlist .mz-wishlist__title {
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  margin: 60px 0; }
+  .mz-wishlist .mz-wishlist__title h2 {
+    padding-left: 60px;
+    padding-bottom: 10px;
+    color: #fff;
+    font-family: "gang_of_three", sans-serif !important; }
+
+.mz-wishlist .mz-wishlist__shelf {
+  min-height: 500px;
+  background: url("https://ironstudios.vteximg.com.br/loading.gif") no-repeat center center; }
+  .mz-wishlist .mz-wishlist__shelf:empty::before {
+    content: 'Lista Vazia. Navegue pela loja e adicione produtos :)';
+    color: #ED1B23;
+    font-family: "Titillium Web", sans-serif;
+    margin-top: 15px;
+    display: block;
+    text-align: center; }
+  .mz-wishlist .mz-wishlist__shelf.ready {
+    background: none; }
+  .mz-wishlist .mz-wishlist__shelf.qd-empty {
+    text-align: center;
+    padding-top: 2%;
+    font-family: "Titillium Web", sans-serif; }
+    .mz-wishlist .mz-wishlist__shelf.qd-empty h3 {
+      font-size: 18px;
+      font-weight: 800;
+      height: 30px; }
+      .mz-wishlist .mz-wishlist__shelf.qd-empty h3::first-letter {
+        text-transform: uppercase; }
+    .mz-wishlist .mz-wishlist__shelf.qd-empty p {
+      font-size: 18px;
+      color: #f1545a; }
+  .mz-wishlist .mz-wishlist__shelf .prateleira > ul {
+    margin-bottom: 30px;
+    padding: 0; }
+    @media (max-width: 769px) {
+      .mz-wishlist .mz-wishlist__shelf .prateleira > ul {
+        width: 50%; } }
+
+body.orders .mz-wishlist {
+  margin-top: 40px; }
+
+body.wishlist .mz-wishlist .prateleira {
+  justify-content: start; }
+
+body.wishlist .mz-wishlist .prateleira ul {
+  list-style: none; }
+
+.mz-search .mz-search__title {
+  display: none; }
+  @media (min-width: 992px) {
+    .mz-search .mz-search__title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1b1b1b;
+      text-transform: capitalize;
+      display: block; } }
+
+.mz-search .mz-search__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .mz-search .mz-search__actions > div,
+  .mz-search .mz-search__actions > button {
+    flex: 1; }
+  .mz-search .mz-search__actions .mz-search__navigation-trigger {
+    -webkit-clip-path: polygon(5% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 25%);
+    clip-path: polygon(5% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 25%);
+    background-color: #ED1B23;
+    color: #fff;
+    padding: 5px 10px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    z-index: 10;
+    height: 40px;
+    border: none;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .mz-search .mz-search__actions .mz-search__navigation-trigger:before {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: "icomoon" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: 900;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: "";
+      margin-right: 5px;
+      color: #fff;
+      font-weight: 300;
+      font-size: 30px; }
+      body.body-cart .mz-search .mz-search__actions .mz-search__navigation-trigger:before,
+      body.body-order-form .mz-search .mz-search__actions .mz-search__navigation-trigger:before {
+        font-family: "FontAwesome" !important; }
+    .mz-search .mz-search__actions .mz-search__navigation-trigger:hover, .mz-search .mz-search__actions .mz-search__navigation-trigger:focus, .mz-search .mz-search__actions .mz-search__navigation-trigger:active {
+      text-decoration: none; }
+    .mz-search .mz-search__actions .mz-search__navigation-trigger i {
+      color: #1b1b1b; }
+  @media (min-width: 992px) {
+    .mz-search .mz-search__actions .mz-search__navigation-trigger {
+      display: none; } }
+
+.mz-search__layout-change {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; }
+  @media (min-width: 992px) {
+    .mz-search__layout-change {
+      display: none !important; } }
+  .mz-search__layout-change > div {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 4px;
+    cursor: pointer; }
+  .mz-search__layout-change .layout-full {
+    border: 1px solid #717171; }
+    .mz-search__layout-change .layout-full.active {
+      border-color: #FFDD00; }
+  .mz-search__layout-change .layout-list,
+  .mz-search__layout-change .layout-grid {
+    display: flex;
+    flex-direction: column; }
+    .mz-search__layout-change .layout-list::after, .mz-search__layout-change .layout-list::before,
+    .mz-search__layout-change .layout-grid::after,
+    .mz-search__layout-change .layout-grid::before {
+      content: '';
+      width: 24px;
+      height: 10px;
+      border: 1px solid #717171; }
+    .mz-search__layout-change .layout-list::before,
+    .mz-search__layout-change .layout-grid::before {
+      margin-bottom: 4px; }
+    .mz-search__layout-change .layout-list.active::after, .mz-search__layout-change .layout-list.active::before,
+    .mz-search__layout-change .layout-grid.active::after,
+    .mz-search__layout-change .layout-grid.active::before {
+      border-color: #ED1B23;
+      background: #ED1B23; }
+  .mz-search__layout-change .layout-grid {
+    transform-origin: center;
+    transform: rotate(90deg);
+    margin-bottom: 0; }
+
+.mz-search__result {
+  z-index: 5;
+  opacity: 0;
+  transition: all 2s;
+  position: relative; }
+  .mz-search__result .btn-LoadMore {
+    background: url(https://lojatamashii.vteximg.com.br/arquivos/CarregarMais-border.png) no-repeat;
+    background-size: contain;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    height: 42px;
+    max-width: 212px;
+    margin: 30px auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .mz-search__result .btn-LoadMore::before {
+      content: '+';
+      padding: 5px;
+      color: #fff; }
+    .mz-search__result .btn-LoadMore:hover {
+      opacity: 0.8; }
+  .mz-search__result #scrollLoading {
+    display: none; }
+  body.jsFullLoaded .mz-search__result {
+    opacity: 1; }
+  .mz-search__result .vitrine + p.searchResultsTime {
+    display: none !important; }
+  .mz-search__result ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .mz-search__result .resultado-busca-termo {
+    display: block; }
+    .mz-search__result .resultado-busca-termo .value {
+      font-size: 27px; }
+      .mz-search__result .resultado-busca-termo .value:empty {
+        display: none; }
+    .mz-search__result .resultado-busca-termo:last-child {
+      display: none; }
+  .mz-search__result .resultado-busca-numero:nth-child(3) {
+    display: none; }
+  .mz-search__result .resultado-busca-numero .value {
+    color: #fff;
+    font-size: 14px; }
+  .mz-search__result .titulo-sessao,
+  .mz-search__result .sub,
+  .mz-search__result .pages {
+    display: none; }
+  @media (max-width: 991px) {
+    .mz-search__result .search-qd-v1-order {
+      transition: all 0.2s ease-out;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: -90%;
+      z-index: 2147483647;
+      max-width: 400px;
+      padding: 50px 20px 15px;
+      width: 90%;
+      background-color: #fff;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch; }
+      body.qd-ob-on .mz-search__result .search-qd-v1-order {
+        display: block;
+        right: 0; }
+      .mz-search__result .search-qd-v1-order:before {
+        display: block;
+        font-weight: 300;
+        font-size: 20px;
+        content: 'Ordenar por';
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 30px 10px 15px;
+        color: #fff;
+        text-align: left;
+        background-color: #ED1B23; } }
+  .mz-search__result .search-qd-v1-order a {
+    color: #5d5d5d;
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    padding: 10px 0; }
+    .mz-search__result .search-qd-v1-order a:hover, .mz-search__result .search-qd-v1-order a:focus, .mz-search__result .search-qd-v1-order a:active {
+      text-decoration: none; }
+  .mz-search__result .search-qd-v1-order-close {
+    color: #fff;
+    font-weight: 300;
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 50px;
+    text-align: right;
+    cursor: pointer; }
+  .mz-search__result .searchResultsTime {
+    text-align: center;
+    color: #fff;
+    padding: 10px 0px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 0;
+    display: flex !important;
+    align-items: initial;
+    justify-content: center; }
+    @media (min-width: 992px) {
+      .mz-search__result .searchResultsTime {
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 16px; } }
+    .mz-search__result .searchResultsTime i {
+      color: #1b1b1b; }
+    .mz-search__result .searchResultsTime .value {
+      text-transform: capitalize;
+      font-family: "Titillium Web", sans-serif;
+      font-size: 18px;
+      font-weight: 700; }
+    .mz-search__result .searchResultsTime .resultado-busca-tempo,
+    .mz-search__result .searchResultsTime .resultado-busca-tempo + .resultado-busca-numero {
+      display: none !important; }
+    .mz-search__result .searchResultsTime .resultado-busca-termo > * {
+      display: none; }
+    .mz-search__result .searchResultsTime .resultado-busca-numero * {
+      font-size: 14px; }
+
+.prateleira {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%; }
+  .prateleira ul {
+    position: relative;
+    padding-right: 5px;
+    padding-left: 5px;
+    list-style: none;
+    width: 33%;
+    margin-bottom: 30px; }
+  .prateleira ul .box-banner img {
+    height: 100%;
+    width: 100%; }
