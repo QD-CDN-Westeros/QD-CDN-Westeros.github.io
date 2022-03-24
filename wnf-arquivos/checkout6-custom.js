@@ -1,2 +1,2 @@
-/* LAPTOP-T0P1H0OI - 05/08/2021 15:54:01 GMT */
+/* LAPTOP-T0P1H0OI - 24/03/2022 11:40:39 GMT */
 "use strict";var Checkout={init:function init(){Checkout.warningCheckout()},warningCheckout:function warningCheckout(){setTimeout(function(){$('<div class="warning_checkout" style="display:none"><p>Antes de finalizar o pedido, confirme se o seu endereço de entrega está completo e correto</p></div>').insertBefore(".container.container-main")},3500);$(window).on("hashchange",function(){var hash=window.location.hash;if(hash=="#/profile"||hash=="#/shipping"){$(".warning_checkout").addClass("active")}if(hash=="#/payment"){$(".warning_checkout").addClass("active")}})}};$(function(){Checkout.init()});
