@@ -566,7 +566,12 @@ try {
 
       function render(element) {
         $("body").prepend(element);
-        element.find('input[name="birthDate"]').mask("00/00/0000");
+
+        if (element.find('input[name="birthDate"]')) {
+          element.find('input[name="birthDate"]').mask("00/00/0000");
+
+        }
+
       }
 
       function finish(birthDate, email) {
