@@ -570,10 +570,10 @@ try {
         $("body").prepend(element);
 
         console.log(element);
-        
+
         console.log(element.find('input[name="birthDate"]'));
 
-        element.find('input[name="birthDate"]').mask("00/00/0000");
+        element.find('input[name="birthDate"]');
       
       }
 
