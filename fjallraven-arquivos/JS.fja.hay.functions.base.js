@@ -547,6 +547,7 @@ try {
                         <button type="button" data-close>X</button>\
                     </div>\
                     <div class="Mzwelcome-popup__form">\
+                        <p></p>\
                         <h2>Acompanhe nossa jornada <span></span></h2>\
                         <form>\
                             <input type="email" name="email" placeholder="Email"/>\
@@ -565,13 +566,15 @@ try {
       }
 
       function render(element) {
+        
         $("body").prepend(element);
 
-        if (element.find('input[name="birthDate"]')) {
-          element.find('input[name="birthDate"]').mask("00/00/0000");
+        console.log(element);
+        
+        console.log(element.find('input[name="birthDate"]'));
 
-        }
-
+        element.find('input[name="birthDate"]').mask("00/00/0000");
+      
       }
 
       function finish(birthDate, email) {
