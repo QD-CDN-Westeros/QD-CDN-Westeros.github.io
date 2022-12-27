@@ -1,0 +1,2 @@
+/* Anonymouswill - 10/11/2020 16:55:41 GMT */
+function minimunValueOrder(){var subtotal=$(".totalizers-list .monetary").html().replace(/[^0-9,]*/g,"").replace(",",".");var minimumValue=window.qd_ShippingTargetPrice;if(subtotal>=minimumValue){$('<span class="congrats">Parabéns você atingiu o valor mínimo de pedido!</span>').appendTo(".full-cart .totalizers")}else{$("body").find(".congrats").remove()}}minimunValueOrder();
