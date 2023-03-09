@@ -1,2 +1,2 @@
-/* DESKTOP-GUOJE28 - 03/03/2021 10:09:35 GMT */
+/* DESKTOP-F6V71R2 - 09/03/2023 15:55:02 GMT */
 function slideTipBar(){if($(window).width()<768){$(".tipbar__slider").slick({infinite:true,slidesToShow:1,slidesToScroll:1,autoPlay:true,autoplaySpeed:1e3,dots:false,arrows:false})}}$(document).ready(function(){slideTipBar()});
