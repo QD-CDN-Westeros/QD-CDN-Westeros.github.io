@@ -1,2 +1,14 @@
-/* DESKTOP-F6V71R2 - 24/05/2023 12:27:20 GMT */
-function variationsButton(){let hasSize=$(".dimension-Tamanho")[0];let hasSizeSelected=$(".dimension-Tamanho.sku-picked")[0];let hasColor=$(".dimension-Cor")[0];let hasColorSelected=$(".dimension-Cor.sku-picked")[0];let showSizeClass="product--show-size-selector";$(".buy-button").on("click",function(){var selectedSize=$(".dimension-Tamanho.sku-picked").length;var selectedColor=$(".dimension-Cor.sku-picked").length;if(selectedSize==0&&selectedColor==1){alert("Selecione um Tamanho")}if(selectedSize==1&&selectedColor==0){alert("Selecione uma Cor")}if(selectedSize==0&&selectedColor==0){alert("Selecione uma Cor e Tamanho")}});if(hasSize&&!hasSizeSelected||hasColor&&!hasColorSelected){if($("body").hasClass(showSizeClass)){$("body").addClass(showSizeClass)}}else{const query=href.split("?")[1],_getQueryParameters=rex.utils.getQueryParameters(query),id=_getQueryParameters.sku,quantity=_getQueryParameters.qty,seller=_getQueryParameters.seller,jssalesChannel=window.jssalesChannel||_getQueryParameters.sc||"",items=[{id:id,quantity:quantity,seller:seller}];vtexjs.checkout.addToCart(items,null,jssalesChannel).done(function(orderForm){$("body").removeClass("product--show-info product--show-size-selector");rex.modules.get("minicart")[0].open()})}}variationsButton();
+/* DESKTOP-H5GU4NO - 29/05/2023 11:37:26 GMT */
+function variationsButton(){$(".buy-button").on("click",function(){var selectedSize=$(".dimension-Tamanho.sku-picked").length;var selectedColor=$(".dimension-Cor.sku-picked").length;if(selectedSize==0||selectedColor==0){handleShowSkuAlertModal()}});if(!href)return;const query=href.split("?")[1],_getQueryParameters=rex.utils.getQueryParameters(query),id=_getQueryParameters.sku,quantity=_getQueryParameters.qty,seller=_getQueryParameters.seller,jssalesChannel=window.jssalesChannel||_getQueryParameters.sc||"",items=[{id:id,quantity:quantity,seller:seller}];addToCard({items:items,jssalesChannel:jssalesChannel})}function addToCard({items,jssalesChannel}){vtexjs.checkout.addToCart(items,null,jssalesChannel).done(function(orderForm){$("body").removeClass("product--show-info product--show-size-selector");rex.modules.get("minicart")[0].open()})}function createAlertSkuModal(){const bodyContainer=document.querySelector("body");const modalElementHTML=`
+    <div class="sku-alert-wrapper">
+      <div class="sku-alert-modal">
+        <header>
+          <h1>Por favor, selecione uma das opções disponíveis!</h1>
+
+          <button type="button" onclick="handleClickCloseSkuAlertModal()"><i></i></button>
+        </header>
+
+        <button type="button" onclick="handleClickCloseSkuAlertModal()">OK</button>
+      </div>
+    </div>
+  `;bodyContainer.insertAdjacentHTML("afterbegin",modalElementHTML)}function handleShowSkuAlertModal(){const modal=document.querySelector(".sku-alert-wrapper");if(!modal.classList.contains("visible")){modal.classList.add("visible")}}function handleClickCloseSkuAlertModal(){const modal=document.querySelector(".sku-alert-wrapper");modal.classList.remove("visible")}createAlertSkuModal();variationsButton();
